@@ -38,7 +38,7 @@ const size = {
 }
 
 const font = {
-    fontFamily: "'Roboto', sans-serif"
+    fontFamily: "'Roboto', sans-serif",
 }
 
 
