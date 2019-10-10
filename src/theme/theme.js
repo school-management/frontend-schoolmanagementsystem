@@ -1,10 +1,11 @@
 // import RobotoItalic from '../assets/fonts/Roboto/Roboto-Black.ttf';
-
+import TickIcon from '../assets/icons/icons8/doubletick.png';
 
 const colors = {
     main: "blue",
     ter: "red",
     white: "white",
+    black: "black",
     gray: "#5f6769",
     //button colors
     btnPurple: '#6200ed',
@@ -41,8 +42,18 @@ const font = {
     fontFamily: "'Roboto', sans-serif",
 }
 
+const text = {
+    altText: "sorry no image"
+}
+
+const icon = {
+    tick: { TickIcon },
+    beforeColor: colors.black,
+    hoverColor: colors.white
+}
 
 
-export default { colors, size, font };
+
+export default { colors, size, font, text, icon };
 
 

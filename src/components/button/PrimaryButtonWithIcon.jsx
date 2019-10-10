@@ -1,40 +1,20 @@
-import styled from 'styled-components';
+import React, { Component } from 'react'
+import PrimaryButton from './PrimaryButton';
 import theme from '../../theme/theme';
+import DoubleTickIcon from '../icon/DoubleTickIcon';
 
-
-
-const PrimaryButtonWithIcon = styled.button`
-
-background: ${props => props.primary ? theme.colors.btnPurple : "palevioletred"};
-color: ${props => props.primary ? theme.colors.white : "blacks"};
-
-font-size: ${theme.size.btnFont};
-font-weight: 800;
-font-family: ${theme.font.fontFamily};
-
-padding: ${theme.size.btnPadding};
-border: 1px solid ${theme.colors.btnPurple};
-border-radius: ${theme.size.btnRadius};
-outline: ${theme.size.btnOutline};
-box-shadow: ${theme.size.btnBoxShadow};
-cursor: pointer;
-
-&:hover {
-    box-shadow: ${theme.size.btnBoxShadowWhenHover};
-    background: ${theme.colors.btnPurpleWhenHover};
-    border-radius: ${theme.size.btnRadiusWhenHover};
-    outline: ${theme.size.btnOutline};
-    transition: 0.35s;
+const style = {
+    width: "10em"
 }
 
-&:active {
-    transform: translateY(2px);
-    outline: ${theme.size.btnOutline};
+export default class PrimaryButtonWithIcon extends Component {
+    render() {
+        return (
+            <div>
+                {/* <PrimaryButton><img src={Icon} alt={theme.text.altText} /></PrimaryButton> */}
+                <PrimaryButton style={style}><DoubleTickIcon /></PrimaryButton>
+            </div>
+        )
+    }
 }
 
-/* temporary use */
-margin: 2em;
-
-`;
-
-export default PrimaryButtonWithIcon;

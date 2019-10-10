@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import PrimaryButton from './components/button/PrimaryButton';
 import LargeButton from './components/button/LargeButton';
+import PrimaryButtonWithIcon from './components/button/PrimaryButtonWithIcon';
+
 
 
 
@@ -15,7 +17,7 @@ function App() {
       <LargeButton primary>Submit</LargeButton>
       <LargeButton secondary>Clear</LargeButton>
       <br></br>
-      <PrimaryButton primary>Clear</PrimaryButton>
+      <PrimaryButtonWithIcon />
     </div>
   );
 }
