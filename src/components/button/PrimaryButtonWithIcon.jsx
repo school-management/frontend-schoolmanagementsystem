@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import theme from '../../../theme/theme';
+import theme from '../../theme/theme';
 
 
 
-const Button = styled.button`
+const PrimaryButtonWithIcon = styled.button`
 
 background: ${props => props.primary ? theme.colors.btnPurple : "palevioletred"};
 color: ${props => props.primary ? theme.colors.white : "blacks"};
@@ -37,4 +37,4 @@ margin: 2em;
 
 `;
 
-export default Button;
+export default PrimaryButtonWithIcon;

@@ -1,13 +1,18 @@
 import React from 'react';
 import './App.css';
-import Button from './components/button/contained/PrimaryButton';
+import PrimaryButton from './components/button/PrimaryButton';
+import LargeButton from './components/button/LargeButton';
 
 
 
 function App() {
   return (
     <div className="App">
-      <Button primary>Primary</Button>
+      <PrimaryButton primary>Submit</PrimaryButton>
+      <PrimaryButton secondary>Clear</PrimaryButton>
+      <br></br>
+      <LargeButton primary>Submit</LargeButton>
+      <LargeButton secondary>Clear</LargeButton>
     </div>
   );
 }
