@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 import theme from '../../theme/theme';
+import Icon from '../icon/Icon';
 
 
-
-const PrimaryButton = styled.button`
+const PrimaryIconOnlyButton = styled.button`
 
 background: ${props => props.primary ? theme.colors.btnPurple : props.secondary ? theme.colors.white : theme.colors.white};
 color: ${props => props.primary ? theme.colors.white : props.secondary ? theme.colors.btnPurple : theme.colors.btnPurple};
@@ -28,8 +28,11 @@ cursor: pointer;
     border-radius: ${theme.size.btnRadiusWhenHover};
     outline: ${theme.size.btnOutline};
     transition: 0.35s;
+    content: "fa fa-user";
     
 }
+
+
 
 &:active {
     transform: translateY(2px);
@@ -41,4 +44,4 @@ margin: 2em;
 
 `;
 
-export default PrimaryButton;
+export default PrimaryIconOnlyButton;

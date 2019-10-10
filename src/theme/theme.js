@@ -47,8 +47,7 @@ const text = {
 }
 
 const icon = {
-    tick: { TickIcon },
-    beforeColor: colors.black,
+    beforeColor: colors.btnPurple,
     hoverColor: colors.white
 }
 

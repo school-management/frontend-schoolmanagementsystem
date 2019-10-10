@@ -1,17 +1,17 @@
 import styled from 'styled-components';
 import theme from '../../theme/theme';
+import Icon from '../icon/Icon';
 
 
-
-const PrimaryButton = styled.button`
+const LargeIconOnlyButton = styled.button`
 
 background: ${props => props.primary ? theme.colors.btnPurple : props.secondary ? theme.colors.white : theme.colors.white};
 color: ${props => props.primary ? theme.colors.white : props.secondary ? theme.colors.btnPurple : theme.colors.btnPurple};
 
-font-size: ${theme.size.btnFont};
+font-size: ${theme.size.btnFontLarge};
 font-weight: ${theme.size.btnFontWeight};
 font-family: ${theme.font.fontFamily};
-letter-spacing: ${theme.size.btnFontSpacing};
+letter-spacing: ${theme.size.btnFontSpacingLarge};
 
 padding: ${theme.size.btnPadding};
 border: 1px solid ${theme.colors.btnPurple};
@@ -28,8 +28,11 @@ cursor: pointer;
     border-radius: ${theme.size.btnRadiusWhenHover};
     outline: ${theme.size.btnOutline};
     transition: 0.35s;
+    content: "fa fa-user";
     
 }
+
+
 
 &:active {
     transform: translateY(2px);
@@ -41,4 +44,4 @@ margin: 2em;
 
 `;
 
-export default PrimaryButton;
+export default LargeIconOnlyButton;
