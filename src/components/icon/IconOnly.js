@@ -9,7 +9,7 @@ const IconOnly = styled.i`
        }
 
        &:hover {
-            color: ${props => props.primary ? theme.colors.white : props.secondary ? theme.colors.white : theme.colors.white}
+            color: ${props => props.primary ? theme.colors.white : props.secondary ? theme.colors.white : theme.colors.white};
             transform: translateX(10px) translate3d(200px);
             transition-duration: 5ms;
             transition: 10ms;

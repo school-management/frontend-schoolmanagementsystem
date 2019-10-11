@@ -9,7 +9,11 @@ const colors = {
     gray: "#5f6769",
     //button colors
     btnPurple: '#6200ed',
-    btnPurpleWhenHover: "#5600d1"
+    btnPurpleWhenHover: "#5600d1",
+    //input color
+    inputPurple: '#6200ed',
+    inputPurpleWhenFocus: "#5600d1"
+
 }
 
 const size = {
@@ -36,6 +40,18 @@ const size = {
     btnFontSpacingLarge: "0.13em",
     btnPaddingLarge: "0.8em 1.4em",
     btnRadiusLarge: "0.40em",
+
+    //input field styling
+    inputPadding: "0.6em",
+    inputPaddingWhenFocus: "0.7em",
+    inputWidth: "9em",
+    inputWidthWhenFocus: "10em",
+    inputBorder: "2px solid #979797",
+    inputBoxShadow: "3px 10px 20px rgba(0, 0, 0, 0.05)",
+    inputBoxShadowWhenHover: "5px 15px 40px rgba(0, 0, 0, 0.10)",
+    inputBoxShadowWhenHover1: "5px 15px 40px rgba(0, 0, 0, 0.04)",
+    inputBoxShadowWhenFocus: "10px 20px 80px rgba(0, 0, 0, 0.20)",
+    inputOutline: "none"
 }
 
 const font = {
