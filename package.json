@@ -9,6 +9,7 @@
     "font-awesome-icons": "^1.6.0",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
+    "react-grid-system": "^5.0.2",
     "react-localization": "^1.0.15",
     "react-scripts": "3.2.0",
     "styled-components": "^4.4.0"
