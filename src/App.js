@@ -3,6 +3,7 @@ import './App.css';
 import Buttons from './screens/Buttons';
 import Typography from './screens/Typography';
 import Breadcrumbs from './screens/Breadcrumbs';
+import Cards from './screens/Cards';
 
 
 
@@ -15,7 +16,8 @@ function App() {
     <div className="App">
       {/* <Buttons /> */}
       {/* <Typography /> */}
-      <Breadcrumbs/>
+      {/* <Breadcrumbs/> */}
+      <Cards />
     </div>
   );
 }
