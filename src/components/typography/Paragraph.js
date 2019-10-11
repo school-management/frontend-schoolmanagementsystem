@@ -3,7 +3,8 @@ import theme from '../../theme/theme';
 
 const Paragraph = styled.p`
     font-family:${theme.font.fontFamily};
-    color: ${theme.colors.gray};
+    font-weight: ${theme.size.bold}
+    /* color: ${theme.colors.gray}; */
 `
 
 export default Paragraph;
