@@ -5,6 +5,7 @@ import Typography from './screens/Typography';
 import Inputs from './screens/Inputs';
 import SampleForm from './screens/SampleForm';
 import Breadcrumbs from './screens/Breadcrumbs';
+import Cards from './screens/Cards';
 
 
 
@@ -17,8 +18,12 @@ function App() {
     <div className="App">
       {/* <Buttons /> */}
       {/* <Typography /> */}
-      <Inputs />
+      {/* <Inputs /> */}
       {/* <SampleForm /> */}
+      {/* <Breadcrumbs/> */}
+      {/* <Cards /> */}
+      {/* <Inputs /> */}
+      <SampleForm />
     </div>
   );
 }
