@@ -5,6 +5,10 @@ import FlatInput from '../components/inputs/FlatInput';
 import Heading1 from '../components/typography/Heading1';
 import PasswordInput from '../components/inputs/PasswordInput';
 import FlatPasswordInput from '../components/inputs/FlatPasswordInput';
+import Select from '../components/inputs/Select';
+import Option from '../components/inputs/Option';
+import InputWithIcon from '../components/inputs/InputWithIcon';
+import InputIcon from '../components/inputs/InputIcon';
 
 export default class Inputs extends Component {
     render() {
@@ -16,7 +20,25 @@ export default class Inputs extends Component {
                 <br />
                 <PasswordInput placeholder="Password"></PasswordInput>
                 <FlatPasswordInput placeholder="Password"></FlatPasswordInput>
-            </div>
+                <br />
+                <Select>
+                    <Option value="">Select a Value</Option>
+                    <Option value="A">A</Option>
+                    <Option value="B">B</Option>
+                </Select>
+                {/* <InputIcon></InputIcon> */}
+
+                {/* <InputWithIcon
+                    name="field1"
+                    type="text"
+                    value=""
+                    placeholder="Sample input"
+                    onChange={this.onChange}
+                ></InputWithIcon> */}
+
+
+
+            </div >
         )
     }
 }

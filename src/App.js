@@ -17,8 +17,8 @@ function App() {
     <div className="App">
       {/* <Buttons /> */}
       {/* <Typography /> */}
-      {/* <Inputs /> */}
-      <SampleForm />
+      <Inputs />
+      {/* <SampleForm /> */}
     </div>
   );
 }

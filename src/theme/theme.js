@@ -51,7 +51,10 @@ const size = {
     inputBoxShadowWhenHover: "5px 15px 40px rgba(0, 0, 0, 0.10)",
     inputBoxShadowWhenHover1: "5px 15px 40px rgba(0, 0, 0, 0.04)",
     inputBoxShadowWhenFocus: "10px 20px 80px rgba(0, 0, 0, 0.20)",
-    inputOutline: "none"
+    inputOutline: "none",
+
+    //dropdown or select styles
+    selectBorder: "2px solid #6200ed",
 }
 
 const font = {
@@ -67,8 +70,12 @@ const icon = {
     hoverColor: colors.white
 }
 
+const imgSrc = {
+    loginBackground: require('../assets/img/school.png')
+}
 
 
-export default { colors, size, font, text, icon };
+
+export default { colors, size, font, text, icon, imgSrc };
 
 
