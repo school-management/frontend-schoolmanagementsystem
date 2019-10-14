@@ -1,12 +1,10 @@
-import React, { Component } from 'react'
-import GlobalStyle from '../globalstyle/GlobalStyle'
+import React, { Component } from 'react';
+import Sidenav from './sidenav/Sidenav'
 
 export default class Layout extends Component {
     render() {
         return (
-            <GlobalStyle>
-
-            </GlobalStyle>
+            <Sidenav />
         )
     }
 }

@@ -11,6 +11,7 @@
     "react-dom": "^16.10.2",
     "react-grid-system": "^5.0.2",
     "react-localization": "^1.0.15",
+    "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0",
     "react-select-v2": "^2.4.2",
     "styled-components": "^4.4.0"

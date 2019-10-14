@@ -1,9 +1,9 @@
 // import RobotoItalic from '../assets/fonts/Roboto/Roboto-Black.ttf';
-import TickIcon from '../assets/icons/icons8/doubletick.png';
+// import School from '../assets/img/school.jpg';
 
 const colors = {
     main: "blue",
-    ter: "red",
+    base: "#f0f1f3",
     white: "white",
     black: "black",
     gray: "#5f6769",
@@ -71,7 +71,7 @@ const icon = {
 }
 
 const imgSrc = {
-    loginBackground: require('../assets/img/school.png')
+    loginBackground: require('../assets/img/school.jpg')
 }
 
 
