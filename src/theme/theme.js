@@ -12,7 +12,9 @@ const colors = {
     btnPurpleWhenHover: "#5600d1",
     //input color
     inputPurple: '#6200ed',
-    inputPurpleWhenFocus: "#5600d1"
+    inputPurpleWhenFocus: "#5600d1",
+    //cards color
+    cardsbackground: "navy",
 
 }
 
@@ -52,6 +54,15 @@ const size = {
     inputBoxShadowWhenHover1: "5px 15px 40px rgba(0, 0, 0, 0.04)",
     inputBoxShadowWhenFocus: "10px 20px 80px rgba(0, 0, 0, 0.20)",
     inputOutline: "none",
+
+    //LoginFormContainer
+    LoginBoxShadow: "4px 15px 4px 1px #fafafa",
+
+    //cards field styling
+    cardswidth: "6em",
+    cardshight: "10em",
+    cardsboxshadow: "0 4px 8px 0 rgba(0,0,0,0.2)",
+    cardsMargin: "10px",
 
     //dropdown or select styles
     selectBorder: "2px solid #6200ed",
