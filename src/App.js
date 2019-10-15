@@ -7,21 +7,17 @@ import SampleForm from './screens/SampleForm';
 import Breadcrumbs from './screens/Breadcrumbs';
 import Cards from './screens/Cards';
 
-
-
-
-
-
-
 function App() {
   return (
     <div className="App">
       {/* <Buttons /> */}
       {/* <Typography /> */}
-      {/* <Breadcrumbs/> */}
-      {/* <Cards /> */}
+      {/* <Breadcrumbs /> */}
+
       {/* <Inputs /> */}
-      <SampleForm />
+      {/* <SampleForm /> */}
+      <Cards />
+
     </div>
   );
 }
