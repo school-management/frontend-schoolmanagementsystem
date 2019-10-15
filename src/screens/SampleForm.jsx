@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Form from '../components/form/Form';
-import Heading3 from '../components/typography/Heading3';
+import Heading2 from '../components/typography/Heading2';
 import FlatInput from '../components/inputs/FlatInput';
 import { Row, Col } from 'react-grid-system';
 import Label from '../components/typography/Label';
@@ -14,19 +14,21 @@ import Heading2 from '../components/typography/Heading2';
 export default class SampleForm extends Component {
     render() {
         return (
-            <LoginFormContainer>
+
+            <div>
                 <Form action="#">
                     <Heading2>Login</Heading2>
                     <br />
-
-                    <FlatInput name="username" placeholder="Username">{this.props.children}</FlatInput>
+                    <Label for="username">  </Label>
+                    <FlatInput name="username" placeholder="Username"></FlatInput>
                     <br />
-
+                    <Label for="password"></Label>
                     <FlatPasswordInput name="password" placeholder="Password"></FlatPasswordInput>
                     <br />
                     <PrimaryButton primary>Login</PrimaryButton>
                 </Form>
-            </LoginFormContainer>
+            </div>
+
         )
     }
 }

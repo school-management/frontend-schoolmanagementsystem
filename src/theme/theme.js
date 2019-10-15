@@ -1,9 +1,9 @@
 // import RobotoItalic from '../assets/fonts/Roboto/Roboto-Black.ttf';
-import TickIcon from '../assets/icons/icons8/doubletick.png';
+// import School from '../assets/img/school.jpg';
 
 const colors = {
     main: "blue",
-    ter: "red",
+    base: "#f0f1f3",
     white: "white",
     black: "black",
     gray: "#5f6769",
@@ -64,6 +64,8 @@ const size = {
     cardsboxshadow: "0 4px 8px 0 rgba(0,0,0,0.2)",
     cardsMargin: "10px",
 
+    //dropdown or select styles
+    selectBorder: "2px solid #6200ed",
 }
 
 const font = {
@@ -79,8 +81,12 @@ const icon = {
     hoverColor: colors.white
 }
 
+const imgSrc = {
+    loginBackground: require('../assets/img/school.jpg')
+}
 
 
-export default { colors, size, font, text, icon };
+
+export default { colors, size, font, text, icon, imgSrc };
 
 

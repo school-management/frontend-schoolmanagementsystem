@@ -1,0 +1,11 @@
+.inner-addon .glyphicon {
+    position: absolute;
+    padding: 10px;
+    pointer-events: none;
+  }
+
+  .left-addon .glyphicon  { left:  0px;}
+
+  .inner-addon {
+    position: relative;
+  }

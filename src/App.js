@@ -6,19 +6,17 @@ import Inputs from './screens/Inputs';
 import SampleForm from './screens/SampleForm';
 import Breadcrumbs from './screens/Breadcrumbs';
 import Cards from './screens/Cards';
+import Layout from './layout/Layout';
+import GlobalStyle from './globalstyle/GlobalStyle';
 
 function App() {
   return (
-    <div className="App">
-      {/* <Buttons /> */}
-      {/* <Typography /> */}
-      {/* <Breadcrumbs /> */}
 
-      {/* <Inputs /> */}
-      {/* <SampleForm /> */}
-      <Cards />
 
-    </div>
+    <Layout />
+
+
+
   );
 }
 
