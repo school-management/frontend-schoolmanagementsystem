@@ -57,12 +57,12 @@ const size = {
 
     //LoginFormContainer
     LoginBoxShadow: "4px 15px 4px 1px #fafafa",
-
     //cards field styling
-    cardswidth: "6em",
-    cardshight: "10em",
+    cardswidth: "10.6em",
+    cardshight: "12em",
     cardsboxshadow: "0 4px 8px 0 rgba(0,0,0,0.2)",
     cardsMargin: "10px",
+    cardsRadius: "1.5em",
 
     //dropdown or select styles
     selectBorder: "2px solid #6200ed",
