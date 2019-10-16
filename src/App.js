@@ -9,14 +9,10 @@ import Cards from './screens/Cards';
 import Layout from './layout/Layout';
 import GlobalStyle from './globalstyle/GlobalStyle';
 
+
 function App() {
   return (
-
-
     <Layout />
-
-
-
   );
 }
 
