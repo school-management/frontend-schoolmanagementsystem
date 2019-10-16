@@ -1,12 +1,9 @@
 import styled from 'styled-components';
 import theme from '../../theme/theme';
 
-const TinyDivider = styled.div`
-    height: 35px;
+const MiddleDivider = styled.div`
+    height: 55px;
     width: 2px;
-    flex-direction: column;
     background: ${theme.colors.btnPurple};
-    margin-top: 0.8em;
 `
-
-export default TinyDivider;
+export default MiddleDivider;
