@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Form from '../components/form/Form';
-import Heading2 from '../components/typography/Heading2';
 import FlatInput from '../components/inputs/FlatInput';
 import { Row, Col } from 'react-grid-system';
 import Label from '../components/typography/Label';
