@@ -2,7 +2,7 @@
 // import School from '../assets/img/school.jpg';
 
 const colors = {
-    main: "blue",
+    main: "#5d4f8d",
     base: "#f0f1f3",
     white: "white",
     black: "black",
@@ -66,6 +66,9 @@ const size = {
 
     //dropdown or select styles
     selectBorder: "2px solid #6200ed",
+
+    //sidebar styles
+    sideBarBoxShadow: "4px 2px 4px rgba(0, 0, 0, 0.10)"
 }
 
 const font = {
