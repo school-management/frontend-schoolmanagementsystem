@@ -3,13 +3,13 @@ import theme from '../../theme/theme';
 
 
 
-const Topbar = styled.div`
+const TopbarFlex = styled.div`
     background: ${theme.colors.white};
-    width: 65em;
-    height: 4em;
-    margin-left: 5em;
+    width: 98%;
+    height: 20%;
+    margin-left: 0.8em;
     text-align: left;
-    align-items: center;    
+    align-content: center;    
     color: ${theme.colors.gray};
     font-size: ${theme.size.fontDefault};
     font-weight: 400;
@@ -19,12 +19,13 @@ const Topbar = styled.div`
     border-bottom-left-radius: 0.8em;
     border-bottom: 4px;
     box-shadow: ${theme.size.inputBoxShadowWhenHover1};
-    /* display: flex; */
-    /* flex-direction: row; */
+    display: flex;
+    flex-direction: row;
+   
 
 
 
    
 
 `
-export default Topbar;
+export default TopbarFlex;

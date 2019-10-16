@@ -5,7 +5,7 @@ const TinyDivider = styled.div`
     height: 35px;
     width: 2px;
     flex-direction: column;
-    background: ${theme.colors.btnPurple};
+    background: ${theme.colors.base};
     margin-top: 0.8em;
 `
 

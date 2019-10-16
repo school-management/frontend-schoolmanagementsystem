@@ -24,7 +24,7 @@ export default class Topnav extends Component {
                     </Col>
                     <TinyDivider />
                     <Col md={1}>
-                        <BellIcon src={Avatar} style={{ height: "45px", marginTop: "0.3em", borderRadius: "1em" }}></BellIcon>
+                        <BellIcon src={Avatar} style={{ height: "45px", marginTop: "0.3em", borderRadius: "3em" }}></BellIcon>
                     </Col>
 
 

@@ -8,6 +8,7 @@ import PrimaryButton from '../components/button/PrimaryButton';
 import theme from '../theme/theme';
 import Container from '../components/containers/LoginFormContainer';
 import LoginFormContainer from '../components/containers/LoginFormContainer';
+import Heading2 from '../components/typography/Heading2';
 
 export default class SampleForm extends Component {
     render() {
