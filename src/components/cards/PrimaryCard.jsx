@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import Card from './Card'
 import Heading3 from '../typography/Heading3'
 import Paragraph from '../typography/Paragraph'
+import HomeCard from './HomeCard'
 
 export default class PrimaryCard extends Component {
     render() {
@@ -15,7 +16,7 @@ export default class PrimaryCard extends Component {
             <Card >
                 <Heading3>Students</Heading3>
             </Card>
-
+            <HomeCard></HomeCard>
         </div>
         )
     }
