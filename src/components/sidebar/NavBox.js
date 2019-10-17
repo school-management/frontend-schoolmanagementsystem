@@ -7,7 +7,7 @@ import SidenavCard from '../cards/SidenavCard';
 const NavBox = styled.div`
     background: ${theme.colors.main};
     text-align: justify;
-    width: 8.27em;
+    width: 9.15em;
     color: ${theme.colors.white};
     padding: 1em;
     border: none;

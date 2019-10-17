@@ -39,6 +39,7 @@ const HomeIcons = styled.img`
     margin-top:0.3em;  
     margin-bottom: -1em;
     background: ${theme.colors.base};
+    background-blend-mode:screen;
     border-radius:${theme.size.cardsRadius};
 
     &:hover {

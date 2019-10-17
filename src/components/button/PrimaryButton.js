@@ -1,5 +1,6 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import theme from '../../theme/theme';
+import DoubleTickIconSecondary from '../icon/DoubleTickIconSecondary';
 
 
 
@@ -28,6 +29,7 @@ cursor: pointer;
     border-radius: ${theme.size.btnRadiusWhenHover};
     outline: ${theme.size.btnOutline};
     transition: 0.35s;
+
     
 }
 
@@ -37,6 +39,16 @@ cursor: pointer;
     transform: translateY(2px);
     outline: ${theme.size.btnOutline};
 }
+
+${props => props.primary && css`
+    &:hover {
+        ${DoubleTickIconSecondary} {
+            fill: "white";
+            color: "white";
+            background: "white";
+        };
+    }
+`}
 
 /* temporary use */
 margin: 2em;
