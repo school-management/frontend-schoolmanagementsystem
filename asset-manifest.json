@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/FrontEnd-SchoolManagementSystem/static/css/main.d0190f4d.chunk.css",
+    "main.js": "/FrontEnd-SchoolManagementSystem/static/js/main.18520a34.chunk.js",
+    "main.js.map": "/FrontEnd-SchoolManagementSystem/static/js/main.18520a34.chunk.js.map",
+    "runtime-main.js": "/FrontEnd-SchoolManagementSystem/static/js/runtime-main.43c0a181.js",
+    "runtime-main.js.map": "/FrontEnd-SchoolManagementSystem/static/js/runtime-main.43c0a181.js.map",
+    "static/js/2.a1bc1b5e.chunk.js": "/FrontEnd-SchoolManagementSystem/static/js/2.a1bc1b5e.chunk.js",
+    "static/js/2.a1bc1b5e.chunk.js.map": "/FrontEnd-SchoolManagementSystem/static/js/2.a1bc1b5e.chunk.js.map",
+    "index.html": "/FrontEnd-SchoolManagementSystem/index.html",
+    "precache-manifest.9216af54b0b0a443b0a30f420323c662.js": "/FrontEnd-SchoolManagementSystem/precache-manifest.9216af54b0b0a443b0a30f420323c662.js",
+    "service-worker.js": "/FrontEnd-SchoolManagementSystem/service-worker.js",
+    "static/css/main.d0190f4d.chunk.css.map": "/FrontEnd-SchoolManagementSystem/static/css/main.d0190f4d.chunk.css.map",
+    "static/media/avatar.jpg": "/FrontEnd-SchoolManagementSystem/static/media/avatar.a5151bc1.jpg",
+    "static/media/bell-regular.svg": "/FrontEnd-SchoolManagementSystem/static/media/bell-regular.ac874803.svg",
+    "static/media/book-read.svg": "/FrontEnd-SchoolManagementSystem/static/media/book-read.4647858e.svg",
+    "static/media/envelope-regular.svg": "/FrontEnd-SchoolManagementSystem/static/media/envelope-regular.21c1e3b2.svg",
+    "static/media/school.jpg": "/FrontEnd-SchoolManagementSystem/static/media/school.fad4640b.jpg",
+    "static/media/stjohns.png": "/FrontEnd-SchoolManagementSystem/static/media/stjohns.13c4defe.png",
+    "static/media/user-graduate-solid.svg": "/FrontEnd-SchoolManagementSystem/static/media/user-graduate-solid.d4ef9082.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.43c0a181.js",
+    "static/js/2.a1bc1b5e.chunk.js",
+    "static/css/main.d0190f4d.chunk.css",
+    "static/js/main.18520a34.chunk.js"
+  ]
+}
