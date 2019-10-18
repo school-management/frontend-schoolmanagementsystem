@@ -20,11 +20,11 @@ export default class Layout extends Component {
                 <TopnavFlex />
                 <FlexContainer>
                     <Sidenav />
-                    <ContentContainer />
-                    {/* <Content>
+                    {/* <ContentContainer /> */}
+                    <Content>
                         <Paragraph style={{ opacity: 0.8 }}>Hi</Paragraph>
                         <Paragraph style={{ opacity: 0.8 }}>This is Sample Content</Paragraph>
-                    </Content> */}
+                    </Content>
 
                 </FlexContainer>
                 <FooterFlex />
