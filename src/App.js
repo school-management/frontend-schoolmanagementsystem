@@ -15,9 +15,8 @@ import TableCom from './screens/Table';
 
 function App() {
   return (
-    // <Router />
-    <TableCom />
+    <Router />
+    // <TableCom />
   );
 }
-
 export default App;

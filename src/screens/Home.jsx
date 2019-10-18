@@ -10,12 +10,16 @@ import Student from '../assets/icons/fontawesome/user-graduate-solid.svg';
 import HomeIcons from '../components/icon/home/HomeIcons';
 import Heading3 from '../components/typography/Heading3';
 import Topnav from '../layout/topnav/Topnav';
+import TopnavFlex from '../layout/topnav/TopnavFlex';
+import theme from '../theme/theme';
+import Footer from '../components/footer/footer';
+import FooterFlex from '../layout/footer/FooterFlex';
 
 export default class Home extends Component {
     render() {
         return (
-            <div>
-                <Topnav />
+            <div style={{ background: theme.colors.base }}>
+                <TopnavFlex home />
                 <HomeContainer>
                     <Row>
                         <Col md={2}>
@@ -83,7 +87,7 @@ export default class Home extends Component {
                         <Col md={2}>
                             <BasicCard>
                                 <HomeIcons src="https://img.icons8.com/color/150/000000/sales-channels.png" />
-                                <Heading3 style={{ textAlign: "center" }}>Club & Organizations</Heading3>
+                                <Heading3 style={{ textAlign: "center" }}>Clubs&nbsp;&&nbsp;Organizations</Heading3>
                             </BasicCard>
                         </Col>
                         <Col md={2}>
@@ -101,6 +105,7 @@ export default class Home extends Component {
 
                     </Row>
                 </HomeContainer>
+                <FooterFlex />
             </div>
         )
     }

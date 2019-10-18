@@ -13,7 +13,7 @@ import InputIcon from '../components/inputs/InputIcon';
 export default class Inputs extends Component {
     render() {
         return (
-            <div>
+            <div style={{ textAlign: "center" }}>
                 <Heading1>Inputs</Heading1>
                 <Input placeholder="Username"></Input>
                 <FlatInput placeholder="Username"></FlatInput>
@@ -21,11 +21,11 @@ export default class Inputs extends Component {
                 <PasswordInput placeholder="Password"></PasswordInput>
                 <FlatPasswordInput placeholder="Password"></FlatPasswordInput>
                 <br />
-                <Select>
+                {/* <Select>
                     <Option value="">Select a Value</Option>
                     <Option value="A">A</Option>
                     <Option value="B">B</Option>
-                </Select>
+                </Select> */}
                 {/* <InputIcon></InputIcon> */}
 
                 {/* <InputWithIcon

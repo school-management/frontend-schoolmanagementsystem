@@ -68,7 +68,10 @@ const size = {
     selectBorder: "2px solid #6200ed",
 
     //sidebar styles
-    sideBarBoxShadow: "4px 2px 4px rgba(0, 0, 0, 0.10)"
+    sideBarBoxShadow: "4px 2px 4px rgba(0, 0, 0, 0.10)",
+
+    //topbar and footer
+    topBarBoxShadow: '8px 15px 12px 10px rgba(240, 241, 243, 100)',
 }
 
 const font = {

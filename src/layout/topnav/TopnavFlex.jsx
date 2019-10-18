@@ -9,13 +9,16 @@ import Envelope from '../../assets/icons/fontawesome/envelope-regular.svg';
 import Avatar from '../../assets/img/avatar.jpg';
 import TopbarFlex from '../../components/topbar/TopbarFlex';
 import TopbarIconSection from '../../components/topbar/TopbarIconSection';
+import School from '../../assets/img/stjohns.png';
 
 export default class TopnavFlex extends Component {
     render() {
         return (
             <TopbarFlex style={{ flexWrap: "wrap" }}>
-
-                <Heading5 style={{ marginLeft: "2.5em", flexBasis: "80em" }} >School Management System</Heading5>
+                <BellIcon src={School} style={{ marginLeft: "2.5em", height: "55px", marginTop: "0.2em", borderRadius: "3em", alignItems: "center", flexDirection: "column" }}></BellIcon>
+                <div style={{ flexBasis: "0.3em" }}></div>
+                <TinyDivider style={{ flexDirection: "column", marginBottom: "0.8em" }} />
+                <Heading5 style={{ marginLeft: "0.5em", flexBasis: "70em" }} >St Johns College, Jaffna</Heading5>
 
                 <TinyDivider style={{ flexDirection: "column", marginBottom: "0.8em" }} />
                 <div style={{ flexBasis: "1em" }}></div>

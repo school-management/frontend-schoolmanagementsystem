@@ -3,33 +3,36 @@ import theme from '../../theme/theme';
 
 
 
-const TopbarFlex = styled.div`
+const Footer = styled.div`
     background: ${theme.colors.white};
     width: 98%;
-    height: 20%;
+    height: 10%;
     margin-left: 0.8em;
-    text-align: left;
+    text-align: center;
     align-content: center;    
     color: ${theme.colors.gray};
     font-size: ${theme.size.fontDefault};
     font-weight: 400;
     font-family: ${theme.font.fontFamily};
-    /* box-shadow: ${theme.size.btnBoxShadow1}; */
-    border-bottom-right-radius: 0.8em;
-    border-bottom-left-radius: 0.8em;
-    border-bottom: 4px;
     box-shadow: ${theme.size.topBarBoxShadow};
+    border-top-right-radius: 0.8em;
+    border-top-left-radius: 0.8em;
+    border-bottom: 4px;
+    box-shadow: ${theme.size.inputBoxShadowWhenHover1};
     display: flex;
     flex-direction: row;
-   
-   ${props => props.home && css} {
-       box-shadow: "1px 2px 3px 5px rgba(0,0,0,0.20)";
-       background: ${theme.colors.white};
-   }
+
+    /* ${props => props.layout && css`
+        width: 82%; 
+        display: flex;
+        flex-direction: column;
+    `}
+     */
+
 
 
 
    
 
 `
-export default TopbarFlex;
+export default Footer;

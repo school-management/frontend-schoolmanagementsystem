@@ -38,6 +38,7 @@ const BasicCard = styled.div`
     border-radius: ${theme.size.cardsRadius};
     background: ${theme.colors.white};
     cursor: pointer;
+    font-weight: 600;
 
 
     &:hover{
