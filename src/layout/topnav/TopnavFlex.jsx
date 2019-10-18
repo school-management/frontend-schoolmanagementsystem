@@ -15,7 +15,7 @@ export default class TopnavFlex extends Component {
     render() {
         return (
             <TopbarFlex style={{ flexWrap: "wrap" }}>
-                <BellIcon src={School} style={{ marginLeft: "2.5em", height: "55px", marginTop: "0.2em", borderRadius: "3em", alignItems: "center", flexDirection: "column" }}></BellIcon>
+                <BellIcon src={School} style={{ marginLeft: "2.5em", height: "48px", marginTop: "0.2em", borderRadius: "3em", alignItems: "center", flexDirection: "column" }}></BellIcon>
                 <div style={{ flexBasis: "0.3em" }}></div>
                 <TinyDivider style={{ flexDirection: "column", marginBottom: "0.8em" }} />
                 <Heading5 style={{ marginLeft: "0.5em", flexBasis: "70em" }} >St Johns College, Jaffna</Heading5>

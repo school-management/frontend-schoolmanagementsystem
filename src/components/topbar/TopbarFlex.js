@@ -6,8 +6,9 @@ import theme from '../../theme/theme';
 const TopbarFlex = styled.div`
     background: ${theme.colors.white};
     width: 98%;
-    height: 20%;
+    height: 22%;
     margin-left: 0.8em;
+    margin-bottom: -0.49em;
     text-align: left;
     align-content: center;    
     color: ${theme.colors.gray};

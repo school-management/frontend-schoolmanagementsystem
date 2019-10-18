@@ -6,7 +6,7 @@ const FlexContainer = styled.div`
     display: flex;
     padding: 0.7em;
     margin-left: 0.3em;
-    margin-bottom: 0.3em;
+    margin-bottom: 0.4em;
     flex-wrap: wrap;
     justify-content: space-between;
 `
