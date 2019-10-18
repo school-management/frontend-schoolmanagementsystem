@@ -10,8 +10,8 @@ export const FlexedRow = styled.div`
 `
 export const FlexedCol = styled.div`
     flex-direction: column;
-    display: flex;
-
+    
+    flex-wrap: wrap;
     
 
 `
