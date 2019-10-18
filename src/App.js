@@ -9,11 +9,14 @@ import Cards from './screens/Cards';
 import Layout from './layout/Layout';
 import GlobalStyle from './globalstyle/GlobalStyle';
 import Router from './router/Router';
+import Table from './components/table/Table';
+import TableCom from './screens/Table';
 
 
 function App() {
   return (
-    <Router />
+    // <Router />
+    <TableCom />
   );
 }
 

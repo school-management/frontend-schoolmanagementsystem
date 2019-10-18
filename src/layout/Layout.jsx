@@ -22,7 +22,6 @@ export default class Layout extends Component {
                         <Paragraph style={{ opacity: 0.8 }}>This is Sample Content</Paragraph>
                     </Content>
                 </FlexContainer>
-
             </LayoutContainer >
 
         )
