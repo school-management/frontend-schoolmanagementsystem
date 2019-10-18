@@ -10,12 +10,15 @@ import Avatar from '../../assets/img/avatar.jpg';
 import TopbarFlex from '../../components/topbar/TopbarFlex';
 import TopbarIconSection from '../../components/topbar/TopbarIconSection';
 import School from '../../assets/img/stjohns.png';
+import { Link } from 'react-router-dom';
 
 export default class TopnavFlex extends Component {
     render() {
         return (
             <TopbarFlex style={{ flexWrap: "wrap" }}>
-                <BellIcon src={School} style={{ marginLeft: "2.5em", height: "48px", marginTop: "0.2em", borderRadius: "3em", alignItems: "center", flexDirection: "column" }}></BellIcon>
+                <Link to="/">
+                    <BellIcon src={School} style={{ marginLeft: "2.5em", height: "48px", marginTop: "0.2em", borderRadius: "3em", alignItems: "center", flexDirection: "column" }}></BellIcon>
+                </Link>
                 <div style={{ flexBasis: "0.3em" }}></div>
                 <TinyDivider style={{ flexDirection: "column", marginBottom: "0.8em" }} />
                 <Heading5 style={{ marginLeft: "0.5em", flexBasis: "70em" }} >St Johns College, Jaffna</Heading5>
