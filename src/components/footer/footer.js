@@ -6,8 +6,9 @@ import theme from '../../theme/theme';
 const Footer = styled.div`
     background: ${theme.colors.white};
     width: 98%;
-    height: 10%;
+    height: 9%;
     margin-left: 0.8em;
+    margin-top: -0.8em;
     text-align: center;
     align-content: center;    
     color: ${theme.colors.gray};
