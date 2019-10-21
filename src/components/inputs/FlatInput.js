@@ -8,9 +8,10 @@ const FlatInput = styled.input`
     padding: ${theme.size.inputPadding};
     border: ${theme.size.inputBorder}; 
     box-shadow: ${theme.size.inputBoxShadow};
-    border-color: ${theme.colors.inputPurple};
+    border-color: ${theme.colors.main};
     width: ${theme.size.inputWidth};
-   
+    
+    /* margin-left:2em; */
     font-family: ${theme.font.fontFamily};
     border-top-color: ${theme.colors.white};
     border-right-color: ${theme.colors.white};
@@ -19,11 +20,11 @@ const FlatInput = styled.input`
     border-top-right-radius: 0.2em;
 
     &:focus {
-        border-color: ${theme.colors.inputPurpleWhenFocus};
-        width: ${theme.size.inputWidthWhenFocus};
+     /*   border-color: ${theme.colors.inputPurpleWhenFocus};
+        /* width: ${theme.size.inputWidthWhenFocus}; */
         box-shadow: ${theme.size.inputBoxShadowWhenFocus};
         padding: ${theme.size.inputPaddingWhenFocus};
-        outline: ${theme.size.inputOutline};
+        /*outline: ${theme.size.inputOutline};
         border-radius: 0.3em;
         /* transform: translateX(0.3em); */
         transition: 50ms;
@@ -31,12 +32,12 @@ const FlatInput = styled.input`
 
     };
 
-    &:hover {
+    /* &:hover {
         box-shadow: ${theme.size.inputBoxShadowWhenHover1};
-    }
+    } */
 
     /* temporary use */ 
-    margin: 2em;
+   
 
 
 `

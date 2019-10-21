@@ -30,8 +30,7 @@ const Input = styled.input`
         box-shadow: ${theme.size.inputBoxShadowWhenHover};
     }
 
-    /* temporary use */ 
-    margin: 2em;
+    
 
 
 `

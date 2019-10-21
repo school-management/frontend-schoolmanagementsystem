@@ -9,8 +9,8 @@ export default class ContentContainer extends Component {
     render() {
         return (
             <Content>
-                {/* <NewAdmission /> */}
-                <Inputs />
+                <NewAdmission />
+                {/* <Inputs /> */}
             </Content>
         )
     }

@@ -45,13 +45,13 @@ const size = {
 
     //input field styling
     inputPadding: "0.6em",
-    inputPaddingWhenFocus: "0.7em",
-    inputWidth: "9em",
+    inputPaddingWhenFocus: "0.65em",
+    inputWidth: "11em",
     inputWidthWhenFocus: "10em",
     inputBorder: "2px solid #979797",
     inputBoxShadow: "3px 10px 20px rgba(0, 0, 0, 0.05)",
     inputBoxShadowWhenHover: "5px 15px 40px rgba(0, 0, 0, 0.10)",
-    inputBoxShadowWhenHover1: "5px 15px 40px rgba(0, 0, 0, 0.04)",
+    inputBoxShadowWhenHover1: "4px 11px 22px rgba(0, 0, 0, 0.04)",
     inputBoxShadowWhenFocus: "10px 20px 80px rgba(0, 0, 0, 0.20)",
     inputOutline: "none",
 
