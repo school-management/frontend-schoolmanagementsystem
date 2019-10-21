@@ -7,5 +7,6 @@ const HomeContainer = styled.div`
     height: 100%;
     /* width: 100%; */
     background: ${theme.colors.base};
+  
 `
 export default HomeContainer;

@@ -26,6 +26,7 @@ const TopbarFlex = styled.div`
    ${props => props.home && css} {
        box-shadow: "1px 2px 3px 5px rgba(0,0,0,0.20)";
        background: ${theme.colors.white};
+      
    }
 
 
