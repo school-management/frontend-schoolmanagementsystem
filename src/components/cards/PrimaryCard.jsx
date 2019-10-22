@@ -10,13 +10,13 @@ export default class PrimaryCard extends Component {
         return (<div >
             <Card >
                 <Heading3>Students</Heading3>
-                <Paragraph>CHC student details here..... </Paragraph>
+                <Paragraph>{this.props}</Paragraph>
             </Card>
 
             <Card >
                 <Heading3>Students</Heading3>
             </Card>
-            <HomeCard></HomeCard>
+
         </div>
         )
     }

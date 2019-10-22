@@ -11,12 +11,14 @@ import GlobalStyle from './globalstyle/GlobalStyle';
 import Router from './router/Router';
 import Table from './components/table/Table';
 import TableCom from './screens/Table';
+import NewAdmission from './screens/student/admission/NewAdmission';
 
 
 function App() {
   return (
     <Router />
     // <TableCom />
+    // <NewAdmission />
   );
 }
 export default App;
