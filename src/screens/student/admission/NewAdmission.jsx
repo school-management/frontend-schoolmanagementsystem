@@ -11,17 +11,18 @@ import FormContainer from '../../../components/containers/FormContainer';
 import FlatInput from '../../../components/inputs/FlatInput';
 import { FormColumn, FormRow, FormWrapper } from '../../../components/containers/FormColumn';
 import PrimaryButton from '../../../components/button/PrimaryButton';
+import { PlaceholderInput, FLabel } from '../../../components/inputs/PlaceholderInput';
 
 
 export default class NewAdmission extends Component {
     render() {
         return (
             <FormContainer>
-                <Heading3 style={{ textAlign: "center" }}>New Admission</Heading3>
+                <Heading3 style={{ textAlign: "center", marginTop: "-1em" }}>New Admission</Heading3>
                 <FormRow>
                     <FormColumn>
-                        <Label>Admission No :</Label>
-                        <FlatInput placeholder="Admission No"></FlatInput>
+                        <Label for="admission_no">Admission No</Label>
+                        <FlatInput placeholder="Enter an Admission Number" name="admission_no"></FlatInput>
                     </FormColumn>
 
                     <FormColumn>

@@ -7,11 +7,9 @@ import { Link } from 'react-router-dom';
 
 
 
-
-const NavLink = styled(Link)`
-
-        background: #5d4f8d;
-        padding: 0.8em;
+const NavLinkSub = styled(Link)`
+        background: ${theme.colors.main};
+        padding: 0.5em;
         cursor: pointer;
         border-radius: 1.6em;
         text-decoration: none;
@@ -22,6 +20,9 @@ const NavLink = styled(Link)`
         color: ${theme.colors.white};
         font-family: ${theme.font.fontFamily};
         z-index: 1000;
+        transform: translateZ(20px);
+        transition: 0.3s linear;
+        text-emphasis-style: embed;
 
 `
-export default NavLink;
+export default NavLinkSub;

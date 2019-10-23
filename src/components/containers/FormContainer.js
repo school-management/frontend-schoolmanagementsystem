@@ -3,7 +3,7 @@ import theme from '../../theme/theme';
 
 const FormContainer = styled.div`
     padding:3em;
-    justify-content: space-between;
+    justify-content: space-around;
     align-content: center;
     text-align: justify;
     flex-wrap: wrap;

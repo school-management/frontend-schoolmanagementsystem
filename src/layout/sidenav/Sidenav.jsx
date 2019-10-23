@@ -6,8 +6,30 @@ import Navigator from '../../components/sidebar/Navigator';
 import NavLink from '../../components/links/NavLink';
 import NavBox from '../../components/sidebar/NavBox';
 import SidenavCard from '../../components/cards/SidenavCard';
+import NavBoxSub from '../../components/sidebar/NavBoxSub';
+import NavLinkSub from '../../components/links/NavLinkSub';
+
+
 
 export default class Sidenav extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            onToggle: false
+
+        }
+    }
+
+    toggleDefault = (e, props) => {
+        this.setState({
+            onToggle: !this.state.onToggle
+        })
+
+
+
+    };
+
     render() {
         return (
             <Sidebar>
@@ -17,23 +39,33 @@ export default class Sidenav extends Component {
 
 
                 <Navigator>
-                    <NavBox default>
-                        <NavLink href='/dashboard'>Dashboard</NavLink>
+                    <NavBox isChecked={false} onClick={() => this.toggleDefault(this.props)}>
+                        <NavLink to='/dashboard'>Dashboard</NavLink>
                     </NavBox>
-                    <NavBox>
-                        <NavLink href='/profile'>Profile</NavLink>
+                    <NavBox isChecked={false} onClick={() => this.toggleDefault(this.props)}>
+                        <NavLink>Profile</NavLink>
+                        {this.state.onToggle &&
+                            <div>
+                                <NavBoxSub>
+                                    <NavLinkSub to="/profile/view">View</NavLinkSub>
+                                </NavBoxSub>
+                                <NavBoxSub>
+                                    <NavLinkSub to="/profile/edit">Edit</NavLinkSub>
+                                </NavBoxSub>
+                            </div>}
+
                     </NavBox>
-                    <NavBox>
-                        <NavLink href='/admission'>Admission</NavLink>
+                    <NavBox isChecked={false} onClick={() => this.toggleDefault(this.props)}>
+                        <NavLink to='/admission'>Admission</NavLink>
                     </NavBox>
-                    <NavBox>
-                        <NavLink href='/profile'>Ex.Curricular&nbsp;Activities</NavLink>
+                    <NavBox isChecked={false} onClick={() => this.toggleDefault(this.props)}>
+                        <NavLink to='/profile'>Ex.Curricular&nbsp;Activities</NavLink>
                     </NavBox>
-                    <NavBox>
-                        <NavLink href='/profile'>Leaving&nbsp;Certificate</NavLink>
+                    <NavBox isChecked={false} onClick={() => this.toggleDefault(this.props)}>
+                        <NavLink to='/profile'>Leaving&nbsp;Certificate</NavLink>
                     </NavBox>
-                    <NavBox>
-                        <NavLink href='/profile'>Promotion</NavLink>
+                    <NavBox isChecked={false} onClick={() => this.toggleDefault(this.props)}>
+                        <NavLink to='/profile'>Promotion</NavLink>
                     </NavBox>
 
 

@@ -8,7 +8,7 @@ const Input = styled.input`
     padding: ${theme.size.inputPadding};
     border: ${theme.size.inputBorder}; 
     border-radius: 0.4em;
-    border-color: ${theme.colors.inputPurpleWhenFocus};
+    border-color: ${theme.colors.main};
     width: ${theme.size.inputWidth};
     box-shadow: ${theme.size.inputBoxShadow};
     font-family: ${theme.font.fontFamily};

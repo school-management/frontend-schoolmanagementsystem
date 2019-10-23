@@ -10,7 +10,9 @@ const FlatInput = styled.input`
     box-shadow: ${theme.size.inputBoxShadow};
     border-color: ${theme.colors.main};
     width: ${theme.size.inputWidth};
-    
+    height: ${theme.size.inputHeight};
+    font-size: ${theme.size.fontDefault};
+    font-weight: ${theme.size.bold};
     /* margin-left:2em; */
     font-family: ${theme.font.fontFamily};
     border-top-color: ${theme.colors.white};

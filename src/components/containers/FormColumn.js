@@ -4,7 +4,7 @@ import theme from '../../theme/theme';
 export const FormRow = styled.div`
     display: flex;
     flex-direction:row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     padding-bottom:2em;
 `
 

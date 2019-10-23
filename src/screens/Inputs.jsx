@@ -26,7 +26,7 @@ export default class Inputs extends Component {
         <br />
         <br />
 
-        <PlaceholderInput placeholder="Username" name="username" />
+
         <br />
         <br />
         <br />

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Topbar from '../../components/topbar/Topbar';
-import Heading5 from '../../components/typography/Heading5';
+import Heading4 from '../../components/typography/Heading4';
 import Bell from '../../assets/icons/fontawesome/bell-regular.svg';
 import { Row, Col } from 'react-grid-system';
 import BellIcon from '../../components/icon/topbar/BellIcon';
@@ -17,11 +17,11 @@ export default class TopnavFlex extends Component {
         return (
             <TopbarFlex style={{ flexWrap: "wrap" }}>
                 <Link to="/">
-                    <BellIcon src={School} style={{ marginLeft: "2.5em", height: "48px", marginTop: "0.2em", borderRadius: "3em", alignItems: "center", flexDirection: "column" }}></BellIcon>
+                    <BellIcon src={School} style={{ marginLeft: "2.5em", height: "54px", marginTop: "0.1em", borderRadius: "3em", alignItems: "center", flexDirection: "column" }}></BellIcon>
                 </Link>
                 <div style={{ flexBasis: "0.3em" }}></div>
-                <TinyDivider style={{ flexDirection: "column", marginBottom: "0.8em" }} />
-                <Heading5 style={{ marginLeft: "0.5em", flexBasis: "70em" }} >St Johns College, Jaffna</Heading5>
+                <TinyDivider style={{ flexDirection: "column", marginBottom: "1em" }} />
+                <Heading4 style={{ marginLeft: "0.5em", flexBasis: "80em" }} >St Johns College, Jaffna</Heading4>
 
                 <TinyDivider style={{ flexDirection: "column", marginBottom: "0.8em" }} />
                 <div style={{ flexBasis: "1em" }}></div>
