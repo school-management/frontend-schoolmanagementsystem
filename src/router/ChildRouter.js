@@ -18,6 +18,7 @@ class ChildRouter extends Component {
                     <Route path="/student/profile/view" component={ViewProfile} />
                     <Route path="/student/profile/edit" component={EditProfile} />
                     <Route path="/student/admission/new" component={NewAdmission} />
+
                 </Switch>
             </RouteIt>
 

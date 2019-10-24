@@ -8,7 +8,7 @@ const TopbarFlex = styled.div`
     width: 98%;
     height: 22%;
     margin-left: 0.8em;
-    margin-bottom: -0.49em;
+    margin-bottom: 0em;
     text-align: left;
     align-content: center;    
     color: ${theme.colors.gray};

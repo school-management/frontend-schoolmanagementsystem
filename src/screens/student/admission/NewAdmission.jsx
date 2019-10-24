@@ -13,14 +13,15 @@ import { FormColumn, FormRow, FormWrapper } from '../../../components/containers
 import PrimaryButton from '../../../components/button/PrimaryButton';
 import { PlaceholderInput, FLabel } from '../../../components/inputs/PlaceholderInput';
 import Step1 from './admissionsteps/Step1';
+import AdmissionMultistepRouter from '../../../router/AdmissionMultistepRouter';
 
 export default class NewAdmission extends Component {
     render() {
         return (
-            <div>
+            <FormContainer>
                 <Heading3 style={{ textAlign: "center", marginTop: "-1em" }}>New Admission</Heading3>
-                <Step1></Step1>
-            </div>
+
+            </FormContainer>
         )
     }
 }
