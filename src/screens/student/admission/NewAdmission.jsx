@@ -12,15 +12,15 @@ import FlatInput from '../../../components/inputs/FlatInput';
 import { FormColumn, FormRow, FormWrapper } from '../../../components/containers/FormColumn';
 import PrimaryButton from '../../../components/button/PrimaryButton';
 import { PlaceholderInput, FLabel } from '../../../components/inputs/PlaceholderInput';
-
+import Step1 from './admissionsteps/Step1';
 
 export default class NewAdmission extends Component {
     render() {
         return (
-            <FormContainer>
+            <div>
                 <Heading3 style={{ textAlign: "center", marginTop: "-1em" }}>New Admission</Heading3>
-
-            </FormContainer>
+                <Step1></Step1>
+            </div>
         )
     }
 }
