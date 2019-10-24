@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/FrontEnd-SchoolManagementSystem/static/css/main.d0190f4d.chunk.css",
-    "main.js": "/FrontEnd-SchoolManagementSystem/static/js/main.5b5e4683.chunk.js",
-    "main.js.map": "/FrontEnd-SchoolManagementSystem/static/js/main.5b5e4683.chunk.js.map",
-    "runtime-main.js": "/FrontEnd-SchoolManagementSystem/static/js/runtime-main.43c0a181.js",
-    "runtime-main.js.map": "/FrontEnd-SchoolManagementSystem/static/js/runtime-main.43c0a181.js.map",
-    "static/js/2.18fa1088.chunk.js": "/FrontEnd-SchoolManagementSystem/static/js/2.18fa1088.chunk.js",
-    "static/js/2.18fa1088.chunk.js.map": "/FrontEnd-SchoolManagementSystem/static/js/2.18fa1088.chunk.js.map",
-    "index.html": "/FrontEnd-SchoolManagementSystem/index.html",
-    "precache-manifest.0658f58b24856e8d3e1d3e2e0975ad76.js": "/FrontEnd-SchoolManagementSystem/precache-manifest.0658f58b24856e8d3e1d3e2e0975ad76.js",
-    "service-worker.js": "/FrontEnd-SchoolManagementSystem/service-worker.js",
-    "static/css/main.d0190f4d.chunk.css.map": "/FrontEnd-SchoolManagementSystem/static/css/main.d0190f4d.chunk.css.map",
-    "static/media/avatar.jpg": "/FrontEnd-SchoolManagementSystem/static/media/avatar.a5151bc1.jpg",
-    "static/media/bell-regular.svg": "/FrontEnd-SchoolManagementSystem/static/media/bell-regular.ac874803.svg",
-    "static/media/book-read.svg": "/FrontEnd-SchoolManagementSystem/static/media/book-read.4647858e.svg",
-    "static/media/envelope-regular.svg": "/FrontEnd-SchoolManagementSystem/static/media/envelope-regular.21c1e3b2.svg",
-    "static/media/school.jpg": "/FrontEnd-SchoolManagementSystem/static/media/school.fad4640b.jpg",
-    "static/media/stjohns.png": "/FrontEnd-SchoolManagementSystem/static/media/stjohns.13c4defe.png",
-    "static/media/user-graduate-solid.svg": "/FrontEnd-SchoolManagementSystem/static/media/user-graduate-solid.d4ef9082.svg"
+    "main.css": "/frontend-schoolmanagementsystem/static/css/main.d0190f4d.chunk.css",
+    "main.js": "/frontend-schoolmanagementsystem/static/js/main.3c2b28f2.chunk.js",
+    "main.js.map": "/frontend-schoolmanagementsystem/static/js/main.3c2b28f2.chunk.js.map",
+    "runtime-main.js": "/frontend-schoolmanagementsystem/static/js/runtime-main.f6973982.js",
+    "runtime-main.js.map": "/frontend-schoolmanagementsystem/static/js/runtime-main.f6973982.js.map",
+    "static/js/2.363151fa.chunk.js": "/frontend-schoolmanagementsystem/static/js/2.363151fa.chunk.js",
+    "static/js/2.363151fa.chunk.js.map": "/frontend-schoolmanagementsystem/static/js/2.363151fa.chunk.js.map",
+    "index.html": "/frontend-schoolmanagementsystem/index.html",
+    "precache-manifest.49de688b62d6d467f41617ae1b9117b5.js": "/frontend-schoolmanagementsystem/precache-manifest.49de688b62d6d467f41617ae1b9117b5.js",
+    "service-worker.js": "/frontend-schoolmanagementsystem/service-worker.js",
+    "static/css/main.d0190f4d.chunk.css.map": "/frontend-schoolmanagementsystem/static/css/main.d0190f4d.chunk.css.map",
+    "static/media/avatar.jpg": "/frontend-schoolmanagementsystem/static/media/avatar.a5151bc1.jpg",
+    "static/media/bell-regular.svg": "/frontend-schoolmanagementsystem/static/media/bell-regular.ac874803.svg",
+    "static/media/book-read.svg": "/frontend-schoolmanagementsystem/static/media/book-read.4647858e.svg",
+    "static/media/envelope-regular.svg": "/frontend-schoolmanagementsystem/static/media/envelope-regular.21c1e3b2.svg",
+    "static/media/school.jpg": "/frontend-schoolmanagementsystem/static/media/school.fad4640b.jpg",
+    "static/media/stjohns.png": "/frontend-schoolmanagementsystem/static/media/stjohns.13c4defe.png",
+    "static/media/user-graduate-solid.svg": "/frontend-schoolmanagementsystem/static/media/user-graduate-solid.d4ef9082.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.43c0a181.js",
-    "static/js/2.18fa1088.chunk.js",
+    "static/js/runtime-main.f6973982.js",
+    "static/js/2.363151fa.chunk.js",
     "static/css/main.d0190f4d.chunk.css",
-    "static/js/main.5b5e4683.chunk.js"
+    "static/js/main.3c2b28f2.chunk.js"
   ]
 }
