@@ -20,7 +20,7 @@ export default class NewAdmission extends Component {
         return (
             <FormContainer>
                 <Heading3 style={{ textAlign: "center", marginTop: "-1em" }}>New Admission</Heading3>
-
+                <AdmissionMultistepRouter />
             </FormContainer>
         )
     }
