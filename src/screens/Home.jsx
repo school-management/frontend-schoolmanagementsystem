@@ -25,7 +25,7 @@ export default class Home extends Component {
                 <HomeContainer>
                     <Row>
                         <Col md={2}>
-                            <Link to="/dashboard" style={{ textDecoration: "none" }}>
+                            <Link to="/student" style={{ textDecoration: "none" }}>
                                 <BasicCard>
                                     <HomeIcons src="https://img.icons8.com/color/150/000000/student-male--v2.png" />
                                     <Heading3 style={{ textAlign: "center", textDecoration: "none" }}>Student</Heading3>

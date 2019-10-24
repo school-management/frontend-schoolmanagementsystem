@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import Buttons from '../../screens/Buttons';
 import Inputs from '../../screens/Inputs';
 import NewAdmission from '../../screens/student/admission/NewAdmission';
+import ChildRouter from '../../router/ChildRouter';
 
 export default class ContentContainer extends Component {
     render() {
@@ -11,7 +12,7 @@ export default class ContentContainer extends Component {
             <Content>
                 {/* <Buttons /> */}
                 {/* <Inputs /> */}
-                <NewAdmission />
+                <ChildRouter />
                 {/* <Inputs /> */}
             </Content>
         )

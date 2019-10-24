@@ -11,7 +11,7 @@ class Router extends Component {
             <RouteIt>
                 <Switch>
                     <Route exact path="/" component={Home} />
-                    <Route path="/dashboard" component={Layout} />
+                    <Route path="/student" component={Layout} />
                 </Switch>
             </RouteIt>
 

@@ -15,8 +15,10 @@ const NavBox = styled.div`
     margin-top: 0.7em;
     cursor: pointer;
 
+  
+
     /* toggling function styles */
-    ${props => props.isChecked && css`
+    ${props => props.isCheck && css`
     ${NavLink} {
             background: ${theme.colors.base};
             color: ${theme.colors.main};
@@ -34,6 +36,10 @@ const NavBox = styled.div`
         box-shadow: ${theme.size.sideBarBoxShadow}
     
     `}
+
+
+    /* on another link clicks the active content style applies to the new selected item */
+
     
     
     /* if a nav box have branches then it could be implemented */
@@ -118,6 +124,11 @@ const NavBox = styled.div`
         border-bottom-left-radius: 1.5em;
 
     } */
+
+    &::selection {
+      background: black;
+    }
+
 
 `
 
