@@ -13,8 +13,6 @@ import theme from '../../theme/theme';
 import Nav from '../../components/links/Nav';
 
 
-
-
 export default class Sidenav extends Component {
 
     constructor(props) {
@@ -31,7 +29,6 @@ export default class Sidenav extends Component {
 
     //profile toggling 
     expandProfileMenu = (e, props) => {
-
         if (!this.state.onProfileToggle) {
             this.setState({
                 onProfileToggle: true,
@@ -69,6 +66,7 @@ export default class Sidenav extends Component {
                 isChecked: true
             })
         }
+
         if (this.state.onAdmissionToggle) {
             this.setState({
                 onProfileToggle: false,
@@ -130,10 +128,6 @@ export default class Sidenav extends Component {
             })
         }
     };
-
-
-
-
 
     collapseProfileMenu = () => {
         if (!this.state.onProfileToggle) {

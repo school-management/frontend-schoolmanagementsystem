@@ -20,22 +20,16 @@ const options = [
 
 export default class Step2 extends Component {
 
-    handleClickNext = (e) => {
-        window.location.hash = "/student/admission/new/step3"
-    }
-    handleClickPrevious = (e) => {
-        window.location.hash = "/student/admission/new/step1"
-    }
 
     render() {
         return (
             <FormContainer>
-                <br />
                 <form>
                     <FormRow>
                         <FormColumn>
                             <Label>Father Name</Label>
                             <FlatInput placeholder="Enter your Father Name"></FlatInput>
+
                         </FormColumn>
 
                         <FormColumn>
@@ -136,14 +130,6 @@ export default class Step2 extends Component {
                     <FormRow>
                         <FormColumn>
                             <Label>Guardian Email:</Label> <FlatInput placeholder="Guardian Email"></FlatInput>
-                        </FormColumn>
-                    </FormRow>
-                    <FormRow>
-                        <FormColumn>
-                            <PrimaryButton onClick={(e) => this.handleClickPrevious(e)} type="button"> Previous</PrimaryButton>
-                        </FormColumn>
-                        <FormColumn>
-                            <PrimaryButton onClick={(e) => this.handleClickNext(e)} type="button"> Next</PrimaryButton>
                         </FormColumn>
                     </FormRow>
                 </form>

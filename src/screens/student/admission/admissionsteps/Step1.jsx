@@ -12,11 +12,8 @@ import FlatInput from '../../../../components/inputs/FlatInput';
 import { FormColumn, FormRow, FormWrapper } from '../../../../components/containers/FormColumn';
 import PrimaryButton from '../../../../components/button/PrimaryButton';
 
-const options = [
-    { value: 'True', label: 'YES' },
-    { value: 'False', label: 'No' },
 
-]
+
 
 export default class Step1 extends Component {
 
