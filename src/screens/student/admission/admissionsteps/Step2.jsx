@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Layout from '../../../../layout/Layout'
 import Heading3 from '../../../../components/typography/Heading3'
 import { Container, Row, Col } from 'react-grid-system'
+import Select from 'react-select'
 
 
 
@@ -12,7 +13,10 @@ import FlatInput from '../../../../components/inputs/FlatInput';
 import { FormColumn, FormRow, FormWrapper } from '../../../../components/containers/FormColumn';
 import PrimaryButton from '../../../../components/button/PrimaryButton';
 
-
+const options = [
+    { value: 'True', label: 'YES' },
+    { value: 'False', label: 'No' }
+]
 
 export default class Step2 extends Component {
 
@@ -30,95 +34,108 @@ export default class Step2 extends Component {
                 <form>
                     <FormRow>
                         <FormColumn>
-                            <Label>Admission No</Label>
-                            <FlatInput placeholder="Enter an Admission Number"></FlatInput>
+                            <Label>Father Name</Label>
+                            <FlatInput placeholder="Enter your Father Name"></FlatInput>
                         </FormColumn>
 
                         <FormColumn>
-                            <Label>First Name :</Label>
-                            <FlatInput placeholder="First Name"></FlatInput>
+                            <Label>Father NIC No</Label>
+                            <FlatInput placeholder="Father NIC No"></FlatInput>
                         </FormColumn>
 
 
                         <FormColumn>
-                            <Label>Last Name :</Label>
-                            <FlatInput placeholder="Last Name"></FlatInput>
+                            <Label>Father Occupation :</Label>
+                            <FlatInput placeholder="Father Occupation "></FlatInput>
                         </FormColumn>
 
                     </FormRow>
                     <FormRow>
                         <FormColumn>
-                            <Label>Middle Name :</Label>
-                            <FlatInput placeholder="Middle Name"></FlatInput>
+                            <Label>Father Moblie No:</Label>
+                            <FlatInput placeholder="Father Moblie No"></FlatInput>
 
                         </FormColumn>
 
 
                         <FormColumn>
-                            <Label>Admission Date :</Label>
-                            <FlatInput placeholder="Admission Date"></FlatInput>
+                            <Label>Father Office Address :</Label>
+                            <FlatInput placeholder="Father Office Address"></FlatInput>
                         </FormColumn>
 
 
 
                         <FormColumn>
-                            <Label>Address :</Label>
-                            <FlatInput placeholder="Address"></FlatInput>
+                            <Label>Father Email:</Label>
+                            <FlatInput placeholder="Father Email"></FlatInput>
                         </FormColumn>
                     </FormRow>
                     <FormRow>
                         <FormColumn>
-                            <Label>Contact No :</Label>
-                            <FlatInput placeholder="Contact No"></FlatInput>
+                            <Label>Father Old Student :</Label>
+                            <Select style={{ height: "10px" }} options={options} />
                         </FormColumn>
                         <FormColumn>
-                            <Label>Religion :</Label>
-                            <FlatInput placeholder="Religion"></FlatInput>
+                            <Label>From:</Label>
+                            <FlatInput placeholder="From"></FlatInput>
                         </FormColumn>
                         <FormColumn>
-                            <Label>Race :</Label>
-                            <FlatInput placeholder="Race"></FlatInput>
+                            <Label>To :</Label>
+                            <FlatInput placeholder="To"></FlatInput>
                         </FormColumn>
                     </FormRow>
                     <FormRow>
                         <FormColumn>
-                            <Label>Date Of Birth :</Label>
-                            <FlatInput placeholder="Date Of Birth"></FlatInput>
+                            <Label>Mother Name :</Label>
+                            <FlatInput placeholder="Mother Name"></FlatInput>
 
                         </FormColumn>
 
                         <FormColumn>
-                            <Label>GN-Division :</Label> <FlatInput placeholder="GN-Division"></FlatInput>
+                            <Label>Mother Occupation :</Label>
+                            <FlatInput placeholder="Mother Occupation"></FlatInput>
                         </FormColumn>
                         <FormColumn>
-                            <Label>Gender :</Label> <FlatInput placeholder="Gender"></FlatInput>
-                        </FormColumn>
-                    </FormRow>
-                    <FormRow>
-                        <FormColumn>
-                            <Label>Class :</Label> <FlatInput placeholder="Class"></FlatInput>
-                        </FormColumn>
-                        <FormColumn>
-                            <Label>Former School :</Label> <FlatInput placeholder="Former School"></FlatInput>
-                        </FormColumn>
-                        <FormColumn>
-                            <Label>Hostel Need :</Label> <FlatInput placeholder="Hostel Need"></FlatInput>
+                            <Label>Mother Office Address :</Label>
+                            <FlatInput placeholder="Mother Office Address "></FlatInput>
                         </FormColumn>
                     </FormRow>
                     <FormRow>
                         <FormColumn>
-                            <Label>Achieve Study  :</Label> <FlatInput placeholder="Achieve Study"></FlatInput>
+                            <Label>Mother Mobile No:</Label>
+                            <FlatInput placeholder="Mother Mobile No"></FlatInput>
                         </FormColumn>
                         <FormColumn>
-                            <Label>Achieve Sports :</Label> <FlatInput placeholder="Achieve Sports"></FlatInput>
+                            <Label>Mother Email :</Label> <FlatInput placeholder="Mother Email"></FlatInput>
                         </FormColumn>
                         <FormColumn>
-                            <Label>Distance :</Label> <FlatInput placeholder="Distance"></FlatInput>
+                            <Label>Mother Old Student:</Label> <Select style={{ height: "10px" }} options={options} />
                         </FormColumn>
                     </FormRow>
                     <FormRow>
                         <FormColumn>
-                            <Label>Father's NIC No :</Label> <FlatInput placeholder="Father NIC No"></FlatInput>
+                            <Label>From:</Label> <FlatInput placeholder="From"></FlatInput>
+                        </FormColumn>
+                        <FormColumn>
+                            <Label>To :</Label> <FlatInput placeholder="To"></FlatInput>
+                        </FormColumn>
+                        <FormColumn>
+                            <Label>Guardian Name :</Label> <FlatInput placeholder="Guardian Name"></FlatInput>
+                        </FormColumn>
+                    </FormRow>
+                    <FormRow>
+                        <FormColumn>
+                            <Label>Guardian Occupation:</Label> <FlatInput placeholder="Guardian Occupation"></FlatInput>
+                        </FormColumn>
+                    </FormRow>
+                    <FormRow>
+                        <FormColumn>
+                            <Label>Guardian Moblie No:</Label> <FlatInput placeholder="Guardian Moblie No"></FlatInput>
+                        </FormColumn>
+                    </FormRow>
+                    <FormRow>
+                        <FormColumn>
+                            <Label>Guardian Email:</Label> <FlatInput placeholder="Guardian Email"></FlatInput>
                         </FormColumn>
                     </FormRow>
                     <FormRow>
