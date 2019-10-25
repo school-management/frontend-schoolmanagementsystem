@@ -33,19 +33,19 @@ export default class NewAdmission extends Component {
     render() {
         return (
             <FormContainer>
-                <Heading3 style={{ textAlign: "center", marginTop: "-1em", color: theme.colors.main }}>New Admission</Heading3>
-                <div className='step-progress'>
+                {/* <div className='step-progress'>
                     <StepZilla
                         steps={steps}
                         stepsNavigation={true}
                         prevBtnOnLastStep={true}
                         startAtStep={0}
                         showSteps={true}
-                        nextButtonCls="btn btn-prev btn-primary btn-lg pull-right"
-                        nextTextOnFinalActionStep="Save"
+                        dontValidate={true}
+                        nextButtonCls="btn"
+                        nextTextOnFinalActionStep="Submit"
                     />
-                </div>
-                {/* <AdmissionMultistepRouter /> */}
+                </div> */}
+                <AdmissionMultistepRouter />
             </FormContainer>
         )
     }

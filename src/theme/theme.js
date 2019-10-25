@@ -68,7 +68,7 @@ const size = {
     cardsRadius: "1.5em",
 
     //dropdown or select styles
-    selectBorder: "2px solid #6200ed",
+    selectBorder: "2px solid #5d4f8d",
 
     //sidebar styles
     sideBarBoxShadow: "4px 2px 4px rgba(0, 0, 0, 0.10)",
