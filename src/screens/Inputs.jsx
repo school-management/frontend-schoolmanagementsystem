@@ -6,7 +6,7 @@ import Heading1 from "../components/typography/Heading1";
 import PasswordInput from "../components/inputs/PasswordInput";
 import FlatPasswordInput from "../components/inputs/FlatPasswordInput";
 import Select from "../components/inputs/Select";
-import Option from "../components/inputs/Option";
+
 import InputWithIcon from "../components/inputs/InputWithIcon";
 import InputIcon from "../components/inputs/InputIcon";
 import PlaceholderInput from "../components/inputs/PlaceholderInput";

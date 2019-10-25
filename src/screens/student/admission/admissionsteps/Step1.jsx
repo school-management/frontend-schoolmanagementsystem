@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import Layout from '../../../../layout/Layout'
 import Heading3 from '../../../../components/typography/Heading3'
 import { Container, Row, Col } from 'react-grid-system'
+import Select from 'react-select';
+
 
 
 
@@ -11,7 +13,20 @@ import FormContainer from '../../../../components/containers/FormContainer';
 import FlatInput from '../../../../components/inputs/FlatInput';
 import { FormColumn, FormRow, FormWrapper } from '../../../../components/containers/FormColumn';
 import PrimaryButton from '../../../../components/button/PrimaryButton';
+import Selection from '../../../../components/inputs/Select';
 
+//options for the selections
+const Religion = [
+    { value: 'hinduism', label: 'Hinduism' },
+    { value: 'christianity_rc', label: 'Christianity RC' },
+    { value: 'christianity-nrc', label: 'Christianity Non-RC' }
+]
+
+const Race = [
+    { value: 'sinhalese', label: 'Sinhalese' },
+    { value: 'christianity_rc', label: 'Christianity RC' },
+    { value: 'christianity-nrc', label: 'Christianity Non-RC' }
+]
 
 
 export default class Step1 extends Component {
@@ -67,11 +82,11 @@ export default class Step1 extends Component {
                         </FormColumn>
                         <FormColumn>
                             <Label>Religion :</Label>
-                            <FlatInput placeholder="Religion"></FlatInput>
+                            <Selection options={Religion} />
                         </FormColumn>
                         <FormColumn>
                             <Label>Race :</Label>
-                            <FlatInput placeholder="Race"></FlatInput>
+                            <Selection options={Race} />
                         </FormColumn>
                     </FormRow>
                     <FormRow>
