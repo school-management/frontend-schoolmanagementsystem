@@ -24,10 +24,33 @@ const Religion = [
 
 const Race = [
     { value: 'sinhalese', label: 'Sinhalese' },
-    { value: 'christianity_rc', label: 'Christianity RC' },
-    { value: 'christianity-nrc', label: 'Christianity Non-RC' }
+    { value: 'Tamil', label: 'Tamil' },
+    { value: 'Indian-Tamil', label: 'Indian-Tamil' },
+    { value: 'Muslims', label: 'Muslims' }
 ]
 
+const Gender = [
+    { value: 'Male', label: 'Male' },
+    { value: 'Female', label: 'Female' },
+
+]
+
+const Class = [
+    { value: '1', label: '1' },
+    { value: '1', label: '2' },
+    { value: '1', label: '3' },
+    { value: '1', label: '4' },
+    { value: '1', label: '5' },
+    { value: '1', label: '6' },
+    { value: '1', label: '7' },
+    { value: '1', label: '8' },
+    { value: '1', label: '9' },
+    { value: '1', label: '10' },
+    { value: '1', label: '11' },
+    { value: '1', label: '12' },
+    { value: '1', label: '13' },
+
+]
 
 
 export default class Step1 extends Component {
@@ -109,12 +132,12 @@ export default class Step1 extends Component {
                             <Label>GN-Division :</Label> <FlatInput placeholder="GN-Division"></FlatInput>
                         </FormColumn>
                         <FormColumn>
-                            <Label>Gender :</Label> <FlatInput placeholder="Gender"></FlatInput>
+                            <Label>Gender :</Label> <Selection options={Gender} />
                         </FormColumn>
                     </FormRow>
                     <FormRow>
                         <FormColumn>
-                            <Label>Class :</Label> <FlatInput placeholder="Class"></FlatInput>
+                            <Label>Class :</Label> <Selection options={Class} />
                         </FormColumn>
                         <FormColumn>
                             <Label>Former School :</Label> <FlatInput placeholder="Former School"></FlatInput>

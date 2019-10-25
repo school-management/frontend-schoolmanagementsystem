@@ -12,14 +12,30 @@ import FormContainer from '../../../../components/containers/FormContainer';
 import FlatInput from '../../../../components/inputs/FlatInput';
 import { FormColumn, FormRow, FormWrapper } from '../../../../components/containers/FormColumn';
 import PrimaryButton from '../../../../components/button/PrimaryButton';
+import Selection from '../../../../components/inputs/Select'
 
 const options = [
     { value: 'True', label: 'YES' },
     { value: 'False', label: 'No' }
 ]
 
+const sel = [
+    { value: true, label: 'Yes' },
+    { value: true, label: 'No' }
+]
+
 export default class Step2 extends Component {
 
+    constructor(props) {
+        super(props);
+        this.state = { perent: [], name: null };
+        this.state = { parId: "", fatherName: "", bookName: "" };
+        this.handleChangeid = this.handleChangeid.bind(this);
+        this.handleChangename = this.handleChangename.bind(this);
+        this.handleChangeisbn = this.handleChangeisbn.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
+        this.routeListBook = this.routeListBook.bind(this);
+    }
 
     render() {
         return (
@@ -67,10 +83,11 @@ export default class Step2 extends Component {
                 <FormRow>
                     <FormColumn>
                         <Label>Father Old Student :</Label>
-                        <Select style={{ height: "10px" }} options={options} />
+                        <Selection options={sel}></Selection>
                     </FormColumn>
                     <FormColumn>
-                        <FormRow><Label>From:</Label>
+                        <FormRow >
+                            <Label>From:</Label>
                             <FlatInput placeholder="From"></FlatInput>
                             <Label>To :</Label>
                             <FlatInput placeholder="To"></FlatInput>
@@ -105,7 +122,8 @@ export default class Step2 extends Component {
                         <Label>Mother Email :</Label> <FlatInput placeholder="Mother Email"></FlatInput>
                     </FormColumn>
                     <FormColumn>
-                        <Label>Mother Old Student:</Label> <Select style={{ height: "10px" }} options={options} />
+                        <Label>Mother Old Student:</Label>
+                        <Selection options={sel}></Selection>
                     </FormColumn>
                 </FormRow>
                 <FormRow>
