@@ -29,13 +29,22 @@ const Race = [
 ]
 
 
+
 export default class Step1 extends Component {
+
+    handleClickNext = (e) => {
+        window.location.hash = "/student/admission/new/step2"
+    }
+    handleClickPrevious = (e) => {
+        window.location.hash = "/student/admission/new/"
+    }
 
 
 
     render() {
         return (
             <FormContainer>
+                <br />
                 <form>
                     <FormRow>
                         <FormColumn>
@@ -130,7 +139,14 @@ export default class Step1 extends Component {
                             <Label>Father's NIC No :</Label> <FlatInput placeholder="Father NIC No"></FlatInput>
                         </FormColumn>
                     </FormRow>
+                    <FormRow>
+                        <FormColumn>
 
+                        </FormColumn>
+                        <FormColumn>
+                            <PrimaryButton onClick={(e) => this.handleClickNext(e)} type="button"> Next</PrimaryButton>
+                        </FormColumn>
+                    </FormRow>
                 </form>
             </FormContainer >
         )
