@@ -16,21 +16,14 @@ import PrimaryButton from '../../../../components/button/PrimaryButton';
 
 export default class Step2 extends Component {
 
-    handleClickNext = (e) => {
-        window.location.hash = "/student/admission/new/step3"
-    }
-    handleClickPrevious = (e) => {
-        window.location.hash = "/student/admission/new/step1"
-    }
 
     render() {
         return (
             <FormContainer>
-                <br />
                 <form>
                     <FormRow>
                         <FormColumn>
-                            <Label>Admission No</Label>
+                            <Label>Parent's Name</Label>
                             <FlatInput placeholder="Enter an Admission Number"></FlatInput>
                         </FormColumn>
 
@@ -119,14 +112,6 @@ export default class Step2 extends Component {
                     <FormRow>
                         <FormColumn>
                             <Label>Father's NIC No :</Label> <FlatInput placeholder="Father NIC No"></FlatInput>
-                        </FormColumn>
-                    </FormRow>
-                    <FormRow>
-                        <FormColumn>
-                            <PrimaryButton onClick={(e) => this.handleClickPrevious(e)} type="button"> Previous</PrimaryButton>
-                        </FormColumn>
-                        <FormColumn>
-                            <PrimaryButton onClick={(e) => this.handleClickNext(e)} type="button"> Next</PrimaryButton>
                         </FormColumn>
                     </FormRow>
                 </form>

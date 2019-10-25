@@ -5,6 +5,7 @@
   "homepage": "https://school-management.github.io/frontend-schoolmanagementsystem/",
   "dependencies": {
     "font-awesome-icons": "^1.6.0",
+    "rc-steps": "^3.5.0",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-floating-label-input": "^4.2.1",
