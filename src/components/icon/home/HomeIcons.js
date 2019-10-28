@@ -33,12 +33,13 @@ import theme from '../../../theme/theme';
 
 const HomeIcons = styled.img`
     height: 5em;
+    width: 5em;
     fill-opacity: 0.8;
-    padding: 1.5em;
-    margin-left : 1.3em;  
+    padding: 1.8em;
+    margin-left : 1.5em;  
     margin-top:0.3em;  
     margin-bottom: -1em;
-    background: ${theme.colors.base};
+    background: ${theme.colors.white};
     background-blend-mode:screen;
     border-radius:${theme.size.cardsRadius};
 

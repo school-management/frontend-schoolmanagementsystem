@@ -1,9 +1,14 @@
 import styled, { css } from 'styled-components';
 import theme from '../../theme/theme';
 
+export const FooterFlexDiv = styled.div`
+  flex-basis: 72em;
 
 
-const Footer = styled.div`
+`
+
+
+export const Footer = styled.div`
     background: ${theme.colors.white};
     width: 98%;
     height: 9%;
@@ -31,9 +36,16 @@ const Footer = styled.div`
      */
 
 
+    @media only screen and (max-width: 1024px) {
+        ${FooterFlexDiv} {
+            flex-basis: 40em;   
+        }
+       
+    }
+ 
 
 
    
 
 `
-export default Footer;
+

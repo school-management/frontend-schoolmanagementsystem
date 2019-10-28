@@ -22,6 +22,8 @@ const Selection = styled(Select)`
         border-radius: 0.4em;
     }
 
+    /* ${props => props.disabled} */
+
 
     
 `

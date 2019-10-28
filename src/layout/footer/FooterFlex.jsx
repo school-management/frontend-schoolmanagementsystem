@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Footer from '../../components/footer/footer'
+import { Footer, FooterFlexDiv } from '../../components/footer/footer'
 import Paragraph from '../../components/typography/Paragraph'
 
 export default class FooterFlex extends Component {
@@ -7,7 +7,7 @@ export default class FooterFlex extends Component {
         return (
             <Footer>
                 <Paragraph footer> &copy;Copyrighted 2019 to Invicta Innovations</Paragraph>
-                <div style={{ flexBasis: "50em" }}></div>
+                <FooterFlexDiv></FooterFlexDiv>
                 <Paragraph footer>Terms</Paragraph><div style={{ flexBasis: "1em" }}></div>
                 <Paragraph footer>Privacy Policy</Paragraph>
             </Footer>

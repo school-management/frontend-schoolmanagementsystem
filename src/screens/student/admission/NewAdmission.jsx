@@ -4,7 +4,7 @@ import Heading3 from '../../../components/typography/Heading3'
 import { Container, Row, Col } from 'react-grid-system'
 import theme from '../../../theme/theme';
 //styles for steps
-import '../../student/steps.css';
+
 
 
 import Input from '../../../components/inputs/Input';
