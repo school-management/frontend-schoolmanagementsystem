@@ -13,7 +13,11 @@ import FormContainer from '../../../../components/containers/FormContainer';
 import FlatInput from '../../../../components/inputs/FlatInput';
 import { FormColumn, FormRow, FormWrapper } from '../../../../components/containers/FormColumn';
 import PrimaryButton from '../../../../components/button/PrimaryButton';
+//import custom styled react-select component
 import Selection from '../../../../components/inputs/Select';
+//import date-picker and its style
+import DatePick from "../../../../components/inputs/DatePicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 //options for the selections
 const Religion = [
@@ -62,7 +66,22 @@ export default class Step1 extends Component {
         window.location.hash = "/student/admission/new/"
     }
 
+    state = {
+        admissionDate: new Date(),
+        dateOfBirth: new Date()
+    };
 
+    handleChangeAdmissionDate = date => {
+        this.setState({
+            admissionDate: date,
+        });
+    };
+
+    handleChangeDateOfBirth = date => {
+        this.setState({
+            dateOfBirth: date,
+        });
+    };
 
     render() {
         return (
@@ -97,7 +116,10 @@ export default class Step1 extends Component {
 
                         <FormColumn>
                             <Label>Admission Date :</Label>
-                            <FlatInput placeholder="Admission Date"></FlatInput>
+                            <DatePick
+                                selected={this.state.admissionDate}
+                                onChange={this.handleChangeAdmissionDate}
+                            />
                         </FormColumn>
 
 
@@ -110,7 +132,7 @@ export default class Step1 extends Component {
                     <FormRow>
                         <FormColumn>
                             <Label>Contact No :</Label>
-                            <FlatInput placeholder="Contact No"></FlatInput>
+                            <FlatInput type="number" placeholder="Contact No"></FlatInput>
                         </FormColumn>
                         <FormColumn>
                             <Label>Religion :</Label>
@@ -124,7 +146,10 @@ export default class Step1 extends Component {
                     <FormRow>
                         <FormColumn>
                             <Label>Date Of Birth :</Label>
-                            <FlatInput placeholder="Date Of Birth"></FlatInput>
+                            <DatePick
+                                selected={this.state.dateOfBirth}
+                                onChange={this.handleChangeDateOfBirth}
+                            />
 
                         </FormColumn>
 
