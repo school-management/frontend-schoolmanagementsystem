@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import theme from '../../theme/theme';
 import Select from 'react-select';
 
@@ -21,6 +21,11 @@ const Selection = styled(Select)`
         border: ${theme.size.selectBorder};
         border-radius: 0.4em;
     }
+
+    ${props => props.mini && css`
+        background: blue;
+        width:6em
+  `}
 
 
     

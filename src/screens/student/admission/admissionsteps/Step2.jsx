@@ -24,18 +24,20 @@ const sel = [
     { value: true, label: 'No' }
 ]
 
+const Year = [
+    { value: "2000", label: '2000' },
+    { value: "2001", label: '2001' },
+    { value: "2002", label: '2002' },
+    { value: "2003", label: '2003' },
+    { value: "2004", label: '2004' },
+    { value: "2005", label: '2005' },
+    { value: "2006", label: '2006' },
+    { value: "2007", label: '2007' }
+]
+
 export default class Step2 extends Component {
 
-    constructor(props) {
-        super(props);
-        this.state = { perent: [], name: null };
-        this.state = { parId: "", fatherName: "", bookName: "" };
-        this.handleChangeid = this.handleChangeid.bind(this);
-        this.handleChangename = this.handleChangename.bind(this);
-        this.handleChangeisbn = this.handleChangeisbn.bind(this);
-        this.onSubmit = this.onSubmit.bind(this);
-        this.routeListBook = this.routeListBook.bind(this);
-    }
+
 
     render() {
         return (
@@ -86,11 +88,11 @@ export default class Step2 extends Component {
                         <Selection options={sel}></Selection>
                     </FormColumn>
                     <FormColumn>
-                        <FormRow >
+                        <FormRow>
                             <Label>From:</Label>
-                            <FlatInput placeholder="From"></FlatInput>
+                            <Selection options={Year} mini></Selection>
                             <Label>To :</Label>
-                            <FlatInput placeholder="To"></FlatInput>
+                            <Selection options={Year} mini></Selection>
                         </FormRow>
                     </FormColumn>
                     <FormColumn>
