@@ -18,6 +18,7 @@ import Selection from '../../../../components/inputs/Select';
 //import date-picker and its style
 import DatePick from "../../../../components/inputs/DatePicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { connect } from 'react-redux'
 
 //options for the selections
 const Religion = [
@@ -57,7 +58,7 @@ const Class = [
 ]
 
 
-export default class Step1 extends Component {
+class StudentForm extends Component {
 
     handleClickNext = (e) => {
         window.location.hash = "/student/admission/new/step2"
@@ -200,3 +201,14 @@ export default class Step1 extends Component {
         )
     }
 }
+
+const mapStatetoProps = state => {
+
+}
+
+const mapDispatchToProps = dispatch => {
+
+}
+
+
+export default connect(mapStatetoProps, mapDispatchToProps)(StudentForm)
