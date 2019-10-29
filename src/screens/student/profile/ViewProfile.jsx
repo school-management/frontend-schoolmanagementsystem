@@ -1,9 +1,15 @@
 import React, { Component } from 'react'
 import Heading3 from '../../../components/typography/Heading3'
 import Paragraph from '../../../components/typography/Paragraph'
+import { connect } from 'react-redux';
+import { getParents } from '../../../redux/actions/student/parentAction';
 
-export default class ViewProfile extends Component {
+class ViewProfile extends Component {
+    componentDidMount() {
+        this.props.fetchParents();
+    }
     render() {
+        console.log(this.props.parentList);
         return (
             <div>
                 <Heading3>View Profile</Heading3>
@@ -12,3 +18,14 @@ export default class ViewProfile extends Component {
         )
     }
 }
+
+const mapStateToProps = state => ({
+    parentList: state.parentReducer.parents
+})
+
+const mapDispatchToProps = dispatch => ({
+    fetchParents: () => dispatch(getParents())
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(ViewProfile)
+

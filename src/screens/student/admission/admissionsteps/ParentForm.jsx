@@ -13,6 +13,7 @@ import FlatInput from '../../../../components/inputs/FlatInput';
 import { FormColumn, FormRow, FormWrapper } from '../../../../components/containers/FormColumn';
 import PrimaryButton from '../../../../components/button/PrimaryButton';
 import Selection from '../../../../components/inputs/Select'
+import { connect } from 'react-redux'
 
 // const isOldStudent = [
 //     { value: 'True', label: 'Yes' },
@@ -24,20 +25,20 @@ const isOldStudent = [
     { value: "false", label: 'No' }
 ]
 
-const Year = [
-    { value: "2000", label: '2000' },
-    { value: "2001", label: '2001' },
-    { value: "2002", label: '2002' },
-    { value: "2003", label: '2003' },
-    { value: "2004", label: '2004' },
-    { value: "2005", label: '2005' },
-    { value: "2006", label: '2006' },
-    { value: "2007", label: '2007' }
-]
+class ParentForm extends Component {
 
-export default class Step2 extends Component {
+    state = {
+        fatherName: "",
+        fatherNIC: "",
+        fatherOldStudent: ""
 
+    }
 
+    handleSelect = e => {
+        this.setState({
+            value: e.target.value
+        })
+    }
 
     render() {
         return (
@@ -46,13 +47,13 @@ export default class Step2 extends Component {
                 <FormRow>
                     <FormColumn>
                         <Label>Father Name</Label>
-                        <FlatInput placeholder="Enter your Father Name"></FlatInput>
+                        <FlatInput placeholder="Enter your Father Name" ></FlatInput>
 
                     </FormColumn>
 
                     <FormColumn>
                         <Label>Father NIC No</Label>
-                        <FlatInput placeholder="Father NIC No"></FlatInput>
+                        <FlatInput placeholder="Father NIC No" ></FlatInput>
                     </FormColumn>
 
 
@@ -85,7 +86,12 @@ export default class Step2 extends Component {
                 <FormRow>
                     <FormColumn>
                         <Label>Father Old Student :</Label>
-                        <Selection options={isOldStudent}></Selection>
+                        <Selection
+                            options={isOldStudent}
+                            placeholder="Is Your Father an Old Student?"
+                            value={this.state.fatherOldStudent}
+                            onChange={(e) => this.handleSelect(e)}
+                        ></Selection>
                     </FormColumn>
                     <FormColumn>
                         <FormRow>
@@ -160,3 +166,13 @@ export default class Step2 extends Component {
         )
     }
 }
+
+const mapStatetoProps = state => {
+
+}
+
+const mapDispatchToProps = dispatch => {
+
+}
+
+export default connect(mapDispatchToProps, mapStatetoProps)(ParentForm)

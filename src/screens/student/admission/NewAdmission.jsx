@@ -14,19 +14,11 @@ import FlatInput from '../../../components/inputs/FlatInput';
 import { FormColumn, FormRow, FormWrapper } from '../../../components/containers/FormColumn';
 import PrimaryButton from '../../../components/button/PrimaryButton';
 import { PlaceholderInput, FLabel } from '../../../components/inputs/PlaceholderInput';
-import Step1 from './admissionsteps/Step1';
+import Step1 from './admissionsteps/StudentForm';
 import AdmissionMultistepRouter from '../../../router/AdmissionMultistepRouter';
-import StepZilla from "react-stepzilla";
-import Step2 from './admissionsteps/Step2';
-import Step3 from './admissionsteps/Step3';
 
-//defining steps
-const steps =
-    [
-        { name: 'Student Details', component: <Step1 /> },
-        { name: 'Parent Details', component: <Step2 /> },
-        { name: 'Extra Details', component: <Step3 /> }
-    ]
+
+
 
 
 export default class NewAdmission extends Component {
