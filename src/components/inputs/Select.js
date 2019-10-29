@@ -22,10 +22,8 @@ const Selection = styled(Select)`
         border-radius: 0.4em;
     }
 
-    ${props => props.mini && css`
-        background: blue;
-        width:6em
-  `}
+    
+    /* ${props => props.disabled} */
 
 
     

@@ -10,7 +10,7 @@ import LayoutContainer from '../components/containers/LayoutContainer';
 import Content from './content/Content';
 import Paragraph from '../components/typography/Paragraph';
 import ContentContainer from './content/ContentContainer';
-import Footer from '../components/footer/footer';
+import { Footer } from '../components/footer/footer';
 import FooterFlex from './footer/FooterFlex';
 
 export default class Layout extends Component {

@@ -129,6 +129,7 @@ export default class Sidenav extends Component {
         }
     };
 
+
     collapseProfileMenu = () => {
         if (!this.state.onProfileToggle) {
             this.setState({
@@ -226,11 +227,9 @@ export default class Sidenav extends Component {
                                 </Nav>
                             </div>}
                     </NavBox>
-                    <NavBox isChecked={false} onClick={() => this.expandPromotion(this.props)}>
+                    <NavBox isChecked={false}>
                         <NavLink to="/student/promotion">Promotion</NavLink>
                     </NavBox>
-
-
 
                 </Navigator>
             </Sidebar >

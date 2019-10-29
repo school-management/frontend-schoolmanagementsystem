@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import theme from '../../theme/theme';
 
 const FlatInput = styled.input`
@@ -33,6 +33,11 @@ const FlatInput = styled.input`
 
 
     };
+
+    ${props => props.medium && css`
+        background: blue;
+        width:6em`
+    }
 
     /* &:hover {
         box-shadow: ${theme.size.inputBoxShadowWhenHover1};
