@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import { Table, TableHead, TableRow, TableHeading, Tablebody } from '../components/table/Table'
+import { Table, TableRow, TableHeading, TableData, THead, TableBtn } from '../components/table/Table'
 import editIcon from '../components/icon/table/editIcon'
+import Card from '../components/cards/Card'
 
 
 class TableCom extends Component {
@@ -8,85 +9,30 @@ class TableCom extends Component {
         return (
 
             <Table>
-
-                <TableRow heading>
-                    <TableHead>Firstname</TableHead>
-                    <TableHead>Firstname</TableHead>
-                    <TableHead>Firstname</TableHead>
-                    <TableHead>Firstname</TableHead>
-                    <TableHead>Firstname</TableHead>
-                    <TableHead>Actions</TableHead>
-                    <TableHead>Actions</TableHead>
+                <THead>
+                    <TableRow heading>
+                        <TableHeading>Admission No</TableHeading>
+                        <TableHeading>First Name</TableHeading>
+                        <TableHeading>Last Name</TableHeading>
+                        <TableHeading colSpan={2}>Actions</TableHeading>
+                    </TableRow>
+                </THead>
+                <TableRow body>
+                    <TableData>001</TableData>
+                    <TableData>Kishanth</TableData>
+                    <TableData>Shanthakumar</TableData>
+                    <TableData><TableBtn><img src="https://img.icons8.com/cute-clipart/24/000000/edit.png" /></TableBtn></TableData>
+                    <TableData><TableBtn><img src="https://img.icons8.com/cute-clipart/24/000000/delete-forever.png" /></TableBtn></TableData>
                 </TableRow>
-
-                <TableRow >
-                    <Tablebody>Jill</Tablebody>
-                    <Tablebody>Jill</Tablebody>
-                    <Tablebody>Jill</Tablebody>
-                    <Tablebody>Jill</Tablebody>
-                    <Tablebody>Jill</Tablebody>
-                    <Tablebody><img src="https://img.icons8.com/metro/15/000000/edit-property.png" />
-                    </Tablebody>
-                    <Tablebody><img src="https://img.icons8.com/material/22/000000/delete-forever--v2.png" />
-                    </Tablebody>
+                <TableRow body>
+                    <TableData>001</TableData>
+                    <TableData>Kishanth</TableData>
+                    <TableData>Shanthakumar</TableData>
+                    <TableData>E</TableData>
+                    <TableData>D</TableData>
                 </TableRow>
-                <TableRow >
-                    <Tablebody>Jill</Tablebody>
-                    <Tablebody>Jill</Tablebody>
-                    <Tablebody>Jill</Tablebody>
-                    <Tablebody>Jill</Tablebody>
-                    <Tablebody>Jill</Tablebody>
-                    <Tablebody><img src="https://img.icons8.com/metro/15/000000/edit-property.png" />
-                    </Tablebody>
-                    <Tablebody><img src="https://img.icons8.com/material/22/000000/delete-forever--v2.png" />
-                    </Tablebody>
-                </TableRow>
-                <TableRow>
-                    <Tablebody>Jill</Tablebody>
-                    <Tablebody>Jill</Tablebody>
-                    <Tablebody>Jill</Tablebody>
-                    <Tablebody>Jill</Tablebody>
-                    <Tablebody>Jill</Tablebody>
-                    <Tablebody><img src="https://img.icons8.com/metro/15/000000/edit-property.png" />
-                    </Tablebody>
-                    <Tablebody><img src="https://img.icons8.com/material/22/000000/delete-forever--v2.png" />
-                    </Tablebody>
-                </TableRow>
-                <TableRow >
-                    <Tablebody>Jill</Tablebody>
-                    <Tablebody>Jill</Tablebody>
-                    <Tablebody>Jill</Tablebody>
-                    <Tablebody>Jill</Tablebody>
-                    <Tablebody>Jill</Tablebody>
-                    <Tablebody><img src="https://img.icons8.com/metro/15/000000/edit-property.png" />
-                    </Tablebody>
-                    <Tablebody><img src="https://img.icons8.com/material/22/000000/delete-forever--v2.png" />
-                    </Tablebody>
-                </TableRow>
-                <TableRow>
-                    <Tablebody>Jill</Tablebody>
-                    <Tablebody>Jill</Tablebody>
-                    <Tablebody>Jill</Tablebody>
-                    <Tablebody>Jill</Tablebody>
-                    <Tablebody>Jill</Tablebody>
-                    <Tablebody><img src="https://img.icons8.com/metro/15/000000/edit-property.png" />
-                    </Tablebody>
-                    <Tablebody><img src="https://img.icons8.com/material/22/000000/delete-forever--v2.png" />
-                    </Tablebody>
-                </TableRow>
-                <TableRow >
-                    <Tablebody>Jill</Tablebody>
-                    <Tablebody>Jill</Tablebody>
-                    <Tablebody>Jill</Tablebody>
-                    <Tablebody>Jill</Tablebody>
-                    <Tablebody>Jill</Tablebody>
-                    <Tablebody><img src="https://img.icons8.com/metro/15/000000/edit-property.png" />
-                    </Tablebody>
-                    <Tablebody><img src="https://img.icons8.com/material/22/000000/delete-forever--v2.png" />
-                    </Tablebody>
-                </TableRow>
-
             </Table>
+
 
         )
     }

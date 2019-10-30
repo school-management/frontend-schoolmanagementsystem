@@ -15,7 +15,6 @@ const Card = styled.div`
     outline: ${theme.size.btnOutline};
     
     box-shadow: ${theme.size.btnBoxShadow1};
-    cursor: pointer;
     z-index: 500;
 
 
