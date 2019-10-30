@@ -8,7 +8,7 @@ export const Table = styled.table`
     /* box-shadow: ${theme.size.btnBoxShadow1WhenHover};  */
     display:flex;
     flex-direction:column;
-    justify-content:space-between;
+    
     
     
 `
@@ -53,6 +53,9 @@ export const TableRow = styled.tr`
 
 export const TableHead = styled.th`
      border-radius: 0.3em; 
+     width:100px;
+     text-align:left;
+     /* border:1px solid ; */
     /* background:${theme.colors.base}; */
     /* box-shadow: ${theme.size.btnBoxShadow1WhenHover};  */
     
@@ -66,10 +69,12 @@ export const TableHead = styled.th`
     
 `
 export const Tablebody = styled.td`
-    
+     width:100px;
+     /* border:1px solid ; */
+     text-align:left;
     &:focus {
         
-        width: ${theme.size.inputWidthWhenFocus}; 
+        /* width: ${theme.size.inputWidthWhenFocus};  */
          box-shadow: ${theme.size.inputBoxShadowWhenFocus}; 
          padding: ${theme.size.inputPaddingWhenFocus}; 
          outline: ${theme.size.inputOutline}; 

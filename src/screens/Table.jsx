@@ -15,8 +15,8 @@ class TableCom extends Component {
                     <TableHead>Firstname</TableHead>
                     <TableHead>Firstname</TableHead>
                     <TableHead>Firstname</TableHead>
-                    <TableHead>Actions</TableHead>
-                    <TableHead>Actions</TableHead>
+                    <TableHead>Edit</TableHead>
+                    <TableHead>Delete</TableHead>
                 </TableRow>
 
                 <TableRow >

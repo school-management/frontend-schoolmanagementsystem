@@ -18,7 +18,7 @@ const cardStyle = {
     textAlign: "center",
     width: "25em",
 
-    
+
 }
 
 const grades = [
@@ -34,32 +34,32 @@ const grades = [
     { value: '10', label: '10' },
     { value: '11', label: '11' },
     { value: '12', label: '12' },
-  ]
+]
 
-  const divisions = [
+const divisions = [
     { value: 'A', label: 'A' },
     { value: 'B', label: 'B' },
     { value: 'C', label: 'C' }
-  ]
-  
+]
+
 export default class ManageAdmission extends Component {
 
+    state = {
+        DevisionStatus: false,
+        AdmissionStatus: false,
+        NameStatus: false
+    }
+
     handleDivision() {
-       return(
-          <h1>gsj</h1>
-       )
+        this.setState({ DevisionStatus: true, AdmissionStatus: false, NameStatus: false })
     }
 
     handleAdmission() {
-        return(
-            <div>how</div>
-        )
+        this.setState({ AdmissionStatus: true, DevisionStatus: false, NameStatus: false })
     }
 
     handleName() {
-        return(
-            <h1>sdfbsf</h1>
-        )
+        this.setState({ NameStatus: true, AdmissionStatus: false, DevisionStatus: false })
     }
 
     render() {
@@ -67,53 +67,59 @@ export default class ManageAdmission extends Component {
             <FlexBoxContainer>
                 <FlexBoxRow>
                     <FlexBoxColumn>
-                    <Card style={cardStyle}>
-                        <FlexBoxRow>
-                            <FlexBoxColumn>
-                            <Heading3> Search A Student</Heading3>
-                            </FlexBoxColumn>
-                        </FlexBoxRow>
-                        <FlexBoxRow style={{justifyContent: "space-between"}}>
-                            <FlexBoxColumn>
-                                <TogglerButton onClick={() => this.handleDivision()}>By Division</TogglerButton>
-                            </FlexBoxColumn>
-                            <FlexBoxColumn>
-                                <TogglerButton onClick={() => this.handleAdmission()}>By Admission No</TogglerButton>
-                            </FlexBoxColumn>
-                            <FlexBoxColumn>
-                                <TogglerButton onClick={() => this.handleName()}>By Name</TogglerButton>
-                            </FlexBoxColumn>
-                        </FlexBoxRow>
-                        <br/>
-                        <FlexBoxRow style={{justifyContent: "space-between"}}>
-                            <FlexBoxColumn>
-                                <Selection options={grades} placeholder="Grades"></Selection>
-                            </FlexBoxColumn>
-                            <FlexBoxColumn>
-                                <Selection options={divisions} placeholder="Divisions"></Selection>
-                            </FlexBoxColumn>
-                        </FlexBoxRow>
-                        <br/>
-                        <FlexBoxRow style={{justifyContent: "space-between"}}>
-                            <FlexBoxColumn>
-                             <Input placeholder="Enter A Name"></Input>
-                            </FlexBoxColumn>
-                            <FlexBoxColumn>
-                            <LargeIconOnlyButton primary><SearchIconPrimary/></LargeIconOnlyButton>
-                            </FlexBoxColumn>
-                        </FlexBoxRow>
-                        <br/>
-                        <FlexBoxRow style={{justifyContent: "space-between"}}>
-                            <FlexBoxColumn>
-                                <Input placeholder="Enter A Admission No"></Input>
-                            </FlexBoxColumn>
-                            <FlexBoxColumn style={{ justifyContent: "center"}}>
-                            <LargeIconOnlyButton primary><SearchIconPrimary/></LargeIconOnlyButton>
-                            </FlexBoxColumn>
+                        <Card style={cardStyle}>
+                            <FlexBoxRow>
+                                <FlexBoxColumn>
+                                    <Heading3> Search A Student</Heading3>
+                                </FlexBoxColumn>
+                            </FlexBoxRow>
+                            <FlexBoxRow style={{ justifyContent: "space-between" }}>
+                                <FlexBoxColumn>
+                                    <TogglerButton onClick={() => this.handleDivision()}>By Division</TogglerButton>
+                                </FlexBoxColumn>
+                                <FlexBoxColumn>
+                                    <TogglerButton onClick={() => this.handleAdmission()}>By Admission No</TogglerButton>
+                                </FlexBoxColumn>
+                                <FlexBoxColumn>
+                                    <TogglerButton onClick={() => this.handleName()}>By Name</TogglerButton>
+                                </FlexBoxColumn>
+                            </FlexBoxRow>
+                            <br />
+                            <FlexBoxRow style={{ justifyContent: "space-between" }}>
+                                {this.state.DevisionStatus ? <FlexBoxColumn>
+                                    <Selection options={grades} placeholder="Grades"></Selection>
+                                </FlexBoxColumn> : ""}
+                                {this.state.DevisionStatus ? <FlexBoxColumn>
+                                    <Selection options={divisions} placeholder="Divisions"></Selection>
+                                </FlexBoxColumn> : ""}
 
-                        </FlexBoxRow>
-                        
-                    </Card>
+                                {this.state.AdmissionStatus ?
+
+                                    <FlexBoxColumn>
+                                        <Input placeholder="Enter A Name"></Input>
+                                    </FlexBoxColumn> : ""}
+                                {this.state.AdmissionStatus ? <FlexBoxColumn>
+                                    <LargeIconOnlyButton primary><SearchIconPrimary /></LargeIconOnlyButton>
+                                </FlexBoxColumn> : ""}
+                                {this.state.NameStatus ?
+
+                                    <FlexBoxColumn>
+                                        <Input placeholder="Enter A Admission No"></Input>
+                                    </FlexBoxColumn> : ""}
+                                {this.state.NameStatus ? <FlexBoxColumn style={{ justifyContent: "center" }}>
+                                    <LargeIconOnlyButton primary><SearchIconPrimary /></LargeIconOnlyButton>
+                                </FlexBoxColumn>
+
+                                    : ""}
+
+                            </FlexBoxRow>
+
+                            <br />
+
+                            <br />
+
+
+                        </Card>
                     </FlexBoxColumn>
                 </FlexBoxRow>
             </FlexBoxContainer>
