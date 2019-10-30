@@ -18,20 +18,11 @@ const Card = styled.div`
     cursor: pointer;
     z-index: 500;
 
-
-
-
-
 &:hover {
     transform: translateY(-1px);
     outline: ${theme.size.btnOutline};
     transition: 0.2s ease-in;
     z-index: 800;
 }
-    
-
-
-
 `
-
 export default Card;
