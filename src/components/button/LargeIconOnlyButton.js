@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import theme from '../../theme/theme';
 import Icon from '../icon/Icon';
+import IconOnly from '../icon/IconOnly';
 
 
 const LargeIconOnlyButton = styled.button`
@@ -21,6 +22,7 @@ outline: ${theme.size.btnOutline};
 box-shadow: ${theme.size.btnBoxShadow1};
 cursor: pointer;
 
+
 &:hover {
     box-shadow: ${theme.size.btnBoxShadow1WhenHover};
     background: ${theme.colors.btnPurpleWhenHover};
@@ -29,7 +31,10 @@ cursor: pointer;
     outline: ${theme.size.btnOutline};
     transition: 0.35s;
     content: "fa fa-user";
-    
+    ${IconOnly} {
+        color: ${theme.colors.white}
+
+    }
 }
 
 
