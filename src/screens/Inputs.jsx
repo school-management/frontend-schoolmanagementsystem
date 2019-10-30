@@ -9,18 +9,21 @@ import Select from '../components/inputs/Select';
 import Option from '../components/inputs/Option';
 import InputWithIcon from '../components/inputs/InputWithIcon';
 import InputIcon from '../components/inputs/InputIcon';
+import Radio from '../components/radiobtn/Radio';
 
 export default class Inputs extends Component {
     render() {
         return (
             <div style={{ textAlign: "center" }}>
                 <Heading1>Inputs</Heading1>
-                <Input placeholder="Username"></Input>
+                <br/><br/><br/>
+                <Radio type="radio"/>
+                {/* <Input placeholder="Username"></Input>
                 <FlatInput placeholder="Username"></FlatInput>
                 <br />
                 <PasswordInput placeholder="Password"></PasswordInput>
                 <FlatPasswordInput placeholder="Password"></FlatPasswordInput>
-                <br />
+                <br /> */}
                 {/* <Select>
                     <Option value="">Select a Value</Option>
                     <Option value="A">A</Option>

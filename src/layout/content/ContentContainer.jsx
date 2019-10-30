@@ -8,8 +8,8 @@ export default class ContentContainer extends Component {
     render() {
         return (
             <Content>
-                <Buttons />
-                {/* <Inputs /> */}
+                {/* <Buttons /> */}
+                <Inputs />
             </Content>
         )
     }
