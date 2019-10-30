@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Table, TableHead, TableRow, TableHeading, Tablebody } from '../components/table/Table'
 
-
 class TableCom extends Component {
     render() {
         return (
@@ -14,7 +13,7 @@ class TableCom extends Component {
                         <TableHead>Firstname</TableHead>
                     </TableRow>
                     <TableRow>
-                        <Tablebody>Jill</Tablebody>
+                        <Tablebody>jill</Tablebody>
                         <Tablebody>Jill</Tablebody>
                         <Tablebody>Jill</Tablebody>
                     </TableRow>

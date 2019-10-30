@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import theme from '../../theme/theme';
 
 const Content = styled.div`
-    background-color: ${theme.colors.white};
+    background-color: ${theme.colors.base};
     display: flex;
     flex-direction: column;
     height: 50%;
