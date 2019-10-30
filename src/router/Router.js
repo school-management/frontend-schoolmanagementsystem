@@ -4,6 +4,7 @@ import Home from '../screens/home/Home';
 // import Home from '../screens/Home';
 import Layout from '../layout/Layout';
 
+
 class Router extends Component {
     render() {
         return (
@@ -11,7 +12,8 @@ class Router extends Component {
             <RouteIt>
                 <Switch>
                     <Route exact path="/" component={Home} />
-                    <Route path="/dashboard" component={Layout} />
+                    <Route path="/student" component={Layout} />
+
                 </Switch>
             </RouteIt>
 

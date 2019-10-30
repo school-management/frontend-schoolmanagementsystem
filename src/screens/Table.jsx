@@ -1,28 +1,36 @@
 import React, { Component } from 'react'
-import Table from '../components/table/Table'
+import { Table, TableHead, TableRow, TableHeading, Tablebody } from '../components/table/Table'
+
 
 class TableCom extends Component {
     render() {
         return (
             <div>
                 <Table>
-                    <tr>
-                        <th>Firstname</th>
-                        <th>Lastname</th>
-                        <th>Age</th>
-                    </tr>
-                    <tr>
-                        <td>Jill</td>
-                        <td>Smith</td>
-                        <td>50</td>
-                    </tr>
+                    <TableHeading>students</TableHeading>
+                    <TableRow>
+                        <TableHead>Firstname</TableHead>
+                        <TableHead>Firstname</TableHead>
+                        <TableHead>Firstname</TableHead>
+                    </TableRow>
+                    <TableRow>
+                        <Tablebody>Jill</Tablebody>
+                        <Tablebody>Jill</Tablebody>
+                        <Tablebody>Jill</Tablebody>
+                    </TableRow>
+                    <TableRow>
+                        <Tablebody>Jill</Tablebody>
+                        <Tablebody>Jill</Tablebody>
+                        <Tablebody>Jill</Tablebody>
+                    </TableRow>
+
                     <tr>
                         <td>Eve</td>
                         <td>Jackson</td>
                         <td>94</td>
                     </tr>
                 </Table>
-            </div>
+            </div >
         )
     }
 }

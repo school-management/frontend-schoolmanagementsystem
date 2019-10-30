@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import theme from '../../theme/theme';
 
 const FlatInput = styled.input`
@@ -8,9 +8,12 @@ const FlatInput = styled.input`
     padding: ${theme.size.inputPadding};
     border: ${theme.size.inputBorder}; 
     box-shadow: ${theme.size.inputBoxShadow};
-    border-color: ${theme.colors.inputPurple};
+    border-color: ${theme.colors.main};
     width: ${theme.size.inputWidth};
-   
+    height: ${theme.size.inputHeight};
+    font-size: ${theme.size.fontDefault};
+    font-weight: ${theme.size.bold};
+    /* margin-left:2em; */
     font-family: ${theme.font.fontFamily};
     border-top-color: ${theme.colors.white};
     border-right-color: ${theme.colors.white};
@@ -19,11 +22,11 @@ const FlatInput = styled.input`
     border-top-right-radius: 0.2em;
 
     &:focus {
-        border-color: ${theme.colors.inputPurpleWhenFocus};
-        width: ${theme.size.inputWidthWhenFocus};
+     /*   border-color: ${theme.colors.inputPurpleWhenFocus};
+        /* width: ${theme.size.inputWidthWhenFocus}; */
         box-shadow: ${theme.size.inputBoxShadowWhenFocus};
         padding: ${theme.size.inputPaddingWhenFocus};
-        outline: ${theme.size.inputOutline};
+        /*outline: ${theme.size.inputOutline};
         border-radius: 0.3em;
         /* transform: translateX(0.3em); */
         transition: 50ms;
@@ -31,12 +34,17 @@ const FlatInput = styled.input`
 
     };
 
-    &:hover {
-        box-shadow: ${theme.size.inputBoxShadowWhenHover1};
+    ${props => props.medium && css`
+        background: blue;
+        width:6em`
     }
 
+    /* &:hover {
+        box-shadow: ${theme.size.inputBoxShadowWhenHover1};
+    } */
+
     /* temporary use */ 
-    margin: 2em;
+   
 
 
 `

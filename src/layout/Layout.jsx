@@ -10,7 +10,7 @@ import LayoutContainer from '../components/containers/LayoutContainer';
 import Content from './content/Content';
 import Paragraph from '../components/typography/Paragraph';
 import ContentContainer from './content/ContentContainer';
-import Footer from '../components/footer/footer';
+import { Footer } from '../components/footer/footer';
 import FooterFlex from './footer/FooterFlex';
 
 export default class Layout extends Component {
@@ -21,11 +21,6 @@ export default class Layout extends Component {
                 <FlexContainer>
                     <Sidenav />
                     <ContentContainer />
-                    {/* <Content>
-                        <Paragraph style={{ opacity: 0.8 }}>Hi</Paragraph>
-                        <Paragraph style={{ opacity: 0.8 }}>This is Sample Content</Paragraph>
-                    </Content> */}
-
                 </FlexContainer>
                 <FooterFlex />
             </LayoutContainer >

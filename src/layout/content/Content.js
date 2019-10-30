@@ -7,7 +7,8 @@ const Content = styled.div`
     flex-direction: column;
     height: 50%;
     width: 82%;
-    box-shadow: '1px 2px 4px 8px rgba(0, 0, 0, 0.11)';
+    box-shadow: '1px 2px 4px 8px rgba(0, 0, 0, 0.21)';
+    border-radius: 0.3em;
 `
 
 export default Content;

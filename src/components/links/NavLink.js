@@ -2,12 +2,13 @@ import styled from 'styled-components';
 import theme from '../../theme/theme';
 import Navigator from '../sidebar/Navigator';
 import Sidebar from '../sidebar/Sidebar';
+import { Link } from 'react-router-dom';
 
 
 
 
 
-const NavLink = styled.a`
+const NavLink = styled(Link)`
 
         background: #5d4f8d;
         padding: 0.8em;

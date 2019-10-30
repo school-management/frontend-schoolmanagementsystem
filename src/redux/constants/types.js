@@ -1,0 +1,1 @@
+export const GET_PARENT = "GET_PARENT";

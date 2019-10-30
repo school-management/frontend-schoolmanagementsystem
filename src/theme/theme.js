@@ -12,14 +12,16 @@ const colors = {
     btnPurpleWhenHover: "#5600d1",
     //input color
     inputPurple: '#6200ed',
-    inputPurpleWhenFocus: "#5600d1",
+    inputPurpleWhenFocus: "#564985",
     //cards color
     cardsbackground: "navy",
+    //sidebar custom hover
+    aside: "#5d4f8d",
 
 }
 
 const size = {
-    fontDefault: 14,
+    fontDefault: '12.8px',
     bold: "bold",
     italic: "italic",
     regular: 550,
@@ -45,33 +47,38 @@ const size = {
 
     //input field styling
     inputPadding: "0.6em",
-    inputPaddingWhenFocus: "0.7em",
-    inputWidth: "9em",
-    inputWidthWhenFocus: "10em",
+    inputPaddingWhenFocus: "0.65em",
+    inputWidth: "13em",
+    inputHeight: "2em",
+    inputWidthWhenFocus: "13.5em",
     inputBorder: "2px solid #979797",
     inputBoxShadow: "3px 10px 20px rgba(0, 0, 0, 0.05)",
     inputBoxShadowWhenHover: "5px 15px 40px rgba(0, 0, 0, 0.10)",
-    inputBoxShadowWhenHover1: "5px 15px 40px rgba(0, 0, 0, 0.04)",
+    inputBoxShadowWhenHover1: "4px 11px 22px rgba(0, 0, 0, 0.04)",
     inputBoxShadowWhenFocus: "10px 20px 80px rgba(0, 0, 0, 0.20)",
     inputOutline: "none",
 
     //LoginFormContainer
     LoginBoxShadow: "4px 15px 4px 1px #fafafa",
     //cards field styling
-    cardswidth: "10.6em",
+    cardswidth: "12em",
     cardshight: "12em",
     cardsboxshadow: "0 4px 8px 0 rgba(0,0,0,0.2)",
     cardsMargin: "10px",
     cardsRadius: "1.5em",
 
     //dropdown or select styles
-    selectBorder: "2px solid #6200ed",
+    selectBorder: "2px solid #5d4f8d",
 
     //sidebar styles
     sideBarBoxShadow: "4px 2px 4px rgba(0, 0, 0, 0.10)",
+    //tree sidebar style
+    sideBarBoxShadow1: "0.5px 1px 2px rgba(0, 0, 0, 0.30)",
 
     //topbar and footer
     topBarBoxShadow: '8px 15px 12px 10px rgba(240, 241, 243, 100)',
+    //text engrave
+    textEngraved: 'rgba(245, 245, 245, 0.5) 0.5px 0.5x 1px',
 }
 
 const font = {

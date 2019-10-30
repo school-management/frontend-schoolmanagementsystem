@@ -13,6 +13,7 @@ const Sidebar = styled.div`
     box-shadow: ${theme.size.btnBoxShadow1};
     display: flex;
     flex-direction: column;
+    box-shadow: '1px 2px 4px 8px rgba(0, 0, 0, 0.21)';
 
 
 
