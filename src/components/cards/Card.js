@@ -3,7 +3,7 @@ import theme from "../../theme/theme"
 
 const Card = styled.div`
     
-    background: ${theme.size.cardsbackground};
+    background: ${theme.colors.white};
     width:${theme.size.cardswidth};
     height:${theme.size.cardshight};
     box-shadow:${theme.size.cardsboxshadow};
