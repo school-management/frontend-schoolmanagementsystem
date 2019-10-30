@@ -188,9 +188,9 @@ export default class Sidenav extends Component {
                                         <NavLinkSub to="/student/admission/new">New</NavLinkSub>
                                     </NavBoxSub>
                                 </Nav>
-                                <Nav to="/student/admission/edit">
+                                <Nav to="/student/admission/manage">
                                     <NavBoxSub>
-                                        <NavLinkSub to="/student/admission/edit">Edit</NavLinkSub>
+                                        <NavLinkSub to="/student/admission/manage">Edit</NavLinkSub>
                                     </NavBoxSub>
                                 </Nav>
                             </div>}

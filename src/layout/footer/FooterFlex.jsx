@@ -8,7 +8,8 @@ export default class FooterFlex extends Component {
             <Footer>
                 <Paragraph footer> &copy;Copyrighted 2019 to Invicta Innovations</Paragraph>
                 <FooterFlexDiv></FooterFlexDiv>
-                <Paragraph footer>Terms</Paragraph><div style={{ flexBasis: "1em" }}></div>
+                <Paragraph footer>Terms</Paragraph>
+                <div style={{ flexBasis: "1em" }}></div>
                 <Paragraph footer>Privacy Policy</Paragraph>
             </Footer>
         )

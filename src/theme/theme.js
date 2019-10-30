@@ -17,6 +17,10 @@ const colors = {
     cardsbackground: "navy",
     //sidebar custom hover
     aside: "#5d4f8d",
+    //toggler button
+    togglerBackground: "rgb(240,250,228)",
+    togglerColor: "#5c5757"
+
 
 }
 
@@ -44,6 +48,13 @@ const size = {
     btnFontSpacingLarge: "0.13em",
     btnPaddingLarge: "0.8em 1.4em",
     btnRadiusLarge: "0.40em",
+    //toggler button
+    togglerBackgroundWhenHover: colors.main,
+    togglerShadow: "0.5px 0.5px 0.2px 0.4px rgba(0,0,0,0.05)", 
+    togglerShadowWhenHover: "1.1px 1.2px 1.1px 1.8px rgba(0,0,0,0.18)",
+    togglerBorder: "0.5px solid rgba(0,0,0,0.12)",
+   
+
 
     //input field styling
     inputPadding: "0.6em",
@@ -66,6 +77,7 @@ const size = {
     cardsboxshadow: "0 4px 8px 0 rgba(0,0,0,0.2)",
     cardsMargin: "10px",
     cardsRadius: "1.5em",
+    normalCardRadius: "0.5em",
 
     //dropdown or select styles
     selectBorder: "2px solid #5d4f8d",
