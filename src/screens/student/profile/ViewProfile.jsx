@@ -3,6 +3,11 @@ import Heading3 from '../../../components/typography/Heading3'
 import Paragraph from '../../../components/typography/Paragraph'
 import { connect } from 'react-redux';
 import { getParents } from '../../../redux/actions/student/parentAction';
+import Card from '../../../components/cards/Card';
+import FlexContainer from '../../../components/layout/FlexContainer';
+import FlexContent from '../../../components/layout/FlexContent';
+import PrimaryCard from '../../../components/cards/PrimaryCard';
+
 
 class ViewProfile extends Component {
     componentDidMount() {
@@ -11,10 +16,14 @@ class ViewProfile extends Component {
     render() {
         console.log(this.props.parentList);
         return (
-            <div>
-                <Heading3>View Profile</Heading3>
-                <Paragraph>Sample Content</Paragraph>
-            </div>
+            <FlexContainer>
+                <FlexContent>
+                    <Card >
+
+                    </Card>
+                </FlexContent>
+
+            </FlexContainer>
         )
     }
 }

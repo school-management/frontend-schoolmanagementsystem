@@ -91,6 +91,10 @@ const size = {
     topBarBoxShadow: '8px 15px 12px 10px rgba(240, 241, 243, 100)',
     //text engrave
     textEngraved: 'rgba(245, 245, 245, 0.5) 0.5px 0.5x 1px',
+
+    //table style
+    tableBoxShadowWhenFocus: "5px 5px 40px rgba(0, 0, 0, 0.10)",
+    tableRadius: "1.5em",
 }
 
 const font = {
