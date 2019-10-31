@@ -9,8 +9,7 @@ export const flexRow = styled.div`
      display: flex;
     flex-direction: row;
   flex-wrap: wrap;
-    justify-content: space-;
-    vertical-align: "center";
+    justify-content: space-evenly;
 
 `
 export const flexCol = styled.div`

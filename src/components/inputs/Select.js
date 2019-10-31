@@ -5,6 +5,7 @@ import Select from 'react-select';
 
 const Selection = styled(Select)`
 flex-direction: column;
+text-align: "center";
     width: 14.5em;
     border: ${theme.size.selectBorder};
     outline: none;
