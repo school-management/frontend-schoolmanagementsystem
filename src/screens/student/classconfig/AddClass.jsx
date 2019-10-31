@@ -3,7 +3,7 @@ import ClassFlex from "./ClassFlex";
 import Heading3 from '../../../components/typography/Heading3';
 import Selection from '../../../components/inputs/Select';
 import Label from '../../../components/typography/Label';
-import { Table, TableRow, TableHead, Tablebody } from '../../../components/table/Table';
+import { Table, TableRow, TableHead, Tablebody } from '../../../components/table/Table1';
 import PrimaryCard from '../../../components/cards/PrimaryCard';
 import Card from '../../../components/cards/Card';
 import FlatInput from '../../../components/inputs/FlatInput';

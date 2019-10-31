@@ -25,24 +25,44 @@ const isOldStudent = [
     { value: "false", label: 'No' }
 ]
 
-const Year = [
-    { value: "2000", label: '2000' },
-    { value: "2001", label: '2001' },
-    { value: "2002", label: '2002' },
-    { value: "2003", label: '2003' },
-    { value: "2004", label: '2004' },
-    { value: "2005", label: '2005' },
-    { value: "2006", label: '2006' },
-    { value: "2007", label: '2007' }
-]
-
-
 class ParentForm extends Component {
 
     state = {
+        parentId: "",
         fatherName: "",
-        fatherNIC: "",
-        fatherOldStudent: ""
+        fatherOccupation: "",
+        fatherOfficialAddress: "",
+        fatherMobile: "",
+        fatherEmail: "",
+        IfFatherOldStudent: "",
+        fatherFrom: "",
+        fatherTo: "",
+        motherName: "",
+        motherOccupation: "",
+        motherOfficialAddress: "",
+        motherMobile: "",
+        motherEmail: "",
+        IfMotherOldStudent: "",
+        motherMaidenName: "",
+        motherFrom: "",
+        motherTo: "",
+        guardian: "",
+        guardianName: "",
+        guardianOccupation: "",
+        guardianOfficialAddress: "",
+        guardianMobile: "",
+        guardianEmail: "",
+        sibilingAdmissionNo: "",
+        sibilingFullName: "",
+        sibilingGrade: "",
+
+    }
+
+    doChange = e => {
+        this.setState({
+            [e.target.id]: e.target.value
+        })
+        //console.log(this.state.fatherName)
 
     }
 
@@ -58,119 +78,240 @@ class ParentForm extends Component {
 
                 <FormRow>
                     <FormColumn>
-                        <Label>Father Name</Label>
-                        <FlatInput placeholder="Enter your Father Name" ></FlatInput>
-
-                    </FormColumn>
-
-                    <FormColumn>
                         <Label>Father NIC No</Label>
-                        <FlatInput placeholder="Father NIC No" ></FlatInput>
+                        <FlatInput placeholder="Father NIC No" type="text"
+                            name="parentId"
+                            id="parentId"
+                            value={this.state.parentId}
+                            onChange={e => this.doChange(e)} ></FlatInput>
                     </FormColumn>
-
-
                     <FormColumn>
-                        <Label>Father Occupation :</Label>
-                        <FlatInput placeholder="Father Occupation "></FlatInput>
+                        <Label>Father's Name</Label>
+                        <FlatInput placeholder="Enter your Father Name" type="text"
+                            name="fatherName"
+                            id="fatherName"
+                            value={this.state.fatherName}
+                            onChange={e => this.doChange(e)}></FlatInput>
                     </FormColumn>
-
-                </FormRow>
-                <FormRow>
                     <FormColumn>
-                        <Label>Father Moblie No:</Label>
-                        <FlatInput placeholder="Father Moblie No"></FlatInput>
-
-                    </FormColumn>
-
-
-                    <FormColumn>
-                        <Label>Father Office Address :</Label>
-                        <FlatInput placeholder="Father Office Address"></FlatInput>
-                    </FormColumn>
-
-
-
-                    <FormColumn>
-                        <Label>Father Email:</Label>
-                        <FlatInput placeholder="Father Email"></FlatInput>
+                        <Label>Father's Occupation :</Label>
+                        <FlatInput placeholder="Father's Occupation " type="text"
+                            name="fatherOccupation"
+                            id="fatherOccupation"
+                            value={this.state.fatherOccupation}
+                            onChange={e => this.doChange(e)}></FlatInput>
                     </FormColumn>
                 </FormRow>
                 <FormRow>
                     <FormColumn>
-                        <Label>Father Old Student :</Label>
+                        <Label>Father's Moblie No:</Label>
+                        <FlatInput placeholder="Father's Moblie No" type="text"
+                            name="fatherMobile"
+                            id="fatherMobile"
+                            value={this.state.fatherMobile}
+                            onChange={e => this.doChange(e)}></FlatInput>
+                    </FormColumn>
+                    <FormColumn>
+                        <Label>Father's Office Address :</Label>
+                        <FlatInput placeholder="Father's Office Address" type="text"
+                            name="fatherOfficialAddress"
+                            id="fatherOfficialAddress"
+                            value={this.state.fatherOfficialAddress}
+                            onChange={e => this.doChange(e)}></FlatInput>
+                    </FormColumn>
+                    <FormColumn>
+                        <Label>Father's Email:</Label>
+                        <FlatInput placeholder="Father's Email" type="text"
+                            name="fatherEmail"
+                            id="fatherEmail"
+                            value={this.state.fatherEmail}
+                            onChange={e => this.doChange(e)}></FlatInput>
+                    </FormColumn>
+                </FormRow>
+                <FormRow>
+                    <FormColumn>
+                        <Label>Is Your Father An Old Student :</Label>
                         <Selection
                             options={isOldStudent}
                             placeholder="Is Your Father an Old Student?"
-                            value={this.state.fatherOldStudent}
+                            value={this.state.IfFatherOldStudent}
                             onChange={(e) => this.handleSelect(e)}
                         ></Selection>
                     </FormColumn>
                     <FormColumn>
-                        <FormRow>
-                            <Label>From:</Label>
-                            <Selection options={Year} mini></Selection>
-                            <Label>To :</Label>
-                            <Selection options={Year} mini></Selection>
-                        </FormRow>
-                        <Label>From:</Label>
-                        <FlatInput placeholder="From"></FlatInput>
+                        <Label>Father Studied From:</Label>
+                        <FlatInput placeholder="From" type="text"
+                            name="fatherFrom"
+                            id="fatherFrom"
+                            value={this.state.fatherFrom}
+                            onChange={e => this.doChange(e)}></FlatInput>
                     </FormColumn>
                     <FormColumn>
-                        <Label>To :</Label>
-                        <FlatInput placeholder="To"></FlatInput>
-                    </FormColumn>
-                </FormRow>
-                <FormRow>
-                    <FormColumn>
-                        <Label>Mother Name :</Label>
-                        <FlatInput placeholder="Mother Name"></FlatInput>
-
-                    </FormColumn>
-
-                    <FormColumn>
-                        <Label>Mother Occupation :</Label>
-                        <FlatInput placeholder="Mother Occupation"></FlatInput>
-                    </FormColumn>
-                    <FormColumn>
-                        <Label>Mother Office Address :</Label>
-                        <FlatInput placeholder="Mother Office Address "></FlatInput>
+                        <Label>Father Studied To :</Label>
+                        <FlatInput placeholder="To" type="text"
+                            name="fatherTo"
+                            id="fatherTo"
+                            value={this.state.fatherTo}
+                            onChange={e => this.doChange(e)}></FlatInput>
                     </FormColumn>
                 </FormRow>
                 <FormRow>
                     <FormColumn>
-                        <Label>Mother Mobile No:</Label>
-                        <FlatInput placeholder="Mother Mobile No"></FlatInput>
+                        <Label>Mother's Name :</Label>
+                        <FlatInput placeholder="Mother's Name" type="text"
+                            name="motherName"
+                            id="motherName"
+                            value={this.state.motherName}
+                            onChange={e => this.doChange(e)}></FlatInput>
+
+                    </FormColumn>
+
+                    <FormColumn>
+                        <Label>Mother's Occupation :</Label>
+                        <FlatInput placeholder="Mother's Occupation" type="text"
+                            name="motherOccupation"
+                            id="motherOccupation"
+                            value={this.state.motherOccupation}
+                            onChange={e => this.doChange(e)}></FlatInput>
                     </FormColumn>
                     <FormColumn>
-                        <Label>Mother Email :</Label> <FlatInput placeholder="Mother Email"></FlatInput>
-                    </FormColumn>
-                    <FormColumn>
-                        <Label disabled>Mother Old Student:</Label>
-                        <Selection isDisabled options={isOldStudent}></Selection>
+                        <Label>Mother's Office Address :</Label>
+                        <FlatInput placeholder="Mother's Official Address " type="text"
+                            name="motherOfficialAddress"
+                            id="motherOfficialAddress"
+                            value={this.state.motherOfficialAddress}
+                            onChange={e => this.doChange(e)}></FlatInput>
                     </FormColumn>
                 </FormRow>
                 <FormRow>
                     <FormColumn>
-                        <Label>From:</Label> <FlatInput placeholder="From"></FlatInput>
+                        <Label>Mother's Mobile No:</Label>
+                        <FlatInput placeholder="Mother's Mobile No" type="number"
+                            name="motherMobile"
+                            id="motherMobile"
+                            value={this.state.motherMobile}
+                            onChange={e => this.doChange(e)}></FlatInput>
                     </FormColumn>
                     <FormColumn>
-                        <Label>To :</Label> <FlatInput placeholder="To"></FlatInput>
+                        <Label>Mother's Email :</Label>
+                        <FlatInput placeholder="Mother's Email" type="text"
+                            name="motherEmail"
+                            id="motherEmail"
+                            value={this.state.motherEmail}
+                            onChange={e => this.doChange(e)}></FlatInput>
                     </FormColumn>
                     <FormColumn>
-                        <Label>Guardian Name :</Label> <FlatInput placeholder="Guardian Name"></FlatInput>
+                        <Label disabled>Is Your Mother An Old Student:</Label>
+                        <Selection isDisabled options={isOldStudent} type="text"
+                            name="IfMotherOldStudent"
+                            id="IfMotherOldStudent"
+                            value={this.state.IfMotherOldStudent}
+                            onChange={e => this.doChange(e)}></Selection>
                     </FormColumn>
                 </FormRow>
                 <FormRow>
                     <FormColumn>
-                        <Label>Guardian Occupation:</Label> <FlatInput placeholder="Guardian Occupation"></FlatInput>
+                        <Label>Mother's Maiden Name :</Label>
+                        <FlatInput placeholder="Mother's Maiden Name " type="text"
+                            name="motherMaidenName"
+                            id="motherMaidenName"
+                            value={this.state.motherMaidenName}
+                            onChange={e => this.doChange(e)}></FlatInput>
                     </FormColumn>
-
                     <FormColumn>
-                        <Label>Guardian Moblie No:</Label> <FlatInput placeholder="Guardian Moblie No"></FlatInput>
+                        <Label>Mother Studied From:</Label>
+                        <FlatInput placeholder="From" type="number"
+                            name="motherFrom"
+                            id="motherFrom"
+                            value={this.state.motherFrom}
+                            onChange={e => this.doChange(e)}></FlatInput>
                     </FormColumn>
-
                     <FormColumn>
-                        <Label>Guardian Email:</Label> <FlatInput placeholder="Guardian Email"></FlatInput>
+                        <Label>Mother Studied To :</Label>
+                        <FlatInput placeholder="To" type="number"
+                            name="motherTo"
+                            id="motherTo"
+                            value={this.state.motherTo}
+                            onChange={e => this.doChange(e)}></FlatInput>
+                    </FormColumn>
+                </FormRow>
+                <FormRow>
+                    <FormColumn>
+                        <Label>Guardian :</Label>
+                        <Selection
+                            options={isOldStudent}
+                            placeholder="Guardian"
+                            value={this.state.guardian}
+                            onChange={(e) => this.handleSelect(e)}
+                        ></Selection>
+                    </FormColumn>
+                    <FormColumn>
+                        <Label>Guardian's Name :</Label>
+                        <FlatInput placeholder="Guardian Name" type="text"
+                            name="guardianName"
+                            id="guardianName"
+                            value={this.state.guardianName}
+                            onChange={e => this.doChange(e)}></FlatInput>
+                    </FormColumn>
+                    <FormColumn>
+                        <Label>Guardian's Occupation:</Label>
+                        <FlatInput placeholder="Guardian Occupation" type="text"
+                            name="guardianOccupation"
+                            id="guardianOccupation"
+                            value={this.state.guardianOccupation}
+                            onChange={e => this.doChange(e)}></FlatInput>
+                    </FormColumn>
+                </FormRow>
+                <FormRow>
+                    <FormColumn>
+                        <Label>Guardian's Official Address:</Label>
+                        <FlatInput placeholder="Guardian's Official Address" type="text"
+                            name="guardianOfficialAddress"
+                            id="guardianOfficialAddress"
+                            value={this.state.guardianOfficialAddress}
+                            onChange={e => this.doChange(e)}></FlatInput>
+                    </FormColumn>
+                    <FormColumn>
+                        <Label>Guardian's Moblie No:</Label>
+                        <FlatInput placeholder="Guardian's Moblie No" type="number"
+                            name="guardianMobile"
+                            id="guardianMobile"
+                            value={this.state.guardianMobile}
+                            onChange={e => this.doChange(e)}></FlatInput>
+                    </FormColumn>
+                    <FormColumn>
+                        <Label>Guardian's Email:</Label>
+                        <FlatInput placeholder="Guardian's Email" type="text"
+                            name="guardianEmail"
+                            id="guardianEmail"
+                            value={this.state.guardianEmail}
+                            onChange={e => this.doChange(e)}></FlatInput>
+                    </FormColumn>
+                </FormRow>
+                <FormRow>
+                    <FormColumn>
+                        <Label>Sibiling's Admission No:</Label>
+                        <FlatInput placeholder="Sibiling's Admission No :" type="text"
+                            name="sibilingAdmissionNo"
+                            id="sibilingAdmissionNo"
+                            value={this.state.sibilingAdmissionNo}
+                            onChange={e => this.doChange(e)}></FlatInput>
+                    </FormColumn>
+                    <FormColumn>
+                        <Label>Sibiling's FullName:</Label>
+                        <FlatInput placeholder="Sibiling's FullName :" type="text"
+                            name="sibilingFullName"
+                            id="sibilingFullName"
+                            value={this.state.sibilingFullName}
+                            onChange={e => this.doChange(e)}></FlatInput>
+                    </FormColumn>
+                    <FormColumn>
+                        <Label>Sibiling's Grade:</Label>
+                        <FlatInput placeholder="Sibiling's Grade :" type="text"
+                            name="sibilingGrade"
+                            id="sibilingGrade"
+                            value={this.state.sibilingGrade}
+                            onChange={e => this.doChange(e)}></FlatInput>
                     </FormColumn>
                 </FormRow>
 
