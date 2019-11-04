@@ -1,114 +1,16 @@
-// import React, { Component } from 'react';
-// import ClassFlex from "./ClassFlex";
-// import Heading3 from '../../../components/typography/Heading3';
-// import Selection from '../../../components/inputs/Select';
-// import Label from '../../../components/typography/Label';
-// import { Table, TableRow, TableHead, Tablebody } from '../../../components/table/Table1';
-// import PrimaryCard from '../../../components/cards/PrimaryCard';
-// import Card from '../../../components/cards/Card';
-// import FlatInput from '../../../components/inputs/FlatInput';
-
-
-// export default class AddClass extends Component {
-//     render() {
-//         return (
-//             <Card style={{ width: "60em", height: "30em" }}>
-//                 <flexContainer >
-//                     <flexRow style={{ textAlign: "center" }}>
-//                         <flexCol>
-//                             <Heading3>Select grade</Heading3>
-//                             <Selection style={{ textAlign: "center" }}>
-//                                 <select>1</select>
-//                             </Selection>
-//                         </flexCol>
-//                     </flexRow>
-
-//                     <flexRow>
-//                         <flexCol style={{ textAlign: "rigth" }}>
-//                             <Table style={{ width: "20em" }}>
-//                                 <TableRow heading>
-//                                     <TableHead>Grade</TableHead>
-//                                     <TableHead>Division</TableHead>
-//                                     <TableHead>Actions</TableHead>
-//                                     <TableHead>Actions</TableHead>
-//                                 </TableRow>
-//                                 <TableRow >
-//                                     <Tablebody>1</Tablebody>
-//                                     <Tablebody>A</Tablebody>
-//                                     <Tablebody><img src="https://img.icons8.com/metro/15/000000/edit-property.png" />
-//                                     </Tablebody>
-//                                     <Tablebody><img src="https://img.icons8.com/material/22/000000/delete-forever--v2.png" />
-//                                     </Tablebody>
-//                                 </TableRow>
-//                                 <TableRow >
-//                                     <Tablebody>1</Tablebody>
-//                                     <Tablebody>B</Tablebody>
-//                                     <Tablebody><img src="https://img.icons8.com/metro/15/000000/edit-property.png" />
-//                                     </Tablebody>
-//                                     <Tablebody><img src="https://img.icons8.com/material/22/000000/delete-forever--v2.png" />
-//                                     </Tablebody>
-//                                 </TableRow>
-//                                 <TableRow >
-//                                     <Tablebody>1</Tablebody>
-//                                     <Tablebody>C</Tablebody>
-//                                     <Tablebody><img src="https://img.icons8.com/metro/15/000000/edit-property.png" />
-//                                     </Tablebody>
-//                                     <Tablebody><img src="https://img.icons8.com/material/22/000000/delete-forever--v2.png" />
-//                                     </Tablebody>
-//                                 </TableRow>
-//                                 <TableRow >
-//                                     <Tablebody>1</Tablebody>
-//                                     <Tablebody>D</Tablebody>
-//                                     <Tablebody><img src="https://img.icons8.com/metro/15/000000/edit-property.png" />
-//                                     </Tablebody>
-//                                     <Tablebody><img src="https://img.icons8.com/material/22/000000/delete-forever--v2.png" />
-//                                     </Tablebody>
-//                                 </TableRow>
-//                             </Table>
-//                             <Label></Label>
-//                         </flexCol>
-
-//                     </flexRow>
-//                     <flexRow style={{ textAlign: "left" }}>
-
-//                         <flexCol >
-//                             <FlatInput></FlatInput>
-
-//                         </flexCol>
-//                     </flexRow>
-//                 </flexContainer >
-//             </Card >
-
-//         )
-//     }
-// }
 import React, { Component } from 'react'
-import Heading3 from '../../../components/typography/Heading3'
-import Paragraph from '../../../components/typography/Paragraph'
+import Heading6 from '../../../components/typography/Heading6'
 import Card from '../../../components/cards/Card'
 import { FlexBoxContainer, FlexBoxRow, FlexBoxColumn } from '../../../screens/student/admission/admissionFlexBox'
-import PrimaryButton from '../../../components/button/PrimaryButton'
-import TogglerButton from '../../../components/button/TogglerButton'
 import Selection from '../../../components/inputs/Select'
-import Label from '../../../components/typography/Label'
-import FlatInput from '../../../components/inputs/FlatInput'
-import FloatingLabelInput from '../../../components/inputs/FloatingLabelInput'
 import Input from '../../../components/inputs/Input'
 import LargeIconOnlyButton from '../../../components/button/LargeIconOnlyButton'
-import PlusIconPrimary from '../../../components/icon/PlusIconPrimary'
-import SearchIconPrimary from '../../../components/icon/SearchIconPrimary'
-import { Table, TableRow, TableHead, Tablebody } from '../../../components/table/Table1';
-import TableCom from '../../Table'
+import TableSmall from '../../TableSmall'
 
 const cardStyle = {
     textAlign: "center",
     width: "50em",
-    height: "4em",
-}
-const cardStyle1 = {
-    textAlign: "center",
-    width: "50em",
-    height: "20em",
+    height: "30em",
 }
 
 const grades = [
@@ -128,11 +30,6 @@ const grades = [
     { value: '12', label: '12 Bio' },
 ]
 
-// const divisions = [
-//     { value: 'A', label: 'A' },
-//     { value: 'B', label: 'B' },
-//     { value: 'C', label: 'C' }
-// ]
 
 export default class AddClass extends Component {
 
@@ -143,7 +40,7 @@ export default class AddClass extends Component {
     }
 
     handleGrade() {
-        this.setState({ GradeStatus: true, DevisionStatus: false, TableStatus: false })
+        this.setState({ GradeStatus: true, DevisionStatus: true, TableStatus: true })
     }
     handleDivision() {
         this.setState({ DevisionStatus: true, GradeStatus: true, TableStatus: true })
@@ -160,56 +57,49 @@ export default class AddClass extends Component {
                         <Card style={cardStyle}>
                             <FlexBoxRow style={{ justifyContent: "center" }}>
                                 <FlexBoxColumn>
-                                    <TogglerButton onClick={() => this.handleDivision()}>Select Grade</TogglerButton>
+                                    <Heading6>Select Grade</Heading6>
+                                </FlexBoxColumn>
+                            </FlexBoxRow>
+                            <FlexBoxRow style={{ justifyContent: "space-between" }}>
+                                <FlexBoxColumn>
+                                </FlexBoxColumn>
+                                <FlexBoxColumn>
+                                    <Selection options={grades} placeholder="Grades" onChange={() => this.handleTable()} onChange={() => this.handleDivision()}></Selection>
+                                </FlexBoxColumn>
+                                <FlexBoxColumn>
                                 </FlexBoxColumn>
                             </FlexBoxRow>
                             <br />
                             <FlexBoxRow style={{ justifyContent: "space-between" }}>
                                 <FlexBoxColumn>
-                                    {/* <Selection options={grades} placeholder="Grades"></Selection> */}
-                                </FlexBoxColumn>
-                                {this.state.DevisionStatus ? <FlexBoxColumn>
-                                    <Selection options={grades} placeholder="Grades"></Selection>
-                                </FlexBoxColumn> : ""}
-                                <FlexBoxColumn>
-                                    {/* <Selection options={grades} placeholder="Grades"></Selection> */}
-                                </FlexBoxColumn>
-                            </FlexBoxRow>
-
-                        </Card>
-                        <Card style={cardStyle1}>
-                            <FlexBoxRow style={{ justifyContent: "space-between" }}>
-                                <FlexBoxColumn>
-                                    <TogglerButton onClick={() => this.handleTable()}>Table</TogglerButton>
+                                    <FlexBoxRow style={{ justifyContent: "center" }}>
+                                        <FlexBoxColumn>
+                                            <Heading6>Table</Heading6>
+                                        </FlexBoxColumn>
+                                    </FlexBoxRow>
                                     <FlexBoxRow>
-                                        {this.state.DevisionStatus ? <FlexBoxColumn>
-                                            <Selection options={divisions} placeholder="Divisions"></Selection>
+                                        {this.state.TableStatus ? <FlexBoxColumn>
+                                            <TableSmall />
                                         </FlexBoxColumn> : ""}
                                     </FlexBoxRow>
-                                    <TableCom />
                                 </FlexBoxColumn>
                                 <FlexBoxColumn>
-                                    {/* <TogglerButton onClick={() => this.handleAdmission()}>By Admission No</TogglerButton> */}
                                 </FlexBoxColumn>
-
-
                                 <FlexBoxColumn>
-                                    <TogglerButton onClick={() => this.handleName()}>Division</TogglerButton>
-                                    {/* {this.state.DevisionStatus ? <FlexBoxColumn>
-                                        <Selection options={divisions} placeholder="Divisions"></Selection>
-                                    </FlexBoxColumn> : ""} */}
-                                    {this.state.NameStatus ?
+                                    <FlexBoxRow style={{ justifyContent: "center" }}>
+                                        <FlexBoxColumn>
+                                            <Heading6>Division</Heading6>
+                                        </FlexBoxColumn>
+                                    </FlexBoxRow>
+                                    {this.state.DevisionStatus ?
                                         <FlexBoxColumn>
                                             <Input placeholder="Division"></Input>
                                         </FlexBoxColumn> : ""}
-                                    {this.state.NameStatus ? <FlexBoxColumn>
+                                    {this.state.DevisionStatus ? <FlexBoxColumn>
                                         <LargeIconOnlyButton primary>+</LargeIconOnlyButton>
                                     </FlexBoxColumn> : ""}
                                 </FlexBoxColumn>
-
                             </FlexBoxRow>
-
-
                         </Card>
                     </FlexBoxColumn>
                 </FlexBoxRow>
