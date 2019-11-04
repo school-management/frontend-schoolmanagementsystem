@@ -128,11 +128,11 @@ const grades = [
     { value: '12', label: '12 Bio' },
 ]
 
-const divisions = [
-    { value: 'A', label: 'A' },
-    { value: 'B', label: 'B' },
-    { value: 'C', label: 'C' }
-]
+// const divisions = [
+//     { value: 'A', label: 'A' },
+//     { value: 'B', label: 'B' },
+//     { value: 'C', label: 'C' }
+// ]
 
 export default class AddClass extends Component {
 
