@@ -1,84 +1,109 @@
-import React, { Component } from 'react';
-import ClassFlex from "./ClassFlex";
-import Heading3 from '../../../components/typography/Heading3';
-import Selection from '../../../components/inputs/Select';
-import Label from '../../../components/typography/Label';
-import { Table, TableRow, TableHead, Tablebody } from '../../../components/table/Table1';
-import PrimaryCard from '../../../components/cards/PrimaryCard';
-import Card from '../../../components/cards/Card';
-import FlatInput from '../../../components/inputs/FlatInput';
+import React, { Component } from 'react'
+import Heading6 from '../../../components/typography/Heading6'
+import Card from '../../../components/cards/Card'
+import { FlexBoxContainer, FlexBoxRow, FlexBoxColumn } from '../../../screens/student/admission/admissionFlexBox'
+import Selection from '../../../components/inputs/Select'
+import Input from '../../../components/inputs/Input'
+import LargeIconOnlyButton from '../../../components/button/LargeIconOnlyButton'
+import TableSmall from '../../TableSmall'
+
+const cardStyle = {
+    textAlign: "center",
+    width: "50em",
+    height: "30em",
+}
+
+const grades = [
+    { value: '1', label: '1' },
+    { value: '2', label: '2' },
+    { value: '3', label: '3' },
+    { value: '4', label: '4' },
+    { value: '5', label: '5' },
+    { value: '6', label: '6' },
+    { value: '7', label: '7' },
+    { value: '8', label: '8' },
+    { value: '9', label: '9' },
+    { value: '10', label: '10' },
+    { value: '11', label: '11' },
+    { value: '12', label: '12 Arts' },
+    { value: '12', label: '12 Maths' },
+    { value: '12', label: '12 Bio' },
+]
 
 
 export default class AddClass extends Component {
+
+    state = {
+        GradeStatus: false,
+        DevisionStatus: false,
+        TableStatus: false
+    }
+
+    handleGrade() {
+        this.setState({ GradeStatus: true, DevisionStatus: true, TableStatus: true })
+    }
+    handleDivision() {
+        this.setState({ DevisionStatus: true, GradeStatus: true, TableStatus: true })
+    }
+    handleTable() {
+        this.setState({ TableStatus: true, GradeStatus: false, DevisionStatus: false })
+    }
+
     render() {
         return (
-            <Card style={{ width: "60em", height: "30em" }}>
-                <flexContainer >
-                    <flexRow style={{ textAlign: "center" }}>
-                        <flexCol>
-                            <Heading3>Select grade</Heading3>
-                            <Selection style={{ textAlign: "center" }}>
-                                <select>1</select>
-                            </Selection>
-                        </flexCol>
-                    </flexRow>
-
-                    <flexRow>
-                        <flexCol style={{ textAlign: "rigth" }}>
-                            <Table style={{ width: "20em" }}>
-                                <TableRow heading>
-                                    <TableHead>Grade</TableHead>
-                                    <TableHead>Division</TableHead>
-                                    <TableHead>Actions</TableHead>
-                                    <TableHead>Actions</TableHead>
-                                </TableRow>
-                                <TableRow >
-                                    <Tablebody>1</Tablebody>
-                                    <Tablebody>A</Tablebody>
-                                    <Tablebody><img src="https://img.icons8.com/metro/15/000000/edit-property.png" />
-                                    </Tablebody>
-                                    <Tablebody><img src="https://img.icons8.com/material/22/000000/delete-forever--v2.png" />
-                                    </Tablebody>
-                                </TableRow>
-                                <TableRow >
-                                    <Tablebody>1</Tablebody>
-                                    <Tablebody>B</Tablebody>
-                                    <Tablebody><img src="https://img.icons8.com/metro/15/000000/edit-property.png" />
-                                    </Tablebody>
-                                    <Tablebody><img src="https://img.icons8.com/material/22/000000/delete-forever--v2.png" />
-                                    </Tablebody>
-                                </TableRow>
-                                <TableRow >
-                                    <Tablebody>1</Tablebody>
-                                    <Tablebody>C</Tablebody>
-                                    <Tablebody><img src="https://img.icons8.com/metro/15/000000/edit-property.png" />
-                                    </Tablebody>
-                                    <Tablebody><img src="https://img.icons8.com/material/22/000000/delete-forever--v2.png" />
-                                    </Tablebody>
-                                </TableRow>
-                                <TableRow >
-                                    <Tablebody>1</Tablebody>
-                                    <Tablebody>D</Tablebody>
-                                    <Tablebody><img src="https://img.icons8.com/metro/15/000000/edit-property.png" />
-                                    </Tablebody>
-                                    <Tablebody><img src="https://img.icons8.com/material/22/000000/delete-forever--v2.png" />
-                                    </Tablebody>
-                                </TableRow>
-                            </Table>
-                            <Label></Label>
-                        </flexCol>
-
-                    </flexRow>
-                    <flexRow style={{ textAlign: "left" }}>
-
-                        <flexCol >
-                            <FlatInput></FlatInput>
-
-                        </flexCol>
-                    </flexRow>
-                </flexContainer >
-            </Card >
-
+            <FlexBoxContainer>
+                <FlexBoxRow>
+                    <FlexBoxColumn>
+                        <Card style={cardStyle}>
+                            <FlexBoxRow style={{ justifyContent: "center" }}>
+                                <FlexBoxColumn>
+                                    <Heading6>Select Grade</Heading6>
+                                </FlexBoxColumn>
+                            </FlexBoxRow>
+                            <FlexBoxRow style={{ justifyContent: "space-between" }}>
+                                <FlexBoxColumn>
+                                </FlexBoxColumn>
+                                <FlexBoxColumn>
+                                    <Selection options={grades} placeholder="Grades" onChange={() => this.handleTable()} onChange={() => this.handleDivision()}></Selection>
+                                </FlexBoxColumn>
+                                <FlexBoxColumn>
+                                </FlexBoxColumn>
+                            </FlexBoxRow>
+                            <br />
+                            <FlexBoxRow style={{ justifyContent: "space-between" }}>
+                                <FlexBoxColumn>
+                                    <FlexBoxRow style={{ justifyContent: "center" }}>
+                                        <FlexBoxColumn>
+                                            <Heading6>Table</Heading6>
+                                        </FlexBoxColumn>
+                                    </FlexBoxRow>
+                                    <FlexBoxRow>
+                                        {this.state.TableStatus ? <FlexBoxColumn>
+                                            <TableSmall />
+                                        </FlexBoxColumn> : ""}
+                                    </FlexBoxRow>
+                                </FlexBoxColumn>
+                                <FlexBoxColumn>
+                                </FlexBoxColumn>
+                                <FlexBoxColumn>
+                                    <FlexBoxRow style={{ justifyContent: "center" }}>
+                                        <FlexBoxColumn>
+                                            <Heading6>Division</Heading6>
+                                        </FlexBoxColumn>
+                                    </FlexBoxRow>
+                                    {this.state.DevisionStatus ?
+                                        <FlexBoxColumn>
+                                            <Input placeholder="Division"></Input>
+                                        </FlexBoxColumn> : ""}
+                                    {this.state.DevisionStatus ? <FlexBoxColumn>
+                                        <LargeIconOnlyButton primary>+</LargeIconOnlyButton>
+                                    </FlexBoxColumn> : ""}
+                                </FlexBoxColumn>
+                            </FlexBoxRow>
+                        </Card>
+                    </FlexBoxColumn>
+                </FlexBoxRow>
+            </FlexBoxContainer >
         )
     }
 }

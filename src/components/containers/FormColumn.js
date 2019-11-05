@@ -9,7 +9,6 @@ export const FormRow = styled.div`
 `
 
 export const FormColumn = styled.div`
-    display: flex;
     flex-direction: column;
     
 `

@@ -11,8 +11,8 @@ export default class EditProfile extends Component {
             <div>
                 <Heading3>Edit Profile</Heading3>
                 <Paragraph>Sample Content</Paragraph>
-                {/* <TableCom /> */}
-                <Table1Show />
+                <TableCom />
+                {/* <Table1Show /> */}
             </div>
         )
     }
