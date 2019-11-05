@@ -25,16 +25,6 @@ import Paragraph from '../../../../components/typography/Paragraph'
 import Heading5 from '../../../../components/typography/Heading5'
 import { CheckBoxWrapper, CheckBox, CheckBoxLabel } from '../../../../components/inputs/Toggler'
 
-// const isOldStudent = [
-//     { value: 'True', label: 'Yes' },
-//     { value: 'False', label: 'No' }
-// ]
-
-const isOldStudent = [
-    { value: "true", label: 'Yes' },
-    { value: "false", label: 'No' }
-]
-
 class ParentForm extends Component {
 
     state = {
@@ -44,7 +34,7 @@ class ParentForm extends Component {
         fatherOfficialAddress: "",
         fatherMobile: "",
         fatherEmail: "",
-        IfFatherOldStudent: "",
+        IfFatherOldStudent: false,
         IfFatherOldStudentstatus: "",
         fatherFrom: "",
         fatherTo: "",
@@ -53,16 +43,18 @@ class ParentForm extends Component {
         motherOfficialAddress: "",
         motherMobile: "",
         motherEmail: "",
-        IfMotherOldStudent: "",
+        IfMotherOldStudent: false,
         motherMaidenName: "",
         motherFrom: "",
         motherTo: "",
-        guardian: false,
+        isGuardianParent: false,
         guardianName: "",
         guardianOccupation: "",
         guardianOfficialAddress: "",
         guardianMobile: "",
         guardianEmail: "",
+        sibling: false,
+        siblingCount: "",
         sibilingAdmissionNo: "",
         sibilingFullName: "",
         sibilingGrade: "",
@@ -96,22 +88,80 @@ class ParentForm extends Component {
         console.log(this.state.guardian);
     }
 
-
-
-
-
-    handleSelect(e) {
-
-        this.setState({
-            IfFatherOldStudent: e.target.value
-
-        })
-        console.log(e.target.value);
+    handleToggleGuardianParent = e => {
+        if (this.state.isGuardianParent == false) {
+            this.setState({
+                isGuardianParent: true
+            })
+            console.log(this.state.isGuardianParent);
+        }
+        else if (this.state.isGuardianParent == true) {
+            this.setState({
+                isGuardianParent: false
+            })
+            console.log(this.state.isGuardianParent);
+        }
 
     }
 
+    handleToggleFatherOldBoy = e => {
+        if (this.state.IfFatherOldStudent == false) {
+            this.setState({
+                IfFatherOldStudent: true
+            })
+            console.log(this.state.IfFatherOldStudent);
+        }
+        else if (this.state.IfFatherOldStudent == true) {
+            this.setState({
+                IfFatherOldStudent: false
+            })
+            console.log(this.state.IfFatherOldStudent);
+        }
+
+    }
+
+    handleToggleMotherOldGirl = e => {
+        if (this.state.IfMotherOldStudent == false) {
+            this.setState({
+                IfMotherOldStudent: true
+            })
+            console.log(this.state.IfMotherOldStudent);
+        }
+        else if (this.state.IfMotherOldStudent == true) {
+            this.setState({
+                IfMotherOldStudent: false
+            })
+            console.log(this.state.IfMotherOldStudent);
+        }
+
+    }
+
+    handleToggleStudentHaveSibling = e => {
+        if (this.state.sibling == false) {
+            this.setState({
+                sibling: true
+            })
+            console.log(this.state.sibling);
+        }
+        else if (this.state.sibling == true) {
+            this.setState({
+                sibling: false
+            })
+            console.log(this.state.sibling);
+        }
+
+    }
+
+
+    handleSelectSiblingCount = e => {
+        this.setState({
+            siblingCount: e.target.value
+        })
+        console.log(this.state.siblingCount);
+    }
+
     render() {
-        console.log(this.state.IfFatherOldStudent)
+        console.log(this.state.guardian);
         return (
             <FormContainer>
                 {/* <FormRow>
@@ -119,14 +169,14 @@ class ParentForm extends Component {
                 </FormRow> */}
                 <FormRow>
                     <FormColumn style={{ marginRight: "1em", justifyContent: "space-between" }}>
-                        <Card>
+                        <Card admission>
                             <FormRow>
                                 <CardHeader>
-                                    <div style={{ paddingRight: "0.1em" }}> 1 - Father's Details</div>
+                                    <div style={{ paddingRight: "0.1em" }}>Father's Details</div>
                                 </CardHeader>
                             </FormRow>
                             <FormRow>
-                                <FormColumn>
+                                <FormColumn admissionForm>
                                     <Label>Father NIC No</Label>
                                     <FlatInput placeholder="Father NIC No" type="text"
                                         name="parentId"
@@ -135,7 +185,7 @@ class ParentForm extends Component {
                                         onChange={e => this.doChange(e)} ></FlatInput>
 
                                 </FormColumn>
-                                <FormColumn>
+                                <FormColumn admissionForm>
                                     <Label>Father's Name</Label>
                                     <FlatInput placeholder="Enter your Father Name" type="text"
                                         name="fatherName"
@@ -145,7 +195,7 @@ class ParentForm extends Component {
                                 </FormColumn>
                             </FormRow>
                             <FormRow>
-                                <FormColumn>
+                                <FormColumn admissionForm>
                                     <Label>Father's Occupation :</Label>
                                     <FlatInput placeholder="Father's Occupation " type="text"
                                         name="fatherOccupation"
@@ -153,7 +203,7 @@ class ParentForm extends Component {
                                         value={this.state.fatherOccupation}
                                         onChange={e => this.doChange(e)}></FlatInput>
                                 </FormColumn>
-                                <FormColumn>
+                                <FormColumn admissionForm>
                                     <Label>Father's Office Address :</Label>
                                     <FlatInput placeholder="Father's Office Address" type="text"
                                         name="fatherOfficialAddress"
@@ -164,15 +214,15 @@ class ParentForm extends Component {
                             </FormRow>
 
                             <FormRow>
-                                <FormColumn>
+                                <FormColumn admissionForm>
                                     <Label>Father's Moblie No:</Label>
-                                    <FlatInput placeholder="Father's Moblie No" type="text"
+                                    <FlatInput placeholder="Father's Moblie No" type="number"
                                         name="fatherMobile"
                                         id="fatherMobile"
                                         value={this.state.fatherMobile}
                                         onChange={e => this.doChange(e)}></FlatInput>
                                 </FormColumn>
-                                <FormColumn>
+                                <FormColumn admissionForm>
                                     <Label>Father's Email:</Label>
                                     <FlatInput placeholder="Father's Email" type="text"
                                         name="fatherEmail"
@@ -182,9 +232,23 @@ class ParentForm extends Component {
                                 </FormColumn>
                             </FormRow>
                             <FormRow>
-                                <FormColumn>
+                                <FormColumn admissionForm>
                                     <Label>Is Your Father An Old Student :</Label>
+                                </FormColumn>
+
+                                <FormColumn admissionForm>
                                     {/* toggler btn */}
+                                    <div>
+                                        <CheckBoxWrapper>
+                                            <CheckBox
+                                                id="isFatherOldStudent"
+                                                name="isFatherOldStudent"
+                                                type="checkbox"
+                                                checked={this.state.IfFatherOldStudent}
+                                                onChange={e => this.handleToggleFatherOldBoy(e)} />
+                                            <CheckBoxLabel htmlFor="isFatherOldStudent" />
+                                        </CheckBoxWrapper>
+                                    </div>
                                 </FormColumn>
 
 
@@ -192,9 +256,9 @@ class ParentForm extends Component {
                             </FormRow>
 
                             {/* toggler for  if father old student select */}
-                            {this.state.IfFatherOldStudent == "true" ?
+                            {this.state.IfFatherOldStudent == true ?
                                 <FormRow>
-                                    <FormColumn>
+                                    <FormColumn admissionForm>
                                         <Label>Father Studied From:</Label>
                                         <FlatInput placeholder="From" type="text"
                                             name="fatherFrom"
@@ -202,7 +266,7 @@ class ParentForm extends Component {
                                             value={this.state.fatherFrom}
                                             onChange={e => this.doChange(e)}></FlatInput>
                                     </FormColumn>
-                                    <FormColumn>
+                                    <FormColumn admissionForm>
                                         <Label>Father Studied To :</Label>
                                         <FlatInput placeholder="To" type="text"
                                             name="fatherTo"
@@ -218,11 +282,11 @@ class ParentForm extends Component {
                         <Card>
                             <FormRow>
                                 <CardHeader>
-                                    2 - Mother's Details
-                            </CardHeader>
+                                    Mother's Details
+                                </CardHeader>
                             </FormRow>
                             <FormRow>
-                                <FormColumn>
+                                <FormColumn admissionForm>
                                     <Label>Mother's Name :</Label>
                                     <FlatInput placeholder="Mother's Name" type="text"
                                         name="motherName"
@@ -230,18 +294,17 @@ class ParentForm extends Component {
                                         value={this.state.motherName}
                                         onChange={e => this.doChange(e)}></FlatInput>
                                 </FormColumn>
-                                <FormColumn>
+                                <FormColumn admissionForm>
                                     <Label>Mother's Occupation :</Label>
                                     <FlatInput placeholder="Mother's Occupation" type="text"
                                         name="motherOccupation"
                                         id="motherOccupation"
                                         value={this.state.motherOccupation}
                                         onChange={e => this.doChange(e)}></FlatInput>
-
                                 </FormColumn>
                             </FormRow>
                             <FormRow>
-                                <FormColumn>
+                                <FormColumn admissionForm>
                                     <Label>Mother's Office Address :</Label>
                                     <FlatInput placeholder="Mother's Official Address " type="text"
                                         name="motherOfficialAddress"
@@ -249,7 +312,7 @@ class ParentForm extends Component {
                                         value={this.state.motherOfficialAddress}
                                         onChange={e => this.doChange(e)}></FlatInput>
                                 </FormColumn>
-                                <FormColumn>
+                                <FormColumn admissionForm>
                                     <Label>Mother's Mobile No:</Label>
                                     <FlatInput placeholder="Mother's Mobile No" type="number"
                                         name="motherMobile"
@@ -260,7 +323,7 @@ class ParentForm extends Component {
                                 </FormColumn>
                             </FormRow>
                             <FormRow>
-                                <FormColumn>
+                                <FormColumn admissionForm>
                                     <Label>Mother's Email :</Label>
                                     <FlatInput placeholder="Mother's Email" type="email"
                                         name="motherEmail"
@@ -268,7 +331,7 @@ class ParentForm extends Component {
                                         value={this.state.motherEmail}
                                         onChange={e => this.doChange(e)}></FlatInput>
                                 </FormColumn>
-                                <FormColumn>
+                                <FormColumn admissionForm>
                                     <Label>Mother's Maiden Name :</Label>
                                     <FlatInput placeholder="Mother's Maiden Name " type="text"
                                         name="motherMaidenName"
@@ -278,36 +341,30 @@ class ParentForm extends Component {
                                 </FormColumn>
                             </FormRow>
                             <FormRow>
-                                <FormColumn>
+                                <FormColumn admissionForm>
                                     <Label>Is Your Mother An Old Student:</Label>
-                                    <Wrapper>
-                                        <Item>
-                                            <RadioButton
-                                                type="radio"
-                                                name="motherOldStudent"
-                                                value="true"
-                                                onChange={event => this.handleSelectChange1(event)}
-                                            />
-                                            <RadioButtonLabel />
-                                            <Heading5 style={{ color: theme.colors.gray }}>Yes</Heading5>
-                                        </Item>
-                                        <Item>
-                                            <RadioButton
-                                                type="radio"
-                                                name="motherOldStudent"
-                                                value="false"
-                                                defaultChecked
-                                                onChange={event => this.handleSelectChange1(event)}
-                                            />
-                                            <RadioButtonLabel />
-                                            <Heading5 style={{ color: theme.colors.gray }}>No</Heading5>
-                                        </Item>
-                                    </Wrapper>
+                                </FormColumn>
+                                <FormColumn admissionForm>
+                                    {/* toggler btn */}
+                                    <div>
+                                        <CheckBoxWrapper>
+                                            <CheckBox
+                                                disabled
+                                                id="isMotherOldStudent"
+                                                name="isMotherOldStudent"
+                                                type="checkbox"
+                                                checked={this.state.IfMotherOldStudent}
+                                                onChange={e => this.handleToggleMotherOldGirl(e)} />
+                                            <CheckBoxLabel htmlFor="isMotherOldStudent" />
+                                        </CheckBoxWrapper>
+                                    </div>
                                 </FormColumn>
                             </FormRow>
+
+
                             {this.state.IfMotherOldStudent == "true" ?
                                 <FormRow >
-                                    <FormColumn>
+                                    <FormColumn admissionForm>
                                         <Label>Mother Studied From:</Label>
                                         <FlatInput placeholder="From" type="number"
                                             name="motherFrom"
@@ -316,7 +373,7 @@ class ParentForm extends Component {
                                             onChange={e => this.doChange(e)}></FlatInput>
 
                                     </FormColumn>
-                                    <FormColumn>
+                                    <FormColumn admissionForm>
                                         <Label>Mother Studied To :</Label>
                                         <FlatInput placeholder="To" type="number"
                                             name="motherTo"
@@ -326,42 +383,41 @@ class ParentForm extends Component {
                                     </FormColumn>
                                 </FormRow>
                                 : ""}
-
-
-
-
-
                         </Card>
                     </FormColumn>
                 </FormRow>
 
 
                 <FormRow>
-                    <FormColumn>
+                    <FormColumn style={{ marginRight: "1em" }}>
                         <Card>
                             <FormRow>
-                                <CardHeader>
-                                    <FormRow>
-                                        <FormColumn>
-                                            3 - Guardian Information
-                                        </FormColumn>
-                                        <div style={{ flexBasis: "20em" }}></div>
-                                        <FormColumn>
-                                            <div>
-                                                <CheckBoxWrapper>
-                                                    <CheckBox id="checkbox" type="checkbox" />
-                                                    <CheckBoxLabel htmlFor="checkbox" />
-                                                </CheckBoxWrapper>
-                                            </div>
-                                        </FormColumn>
-                                    </FormRow>
-
+                                <CardHeader >
+                                    Guardian's Details
                                 </CardHeader>
+                            </FormRow>
 
-
+                            <FormRow>
+                                <FormColumn admissionForm>
+                                    <Label>Is Guardian A Parent ?</Label>
+                                </FormColumn>
+                                <FormColumn admissionForm>
+                                    {/* toggler btn */}
+                                    <div>
+                                        <CheckBoxWrapper>
+                                            <CheckBox
+                                                id="isGuardianParent"
+                                                name="isGuardianParent"
+                                                type="checkbox"
+                                                checked={this.state.isGuardianParent}
+                                                onChange={e => this.handleToggleGuardianParent(e)} />
+                                            <CheckBoxLabel htmlFor="isGuardianParent" />
+                                        </CheckBoxWrapper>
+                                    </div>
+                                </FormColumn>
                             </FormRow>
                             <FormRow>
-                                <FormColumn>
+                                <FormColumn admissionForm>
                                     <Label>Guardian's Name :</Label>
                                     <FlatInput placeholder="Guardian Name" type="text"
                                         name="guardianName"
@@ -369,7 +425,7 @@ class ParentForm extends Component {
                                         value={this.state.guardianName}
                                         onChange={e => this.doChange(e)}></FlatInput>
                                 </FormColumn>
-                                <FormColumn>
+                                <FormColumn admissionForm>
                                     <Label>Guardian's Official Address:</Label>
                                     <FlatInput placeholder="Guardian's Official Address" type="text"
                                         name="guardianOfficialAddress"
@@ -379,8 +435,7 @@ class ParentForm extends Component {
                                 </FormColumn>
                             </FormRow>
                             <FormRow>
-
-                                <FormColumn>
+                                <FormColumn admissionForm>
                                     <Label>Guardian's Moblie No:</Label>
                                     <FlatInput placeholder="Guardian's Moblie No" type="number"
                                         name="guardianMobile"
@@ -388,9 +443,9 @@ class ParentForm extends Component {
                                         value={this.state.guardianMobile}
                                         onChange={e => this.doChange(e)}></FlatInput>
                                 </FormColumn>
-                                <FormColumn>
+                                <FormColumn admissionForm>
                                     <Label>Guardian's Email:</Label>
-                                    <FlatInput placeholder="Guardian's Email" type="text"
+                                    <FlatInput placeholder="Guardian's Email" type="email"
                                         name="guardianEmail"
                                         id="guardianEmail"
                                         value={this.state.guardianEmail}
@@ -398,42 +453,89 @@ class ParentForm extends Component {
 
                                 </FormColumn>
                             </FormRow>
+
                         </Card>
                     </FormColumn>
 
                     <FormColumn>
-                        <Card>
+                        <Card admission>
                             <FormRow>
                                 <CardHeader>
-                                    4 - Sibling Information
+                                    Siblings' Details
                                 </CardHeader>
                             </FormRow>
                             <FormRow>
-                                <Wrapper>
-                                    <Item>
-                                        <RadioButton
-                                            type="radio"
-                                            name="isSiblingStudyInSameSchool"
-                                            value="true"
-                                            onChange={event => this.handleSelectChange3(event)}
-                                        />
-                                        <RadioButtonLabel />
-                                        <Heading5 style={{ color: theme.colors.gray }}>Yes</Heading5>
-                                    </Item>
-                                    <Item>
-                                        <RadioButton
-                                            type="radio"
-                                            name="isSiblingStudyInSameSchool"
-                                            value="false"
-                                            defaultChecked
-                                            onChange={event => this.handleSelectChange3(event)}
-                                        />
-                                        <RadioButtonLabel />
-                                        <Heading5 style={{ color: theme.colors.gray }}>No</Heading5>
-                                    </Item>
-                                </Wrapper>
+                                <FormColumn>
+                                    <Label>Does the Student Have Siblings Studying In Our School</Label>
+                                </FormColumn>
+                                <div style={{ flexBasis: "4em" }}></div>
+                                <FormColumn >
+                                    {/* toggler btn */}
+                                    <div>
+                                        <CheckBoxWrapper>
+                                            <CheckBox
+                                                id="isStudentHaveSibling"
+                                                name="isStudentHaveSibling"
+                                                type="checkbox"
+                                                checked={this.state.sibling}
+                                                onChange={e => this.handleToggleStudentHaveSibling(e)} />
+                                            <CheckBoxLabel htmlFor="isStudentHaveSibling" />
+                                        </CheckBoxWrapper>
+                                    </div>
+                                </FormColumn>
                             </FormRow>
 
+                            {this.state.sibling ?
+                                <div>
+                                    <FormRow>
+                                        <FormColumn>
+                                            <Dropdown
+                                                id="siblingCount"
+                                                name="siblingCount"
+                                                value={this.state.siblingCount}
+                                                onChange={e => this.handleSelectSiblingCount(e)}
+                                            >
+                                                <Option>1</Option>
+                                                <Option>2</Option>
+                                                <Option>3</Option>
+                                                <Option>4</Option>
+                                                <Option>5</Option>
+                                                <Option>6</Option>
+                                                {/* <Option>1</Option>
+                                        <Option>2</Option>
+                                        <Option>3</Option>
+                                        <Option>4</Option>
+                                        <Option>5</Option>
+                                        <Option>6</Option>
+                                        <Option>7</Option>
+                                        <Option>8</Option>
+                                        <Option>9</Option>
+                                        <Option>10</Option>
+                                        <Option>G.C.E O/L</Option>
+                                        <Option>G.C. A/L</Option> */}
+                                            </Dropdown>
+                                        </FormColumn>
+                                    </FormRow>
+                                    <FormRow>
+                                        <FormColumn>
+                                            <Label>Sibiling's FullName:</Label>
+                                            <FlatInput placeholder="Sibiling's FullName :" type="text"
+                                                name="sibilingFullName"
+                                                id="sibilingFullName"
+                                                value={this.state.sibilingFullName}
+                                                onChange={e => this.doChange(e)}></FlatInput>
+                                        </FormColumn>
+                                        <FormColumn>
+                                            <Label>Sibiling's Grade:</Label>
+                                            <FlatInput placeholder="Sibiling's Grade :" type="text"
+                                                name="sibilingGrade"
+                                                id="sibilingGrade"
+                                                value={this.state.sibilingGrade}
+                                                onChange={e => this.doChange(e)}></FlatInput>
+                                        </FormColumn>
+                                    </FormRow>
+                                </div>
+                                : ""}
                         </Card>
 
 
@@ -449,21 +551,10 @@ class ParentForm extends Component {
 
 
 
-                        <Label>Sibiling's FullName:</Label>
-                        <FlatInput placeholder="Sibiling's FullName :" type="text"
-                            name="sibilingFullName"
-                            id="sibilingFullName"
-                            value={this.state.sibilingFullName}
-                            onChange={e => this.doChange(e)}></FlatInput>
 
 
 
-                        <Label>Sibiling's Grade:</Label>
-                        <FlatInput placeholder="Sibiling's Grade :" type="text"
-                            name="sibilingGrade"
-                            id="sibilingGrade"
-                            value={this.state.sibilingGrade}
-                            onChange={e => this.doChange(e)}></FlatInput>
+
                     </FormColumn>
                 </FormRow>
 

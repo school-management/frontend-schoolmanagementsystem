@@ -10,6 +10,7 @@ const CardHeader = styled.div`
     align-content: center;
     color: ${theme.colors.gray};
     border-radius: 0.4em;
+    text-align: center;
 `
 
 export default CardHeader;

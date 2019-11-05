@@ -4,12 +4,13 @@ import theme from '../../theme/theme';
 export const FormRow = styled.div`
     display: flex;
     flex-direction:row;
-    justify-content: space-between;
+    justify-content: stretch;
     padding-bottom:2em;
 `
 
 export const FormColumn = styled.div`
     flex-direction: column;
+    flex-basis: ${props => props.admissionForm ? "50em" : ""};
     
 `
 
