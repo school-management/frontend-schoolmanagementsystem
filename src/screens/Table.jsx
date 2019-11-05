@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
-import { Table, TableRow, TableHeading, TableData, THead, TableBtn } from '../components/table/TableAlt'
+import { Table, TableRow, TableHeading, TableData, THead, TableBtn, Tablebody } from '../components/table/Table'
 import editIcon from '../components/icon/table/editIcon'
 import Card from '../components/cards/Card'
-
 
 class TableCom extends Component {
     render() {

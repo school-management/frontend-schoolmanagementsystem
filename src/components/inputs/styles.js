@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 const Text = styled.p`
   margin: 8px auto;
 `

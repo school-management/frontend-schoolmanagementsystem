@@ -1,0 +1,44 @@
+.flexcontainer {
+    width: 50em;
+     margin-left: 30em;
+}
+
+.flexrow {
+    display: flex;
+    flex-direction: row;
+  flex-wrap: wrap;
+    justify-content: space-;
+  
+  
+}
+
+.flexcol {
+     flex-direction: column;
+  flex-basis: 10em;
+  padding: 0.3em;
+  margin-bottom: 0.5em;
+  margin-left: 0.2em;
+
+}
+
+.green {
+  background: green;
+    width: 70px;
+  height: 50px;
+  text-align: center;
+  
+}
+
+.red {
+    background: red;
+    width: 70px;
+  height: 50px;
+  text-align: center;
+}
+
+.blue {
+    background: blue;
+    width: 70px;
+  height: 50px;
+  text-align: center;
+}

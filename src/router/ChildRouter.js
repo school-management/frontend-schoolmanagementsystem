@@ -7,6 +7,7 @@ import PrincipalDashboard from '../screens/student/PrincipalDashboard';
 import ViewProfile from '../screens/student/profile/ViewProfile';
 import EditProfile from '../screens/student/profile/EditProfile';
 import NewAdmission from '../screens/student/admission/NewAdmission';
+import AddClass from '../screens/student/classconfig/AddClass';
 import ManageAdmission from '../screens/student/admission/ManageAdmission';
 
 class ChildRouter extends Component {
@@ -19,6 +20,7 @@ class ChildRouter extends Component {
                     <Route path="/student/profile/view" component={ViewProfile} />
                     <Route path="/student/profile/edit" component={EditProfile} />
                     <Route path="/student/admission/new" component={NewAdmission} />
+                    <Route path="/student/promotion" component={AddClass} />
                     <Route path="/student/admission/manage" component={ManageAdmission} />
                     {/* <Route path="/student/promotion" component={} /> */}
 

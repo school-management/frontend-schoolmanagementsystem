@@ -19,8 +19,6 @@ export default class Typography extends Component {
                 <Heading5>Heading 05</Heading5>
                 <Heading6>Heading 06</Heading6>
                 <Paragraph>Paragraph</Paragraph>
-
-
             </div>
         )
     }
