@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import theme from "../../theme/theme"
 
 const Card = styled.div`
-    
+    margin:0.5em;
     background: ${theme.colors.white};
     width: auto;
     height:auto;
