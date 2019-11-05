@@ -16,9 +16,7 @@ import SearchIconPrimary from '../../../components/icon/SearchIconPrimary'
 
 const cardStyle = {
     textAlign: "center",
-    width: "25em",
-
-
+    width: "25em"
 }
 
 const grades = [
@@ -45,21 +43,21 @@ const divisions = [
 export default class ManageAdmission extends Component {
 
     state = {
-        DevisionStatus: false,
+        DivisionStatus: false,
         AdmissionStatus: false,
         NameStatus: false
     }
 
     handleDivision() {
-        this.setState({ DevisionStatus: true, AdmissionStatus: false, NameStatus: false })
+        this.setState({ DivisionStatus: true, AdmissionStatus: false, NameStatus: false })
     }
 
     handleAdmission() {
-        this.setState({ AdmissionStatus: true, DevisionStatus: false, NameStatus: false })
+        this.setState({ AdmissionStatus: true, DivisionStatus: false, NameStatus: false })
     }
 
     handleName() {
-        this.setState({ NameStatus: true, AdmissionStatus: false, DevisionStatus: false })
+        this.setState({ NameStatus: true, AdmissionStatus: false, DivisionStatus: false })
     }
 
     render() {
@@ -86,10 +84,10 @@ export default class ManageAdmission extends Component {
                             </FlexBoxRow>
                             <br />
                             <FlexBoxRow style={{ justifyContent: "space-between" }}>
-                                {this.state.DevisionStatus ? <FlexBoxColumn>
+                                {this.state.DivisionStatus ? <FlexBoxColumn>
                                     <Selection options={grades} placeholder="Grades"></Selection>
                                 </FlexBoxColumn> : ""}
-                                {this.state.DevisionStatus ? <FlexBoxColumn>
+                                {this.state.DivisionStatus ? <FlexBoxColumn>
                                     <Selection options={divisions} placeholder="Divisions"></Selection>
                                 </FlexBoxColumn> : ""}
 

@@ -2,10 +2,8 @@ import styled from 'styled-components';
 import theme from '../../theme/theme';
 
 const FormContainer = styled.div`
-    padding:1.7em;
-    justify-content: space-around;
+    padding:0.3em;
     align-content: center;
-    text-align: justify;
     flex-wrap: wrap;
     
     
