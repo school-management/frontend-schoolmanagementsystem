@@ -4,7 +4,7 @@ import theme from "../../theme/theme"
 const Card = styled.div`
     margin:0.5em;
     background: ${theme.colors.white};
-    width:auto;
+    width: auto;
     height:auto;
     box-shadow:${theme.size.cardsboxshadow};
     /* margin:${theme.size.cardsMargin}; */
