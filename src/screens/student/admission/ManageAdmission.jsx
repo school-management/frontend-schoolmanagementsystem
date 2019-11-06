@@ -72,12 +72,12 @@ export default class ManageAdmission extends Component {
                                 </FlexBoxColumn>
                             </FlexBoxRow>
                             <FlexBoxRow style={{ justifyContent: "space-between" }}>
-                                {/* <FlexBoxColumn>
+                                <FlexBoxColumn>
                                     <TogglerButton onClick={() => this.handleDivision()}>By Division</TogglerButton>
                                 </FlexBoxColumn>
                                 <FlexBoxColumn>
                                     <TogglerButton onClick={() => this.handleAdmission()}>By Admission No</TogglerButton>
-                                </FlexBoxColumn> */}
+                                </FlexBoxColumn>
                                 <FlexBoxColumn>
                                     <TogglerButton onClick={() => this.handleName()}>Division</TogglerButton>
                                 </FlexBoxColumn>

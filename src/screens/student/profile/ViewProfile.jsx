@@ -24,57 +24,233 @@ class ViewProfile extends Component {
                     <FormColumn>
                         <FormRow>
 
-                            <Card style={{ height: "70px", width: "70px" }}>
-                            </Card>
+
                             <FormColumn style={{}}>
                                 <Heading2>Viththiyanathan Pakeesan</Heading2>
-                                <Paragraph>Grade:</Paragraph>
+                                <Paragraph>gradeName:</Paragraph><Paragraph>divisionName</Paragraph>
                                 <Paragraph>Addmision No:</Paragraph>
                             </FormColumn>
-
+                            <Card>
+                            </Card>
 
 
                         </FormRow>
                         <FormRow>
                             <FormColumn>
-                                <Card style={{ height: "500px", width: "300px" }}>
+                                <Card>
                                     <FormRow style={{ padding: "0" }}>
-                                        <Paragraph style={{ paddingTop: "-50px" }}>Name:</Paragraph><Paragraph style={{ padding: "-15px" }}>Viththiyanathan Pakeesan</Paragraph>
+                                        <FormColumn><Paragraph >Name:</Paragraph></FormColumn>
+                                        <FormColumn viewprofile><Paragraph >Viththiyanathan Pakeesan</Paragraph></FormColumn>
+                                    </FormRow>
+
+                                    <FormRow style={{ padding: "0" }}>
+                                        <FormColumn><Paragraph >lastname:</Paragraph></FormColumn>
+                                        <FormColumn viewprofile><Paragraph >Viththiyanathan Pakeesan</Paragraph></FormColumn>
+                                    </FormRow>
+
+                                    <FormRow style={{ padding: "0" }}>
+                                        <FormColumn><Paragraph >middlename:</Paragraph></FormColumn>
+                                        <FormColumn viewprofile><Paragraph >Viththiyanathan Pakeesan</Paragraph></FormColumn>
                                     </FormRow>
                                     <FormRow style={{ padding: "0" }}>
-                                        <Paragraph style={{ paddingTop: "-15px" }}>Name:</Paragraph><Paragraph style={{ padding: "-15px" }}>{this.props.fetchParents.fatherName}</Paragraph>
+                                        <FormColumn><Paragraph >address:</Paragraph></FormColumn>
+                                        <FormColumn><Paragraph >madduvil</Paragraph></FormColumn>
                                     </FormRow>
-                                    <Paragraph>Name:</Paragraph>
-                                    <Paragraph>Name:</Paragraph>
-                                    <Paragraph>Name:</Paragraph>
-                                    <Paragraph>Name:</Paragraph>
-                                    <Paragraph>Name:</Paragraph>
-                                    <Paragraph>Name:</Paragraph>
-                                    <Paragraph>Name:</Paragraph>
-                                    <Paragraph>Name:</Paragraph>
+                                    <FormRow style={{ padding: "0" }}>
+                                        <FormColumn><Paragraph>contactno:</Paragraph></FormColumn>
+                                        <FormColumn><Paragraph>N</Paragraph></FormColumn>
+                                    </FormRow>
+
+                                    <FormRow style={{ padding: "0" }}>
+                                        <FormColumn><Paragraph>distance:</Paragraph></FormColumn>
+                                        <FormColumn><Paragraph>contactno:</Paragraph></FormColumn>
+                                    </FormRow>
+
+                                    <FormRow style={{ padding: "0" }}>
+                                        <FormColumn><Paragraph>dob:</Paragraph></FormColumn>
+                                        <FormColumn><Paragraph>Name:</Paragraph></FormColumn>
+                                    </FormRow>
+
+                                    <FormRow style={{ padding: "0" }}>
+                                        <FormColumn><Paragraph>race:</Paragraph></FormColumn>
+                                        <FormColumn><Paragraph>Name:</Paragraph></FormColumn>
+                                    </FormRow>
+
+                                    <FormRow style={{ padding: "0" }}>
+                                        <FormColumn><Paragraph>religion:</Paragraph></FormColumn>
+                                        <FormColumn><Paragraph>Name:</Paragraph></FormColumn>
+                                    </FormRow>
+
+                                    <FormRow style={{ padding: "0" }}>
+                                        <FormColumn><Paragraph>formerclass:</Paragraph></FormColumn>
+                                        <FormColumn><Paragraph>Name:</Paragraph></FormColumn>
+                                    </FormRow>
+                                    <FormRow style={{ padding: "0" }}>
+                                        <FormColumn><Paragraph>fstudyend:</Paragraph></FormColumn>
+                                        <FormColumn><Paragraph>Name:</Paragraph></FormColumn>
+                                    </FormRow>
+
+                                    <FormRow style={{ padding: "0" }}>
+                                        <FormColumn><Paragraph>fstudystart:</Paragraph></FormColumn>
+                                        <FormColumn><Paragraph>Name:</Paragraph></FormColumn>
+                                    </FormRow>
+
+                                    <FormRow style={{ padding: "0" }}>
+                                        <FormColumn><Paragraph>gender:</Paragraph></FormColumn>
+                                        <FormColumn><Paragraph>Name:</Paragraph></FormColumn>
+                                    </FormRow>
+
+                                    <FormRow style={{ padding: "0" }}>
+                                        <FormColumn><Paragraph>hostelneed:</Paragraph></FormColumn>
+                                        <FormColumn><Paragraph>Name:</Paragraph></FormColumn>
+
+                                    </FormRow>
+                                    <FormRow style={{ padding: "0" }}>
+                                        <FormColumn><Paragraph>gsdivision:</Paragraph></FormColumn>
+                                        <FormColumn><Paragraph>Name:</Paragraph></FormColumn>
+                                    </FormRow>
+
+                                    {/* "achievementsport": "string",
+    "achievementstudy": "string",
+    
+    "firstname": "string",
+    "formarschool": "string",
+    
+    "gradeId": 0,
+    "": 0,
+    "": "string",
+    "": "string",
+    "": 0,
+    "": "string",
+    "": "string",
+    
+    "motherstudyend": 0,
+    "motherstudystart": 0,
+    "parId": 0,
+    "parentId": "string",
+    
+    "sId": 0,
+           
+    "startDate": "string",
+    "stuId": "string" */}
                                 </Card>
-                                <Card style={{ height: "200px", width: "300px" }}>
+                                <Card>
+                                    <FormRow style={{ padding: "0" }}>
+                                        <FormColumn><Paragraph>guardian:</Paragraph></FormColumn>
+                                        <FormColumn viewprofile><Paragraph>fathername</Paragraph></FormColumn>
+                                    </FormRow>
+                                    <FormRow style={{ padding: "0" }}>
+                                        <FormColumn><Paragraph>guardianname:</Paragraph></FormColumn>
+                                        <FormColumn viewprofile><Paragraph>guardianname</Paragraph></FormColumn>
+                                    </FormRow>
+                                    <FormRow style={{ padding: "0" }}>
+                                        <FormColumn><Paragraph>guardianmobileNo:</Paragraph></FormColumn>
+                                        <FormColumn viewprofile><Paragraph>fathername</Paragraph></FormColumn>
+                                    </FormRow>
+                                    <FormRow style={{ padding: "0" }}>
+                                        <FormColumn><Paragraph>guardianemail:</Paragraph></FormColumn>
+                                        <FormColumn viewprofile><Paragraph>fathername</Paragraph></FormColumn>
+                                    </FormRow>
+                                    <FormRow style={{ padding: "0" }}>
+                                        <FormColumn><Paragraph>guardianoccupation:</Paragraph></FormColumn>
+                                        <FormColumn viewprofile><Paragraph>fathername</Paragraph></FormColumn>
+                                    </FormRow>
                                 </Card>
 
                             </FormColumn>
                             <FormColumn>
-                                <Card style={{ height: "210px", width: "250px", paddingTop: "0" }}  >
-                                    <Heading5>Father's Details</Heading5>
+                                <Card>
+                                    <Heading5 style={{ marginBottom: "-1em" }}>Father's Details</Heading5>
+                                    <FormRow style={{ padding: "0" }}>
+                                        <FormColumn><Paragraph>fathername:</Paragraph></FormColumn>
+                                        <FormColumn viewprofile><Paragraph>fathername</Paragraph></FormColumn>
+                                    </FormRow>
+                                    <FormRow style={{ padding: "0" }}>
+                                        <FormColumn><Paragraph>fatherOccupation:</Paragraph></FormColumn>
+                                        <FormColumn viewprofile><Paragraph>famer</Paragraph></FormColumn>
+                                    </FormRow>
+
+                                    <FormRow style={{ padding: "0" }}>
+                                        <FormColumn><Paragraph>fatheremail:</Paragraph></FormColumn>
+                                        <FormColumn viewprofile><Paragraph>father@gmail.com:</Paragraph></FormColumn>
+                                    </FormRow>
+
+                                    <FormRow style={{ padding: "0" }}>
+                                        <FormColumn><Paragraph>fathermobile:</Paragraph></FormColumn>
+                                        <FormColumn viewprofile><Paragraph>0777525987</Paragraph></FormColumn>
+                                    </FormRow>
+                                    <FormRow style={{ padding: "0" }}>
+                                        <FormColumn><Paragraph>fathersofficialaddress:</Paragraph></FormColumn>
+                                        <FormColumn viewprofile><Paragraph>chavakachcheri</Paragraph></FormColumn>
+                                    </FormRow>
+
+                                    <FormRow style={{ padding: "0" }}>
+                                        <FormColumn><Paragraph>fatheroldstudent:</Paragraph></FormColumn>
+                                        <FormColumn viewprofile><Paragraph>Yes</Paragraph></FormColumn>
+                                    </FormRow>
                                 </Card>
-                                <Card style={{ height: "210px", width: "250px", paddingTop: "0" }} >
+
+                                <Card  >
                                     <Heading5>Mother's Details</Heading5>
+                                    <FormRow style={{ padding: "0" }}>
+                                        <FormColumn><Paragraph>mothername:</Paragraph></FormColumn>
+                                        <FormColumn viewprofile><Paragraph>fathername</Paragraph></FormColumn>
+                                    </FormRow>
+                                    <FormRow style={{ padding: "0" }}>
+                                        <FormColumn><Paragraph>motherOccupation:</Paragraph></FormColumn>
+                                        <FormColumn viewprofile><Paragraph>famer</Paragraph></FormColumn>
+                                    </FormRow>
+
+                                    <FormRow style={{ padding: "0" }}>
+                                        <FormColumn><Paragraph>motheremail:</Paragraph></FormColumn>
+                                        <FormColumn viewprofile><Paragraph>mother@gmail.com:</Paragraph></FormColumn>
+                                    </FormRow>
+
+                                    <FormRow style={{ padding: "0" }}>
+                                        <FormColumn><Paragraph>mothermobile:</Paragraph></FormColumn>
+                                        <FormColumn viewprofile><Paragraph>0777525987</Paragraph></FormColumn>
+                                    </FormRow>
+                                    <FormRow style={{ padding: "0" }}>
+                                        <FormColumn><Paragraph>motherofficialaddress:</Paragraph></FormColumn>
+                                        <FormColumn viewprofile><Paragraph>chavakachcheri</Paragraph></FormColumn>
+                                    </FormRow>
+
+                                    <FormRow style={{ padding: "0" }}>
+                                        <FormColumn><Paragraph>motheroldstudent:</Paragraph></FormColumn>
+                                        <FormColumn viewprofile><Paragraph>Yes</Paragraph></FormColumn>
+                                    </FormRow>
                                 </Card>
-                                <Card style={{ height: "210px", width: "250px", paddingTop: "0" }}>
-                                    <Heading5>Father's Details</Heading5>
+
+                                <Card >
+                                    <Heading5>ch's Details</Heading5>
+
+                                    <FormRow style={{ padding: "0" }}>
+                                        <FormColumn><Paragraph>sibilingsfullname:</Paragraph></FormColumn>
+                                        <FormColumn viewprofile><Paragraph>Yes</Paragraph></FormColumn>
+                                    </FormRow>
+
+                                    <FormRow style={{ padding: "0" }}>
+                                        <FormColumn><Paragraph>sibilingsGrade:</Paragraph></FormColumn>
+                                        <FormColumn viewprofile><Paragraph>Yes</Paragraph></FormColumn>
+                                    </FormRow>
+
+                                    <FormRow style={{ padding: "0" }}>
+                                        <FormColumn><Paragraph>sililingsadmission:</Paragraph></FormColumn>
+                                        <FormColumn viewprofile><Paragraph>Yes</Paragraph></FormColumn>
+                                    </FormRow>
+                                    <FormRow style={{ padding: "0" }}>
+                                        <FormColumn><Paragraph>sililingsadmission:</Paragraph></FormColumn>
+                                        <FormColumn viewprofile><Paragraph>Yes</Paragraph></FormColumn>
+                                    </FormRow>
                                 </Card>
 
                             </FormColumn>
 
                             <FormColumn>
-                                <Card style={{ height: "120px", width: "250px", paddingTop: "0" }}  >
-                                    <Heading5>Father's Details</Heading5>
+                                <Card   >
+                                    <Heading5>ex's Details</Heading5>
                                 </Card>
-                                <Card style={{ height: "120px", width: "250px" }}  >
+                                <Card>
                                     <Heading5 style={{ padding: "0", fontSize: "12" }}>sports  Details</Heading5>
                                 </Card>
                                 <Card style={{ height: "120px", width: "250px", paddingTop: "0" }}  >
