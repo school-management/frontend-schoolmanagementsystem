@@ -21,7 +21,8 @@ const colors = {
     togglerBackground: "rgb(240,250,228)",
     togglerColor: "#5c5757",
     viewText: "#918190",
-    viewhed: "#400f3c"
+    viewhed1: "#400f3c",
+    viewhed: "#703f6d"
 
 }
 

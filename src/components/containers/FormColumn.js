@@ -12,7 +12,7 @@ export const FormRow = styled.div`
 
 export const FormColumn = styled.div`
     flex-direction: column;
-
+    justify-content:space-between;
     flex-basis: ${props => props.viewprofile ? "70em" : props.admissionForm ? "50em" : ""}
     
 `
