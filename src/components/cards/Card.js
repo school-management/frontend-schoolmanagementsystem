@@ -14,13 +14,14 @@ const Card = styled.div`
     outline: ${theme.size.btnOutline};
     
     box-shadow: ${theme.size.btnBoxShadow1};
-    z-index: 500;
+    position: static;
+    z-index: 1000;
 
 &:hover {
     transform: translateY(-1px);
     outline: ${theme.size.btnOutline};
     transition: 0.2s ease-in;
-    z-index: 800;
+    z-index: 1200;
 }
 `
 export default Card;

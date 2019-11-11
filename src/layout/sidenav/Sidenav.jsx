@@ -228,8 +228,15 @@ export default class Sidenav extends Component {
                             </div>}
                     </NavBox>
                     <NavBox isChecked={false}>
+                        <NavLink to="/student/classconfig">Class Configuration</NavLink>
+                    </NavBox>
+                    <NavBox isChecked={false}>
+                        <NavLink to="/student/classallocation">Classroom Allocation</NavLink>
+                    </NavBox>
+                    <NavBox isChecked={false}>
                         <NavLink to="/student/promotion">Promotion</NavLink>
                     </NavBox>
+
 
                 </Navigator>
             </Sidebar >

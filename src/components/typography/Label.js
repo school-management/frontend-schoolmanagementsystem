@@ -7,6 +7,7 @@ const Label = styled.label`
     font-weight:bold;
     color: ${theme.colors.main};
     padding-bottom:-3em;
+    margin-right: 1em;
     
     /* color: ${theme.colors.gray}; */
 `

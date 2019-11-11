@@ -19,6 +19,10 @@ import Selection from '../../../../components/inputs/Select';
 import DatePick from "../../../../components/inputs/DatePicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { connect } from 'react-redux'
+import Card from '../../../../components/cards/Card';
+import CardHeader from './cardHeader';
+import { Dropdown, Option } from '../../../../components/inputs/Dropdown';
+import { CheckBoxWrapper, CheckBox, CheckBoxLabel } from '../../../../components/inputs/Toggler';
 
 //options for the selections
 const Religion = [
@@ -60,17 +64,47 @@ const Class = [
 
 class StudentForm extends Component {
 
-    handleClickNext = (e) => {
-        window.location.hash = "/student/admission/new/step2"
-    }
-    handleClickPrevious = (e) => {
-        window.location.hash = "/student/admission/new/"
+    state = {
+        studentId: "",
+        firstName: "",
+        lastName: "",
+        middleName: "",
+        admissionDate: new Date(),
+        dateOfBirth: new Date(),
+        address: "",
+        contactNo: "",
+        religion: "",
+        race: "",
+        gsDivision: "",
+        gender: "",
+        formerSchool: "",
+        formerClass: "",
+        currentClass: "",
+        isHostelNeeded: false,
+        distance: "",
+        achievementStudy: "",
+        achievementSport: "",
+        divisionId: "",
+        parentId: ""
+
     }
 
-    state = {
-        admissionDate: new Date(),
-        dateOfBirth: new Date()
-    };
+    doChange = e => {
+        this.setState({
+            [e.target.id]: e.target.value
+        })
+        //console.log(this.state.fatherName)
+
+    }
+
+    handleClickNext = (e) => {
+
+    }
+    handleClickPrevious = (e) => {
+        window.location.hash = "/student/admission/new/step1"
+    }
+
+
 
     handleChangeAdmissionDate = date => {
         this.setState({
@@ -84,119 +118,339 @@ class StudentForm extends Component {
         });
     };
 
+    handleToggleHostelNeed = e => {
+        if (this.state.isHostelNeeded == false) {
+            this.setState({
+                isHostelNeeded: true
+            })
+            console.log(this.state.isHostelNeeded);
+        }
+        else if (this.state.isHostelNeeded == true) {
+            this.setState({
+                isHostelNeeded: false
+            })
+            console.log(this.state.isHostelNeeded);
+        }
+    }
+
     render() {
+        // console.log(this.state.isHostelNeeded);
         return (
             <FormContainer>
 
                 <form>
                     <FormRow>
                         <FormColumn>
-                            <Label>Admission No</Label>
-                            <FlatInput placeholder="Enter an Admission Number"></FlatInput>
+                            <Card>
+                                <FormRow>
+                                    <CardHeader>
+                                        Student Information
+                                    </CardHeader>
+                                </FormRow>
+                                <FormRow>
+                                    <FormColumn formGap>
+                                        <Label>Admission No :</Label>
+                                        <FlatInput placeholder="Enter an Admission Number" type="text"
+                                            name="studentId"
+                                            id="studentId"
+                                            value={this.state.studentId}
+                                            onChange={e => this.doChange(e)} ></FlatInput>
+                                    </FormColumn>
+                                    <FormColumn formGap></FormColumn>
+                                    <FormColumn>
+                                        <Label>First Name :</Label>
+                                        <FlatInput placeholder="First Name" type="text"
+                                            name="firstName"
+                                            id="firstName"
+                                            value={this.state.firstName}
+                                            onChange={e => this.doChange(e)}></FlatInput>
+
+                                    </FormColumn>
+                                </FormRow>
+                                <FormRow>
+                                    <FormColumn formGap>
+                                        <Label>Last Name :</Label>
+                                        <FlatInput placeholder="Last Name" type="text"
+                                            name="lastName"
+                                            id="lastName"
+                                            value={this.state.lastName}
+                                            onChange={e => this.doChange(e)} ></FlatInput>
+                                    </FormColumn>
+                                    <FormColumn formGap></FormColumn>
+                                    <FormColumn formGap>
+                                        <Label>Middle Name :</Label>
+                                        <FlatInput placeholder="Middle Name" type="text"
+                                            name="middleName"
+                                            id="middleName"
+                                            value={this.state.middleName}
+                                            onChange={e => this.doChange(e)} ></FlatInput>
+                                    </FormColumn>
+                                </FormRow>
+                                <FormRow>
+                                    <FormColumn formGap>
+                                        <Label>Admission Date :</Label>
+                                        <DatePick
+                                            selected={this.state.admissionDate}
+                                            onChange={this.handleChangeAdmissionDate}
+                                        />
+                                    </FormColumn>
+                                    <FormColumn formGap></FormColumn>
+                                    <FormColumn formGap>
+                                        <Label>Address :</Label>
+                                        <FlatInput placeholder="Address" type="text"
+                                            name="address"
+                                            id="address"
+                                            value={this.state.address}
+                                            onChange={e => this.doChange(e)} ></FlatInput>
+                                    </FormColumn>
+                                </FormRow>
+                                <FormRow>
+                                    <FormColumn formGap>
+                                        <Label>Contact No :</Label>
+                                        <FlatInput type="number" placeholder="Contact No" type="number"
+                                            name="contactNo"
+                                            id="contactNo"
+                                            value={this.state.contactNo}
+                                            onChange={e => this.doChange(e)}></FlatInput>
+                                    </FormColumn>
+                                    <FormColumn formGap></FormColumn>
+                                    <FormColumn formGap>
+                                        <Label>Religion :</Label>
+                                        <Dropdown options={Religion} type="text"
+                                            name="religion"
+                                            id="religion"
+                                            value={this.state.religion}
+                                            onChange={e => this.doChange(e)}>
+                                            <Option>Hinduism</Option>
+                                            <Option>Christianity_RC</Option>
+                                        </Dropdown>
+
+                                    </FormColumn>
+                                </FormRow>
+                                <FormRow>
+                                    <FormColumn formGap>
+                                        <Label>Race :</Label>
+                                        <Dropdown
+                                            name="race"
+                                            id="race"
+                                            value={this.state.race}
+                                        // onChange={e => this.handleSelect(e)}
+                                        >
+                                            <Option>Sinhalese</Option>
+                                            <Option>Srilankan Tamil</Option>
+                                            <Option>Srilankan Muslim</Option>
+                                            <Option>Srilankan Burghese</Option>
+                                            <Option>Indian Tamil</Option>
+                                        </Dropdown>
+                                    </FormColumn>
+                                    <FormColumn formGap></FormColumn>
+                                    <FormColumn formGap>
+
+                                        <Label>Date Of Birth :</Label>
+                                        <DatePick
+                                            selected={this.state.dateOfBirth}
+                                            onChange={this.handleChangeDateOfBirth}
+                                        />
+                                    </FormColumn>
+                                </FormRow>
+                                <FormRow>
+                                    <FormColumn formGap>
+                                        <Label>GN-Division :</Label> <FlatInput placeholder="GN-Division" type="text"
+                                            name="gsDivision"
+                                            id="gsDivision"
+                                            value={this.state.gsDivision}
+                                            onChange={e => this.doChange(e)} ></FlatInput>
+                                    </FormColumn>
+                                    <FormColumn formGap></FormColumn>
+                                    <FormColumn formGap>
+                                        <Label>Gender :</Label>
+                                        <Dropdown
+                                            type="text"
+                                            name="gender"
+                                            id="gender"
+                                            value={this.state.gender}
+                                            onChange={e => this.doChange(e)}>
+                                            <Option>Male</Option>
+                                            <Option>Female</Option>
+                                            <Option>Not Specified</Option>
+                                        </Dropdown>
+                                    </FormColumn>
+                                </FormRow>
+                                <FormRow>
+                                    <FormColumn formGap>
+                                        <Label>Father's Nic No :</Label> <FlatInput placeholder="Father's Nic No" type="text"
+                                            name="parentId"
+                                            id="parentId"
+                                            value={this.state.parentId}
+                                            onChange={e => this.doChange(e)} ></FlatInput>
+                                    </FormColumn>
+                                    <FormColumn formGap></FormColumn>
+                                    <FormColumn formGap>
+                                        <Label>Division Id :</Label> <FlatInput placeholder="Division Id" type="text"
+                                            name="divisionId"
+                                            id="divisionId"
+                                            value={this.state.divisionId}
+                                            onChange={e => this.doChange(e)} ></FlatInput>
+                                    </FormColumn>
+                                </FormRow>
+
+                            </Card>
                         </FormColumn>
 
+                        {/* 2nd Column */}
                         <FormColumn>
-                            <Label>First Name :</Label>
-                            <FlatInput placeholder="First Name"></FlatInput>
+
+                            {/* former school tab */}
+                            <FormRow>
+                                <Card style={{ height: "13em" }}>
+                                    <FormRow>
+                                        <CardHeader>
+                                            Former School Details
+                                </CardHeader>
+                                    </FormRow>
+                                    <FormRow>
+                                        <FormColumn>
+                                            <Label>Current Class :</Label> <FlatInput placeholder="Current Class" type="text"
+                                                name="currentClass"
+                                                id="currentClass"
+                                                value={this.state.currentClass}
+                                                onChange={e => this.doChange(e)} ></FlatInput>
+                                        </FormColumn>
+                                        <FormColumn formGap></FormColumn>
+                                        <FormColumn>
+                                            <Label>Former School :</Label> <FlatInput placeholder="Former School" type="text"
+                                                name="formerSchool"
+                                                id="formerSchool"
+                                                value={this.state.formerSchool}
+                                                onChange={e => this.doChange(e)} ></FlatInput>
+                                        </FormColumn>
+                                    </FormRow>
+                                    <FormRow>
+                                        <FormColumn>
+                                            <Label>Former Class :</Label> <FlatInput placeholder="Former Class" type="text"
+                                                name="formerClass"
+                                                id="formerClass"
+                                                value={this.state.formerClass}
+                                                onChange={e => this.doChange(e)} ></FlatInput>
+                                        </FormColumn>
+                                        <FormColumn formGap></FormColumn>
+                                        <FormColumn>
+
+                                        </FormColumn>
+                                    </FormRow>
+                                </Card>
+                            </FormRow>
+
+                            {/* hostel need tab */}
+                            <FormRow style={{ marginTop: "-2em" }}>
+                                <Card>
+                                    <FormRow>
+                                        <CardHeader>
+                                            <FormRow>
+                                                <FormColumn style={{ flexBasis: "30em" }}>Hostel Needs</FormColumn>
+                                                <FormColumn>
+                                                    {/* toggler btn */}
+                                                    <div>
+                                                        <CheckBoxWrapper>
+                                                            <CheckBox
+                                                                id="isStudentNeedHostel"
+                                                                name="isStudentNeedHostel"
+                                                                type="checkbox"
+                                                                checked={this.state.isHostelNeeded}
+                                                                onChange={e => this.handleToggleHostelNeed(e)}
+                                                            />
+                                                            <CheckBoxLabel htmlFor="isStudentNeedHostel" />
+                                                        </CheckBoxWrapper>
+                                                    </div>
+                                                </FormColumn>
+                                            </FormRow>
+                                        </CardHeader>
+                                    </FormRow>
+
+                                    {this.state.isHostelNeeded ?
+                                        <FormRow>
+                                            <FormColumn>
+
+                                            </FormColumn>
+                                            <FormColumn>
+
+                                            </FormColumn>
+                                        </FormRow>
+                                        : ""}
+                                </Card>
+                            </FormRow>
+
+                            {/* profile picture tab */}
+                            <FormRow style={{ marginTop: "-2em" }}>
+                                <Card>
+                                    <FormRow>
+                                        <CardHeader>
+                                            Profile Picture
+                                        </CardHeader>
+                                    </FormRow>
+                                    <FormRow>
+
+                                    </FormRow>
+                                    <FormRow>
+                                        <FlatInput style={{ width: "15em" }} type="file" />
+                                    </FormRow>
+                                </Card>
+                            </FormRow>
                         </FormColumn>
 
-
-                        <FormColumn>
-                            <Label>Last Name :</Label>
-                            <FlatInput placeholder="Last Name"></FlatInput>
-                        </FormColumn>
 
                     </FormRow>
+
+
+                    {/*
+
+                
+
+               
+
+
+                    <Label>Hostel Need :</Label> <FlatInput placeholder="Hostel Need" type="text"
+                        name="hostelNeed"
+                        id="hostelNeed"
+                        value={this.state.hostelNeed}
+                        onChange={e => this.doChange(e)} ></FlatInput>
+
+                    <Label>Achievement In Study :</Label> <FlatInput placeholder="Achievement In Study" type="text"
+                        name="achievementStudy"
+                        id="achievementStudy"
+                        value={this.state.achievementStudy}
+                        onChange={e => this.doChange(e)} ></FlatInput>
+
+                    <Label>Achievement In Sports :</Label> <FlatInput placeholder="Achievement In Sports" type="text"
+                        name="achievementSport"
+                        id="achievementSport"
+                        value={this.state.achievementSport}
+                        onChange={e => this.doChange(e)} ></FlatInput>
+
+                    <Label>Division Id :</Label> <FlatInput placeholder="Division Id" type="text"
+                        name="divisionId"
+                        id="divisionId"
+                        value={this.state.divisionId}
+                        onChange={e => this.doChange(e)} ></FlatInput>
+
+                    <Label>Father's Nic No :</Label> <FlatInput placeholder="Father's Nic No" type="text"
+                        name="parentId"
+                        id="parentId"
+                        value={this.state.parentId}
+                        onChange={e => this.doChange(e)} ></FlatInput> */}
+
+
                     <FormRow>
                         <FormColumn>
-                            <Label>Middle Name :</Label>
-                            <FlatInput placeholder="Middle Name"></FlatInput>
-
+                            <PrimaryButton onClick={(e) => this.handleClickPrevious(e)} type="button">Previous</PrimaryButton>
                         </FormColumn>
-
-
+                        <div style={{ flexBasis: "60em" }}></div>
                         <FormColumn>
-                            <Label>Admission Date :</Label>
-                            <DatePick
-                                selected={this.state.admissionDate}
-                                onChange={this.handleChangeAdmissionDate}
-                            />
+                            <PrimaryButton onClick={(e) => this.handleClickNext(e)} type="button">Submit</PrimaryButton>
                         </FormColumn>
 
-
-
-                        <FormColumn>
-                            <Label>Address :</Label>
-                            <FlatInput placeholder="Address"></FlatInput>
-                        </FormColumn>
                     </FormRow>
-                    <FormRow>
-                        <FormColumn>
-                            <Label>Contact No :</Label>
-                            <FlatInput type="number" placeholder="Contact No"></FlatInput>
-                        </FormColumn>
-                        <FormColumn>
-                            <Label>Religion :</Label>
-                            <Selection options={Religion} />
-                        </FormColumn>
-                        <FormColumn>
-                            <Label>Race :</Label>
-                            <Selection options={Race} />
-                        </FormColumn>
-                    </FormRow>
-                    <FormRow>
-                        <FormColumn>
-                            <Label>Date Of Birth :</Label>
-                            <DatePick
-                                selected={this.state.dateOfBirth}
-                                onChange={this.handleChangeDateOfBirth}
-                            />
-
-                        </FormColumn>
-
-                        <FormColumn>
-                            <Label>GN-Division :</Label> <FlatInput placeholder="GN-Division"></FlatInput>
-                        </FormColumn>
-                        <FormColumn>
-                            <Label>Gender :</Label> <Selection options={Gender} />
-                        </FormColumn>
-                    </FormRow>
-                    <FormRow>
-                        <FormColumn>
-                            <Label>Class :</Label> <Selection options={Class} />
-                        </FormColumn>
-                        <FormColumn>
-                            <Label>Former School :</Label> <FlatInput placeholder="Former School"></FlatInput>
-                        </FormColumn>
-                        <FormColumn>
-                            <Label>Hostel Need :</Label> <FlatInput placeholder="Hostel Need"></FlatInput>
-                        </FormColumn>
-                    </FormRow>
-                    <FormRow>
-                        <FormColumn>
-                            <Label>Achieve Study  :</Label> <FlatInput placeholder="Achieve Study"></FlatInput>
-                        </FormColumn>
-                        <FormColumn>
-                            <Label>Achieve Sports :</Label> <FlatInput placeholder="Achieve Sports"></FlatInput>
-                        </FormColumn>
-                        <FormColumn>
-                            <Label>Distance :</Label> <FlatInput placeholder="Distance"></FlatInput>
-                        </FormColumn>
-                    </FormRow>
-                    <FormRow>
-                        <FormColumn>
-                            <Label>Father's NIC No :</Label> <FlatInput placeholder="Father NIC No"></FlatInput>
-                        </FormColumn>
-                    </FormRow>
-                    <FormRow>
-                        <FormColumn>
-
-                        </FormColumn>
-                        <FormColumn>
-                            <PrimaryButton onClick={(e) => this.handleClickNext(e)} type="button"> Next</PrimaryButton>
-                        </FormColumn>
-                    </FormRow>
-                </form>
+                </form >
             </FormContainer >
         )
     }

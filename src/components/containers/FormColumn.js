@@ -10,7 +10,7 @@ export const FormRow = styled.div`
 
 export const FormColumn = styled.div`
     flex-direction: column;
-    flex-basis: ${props => props.admissionForm ? "50em" : ""};
+    flex-basis: ${props => props.fieldWidth ? "50em" : props.formGap ? "14em" : ""};
     
 `
 

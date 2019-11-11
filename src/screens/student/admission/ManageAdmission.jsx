@@ -72,18 +72,17 @@ export default class ManageAdmission extends Component {
                                 </FlexBoxColumn>
                             </FlexBoxRow>
                             <FlexBoxRow style={{ justifyContent: "space-between" }}>
-                                {/* <FlexBoxColumn>
+                                <FlexBoxColumn>
                                     <TogglerButton onClick={() => this.handleDivision()}>By Division</TogglerButton>
                                 </FlexBoxColumn>
                                 <FlexBoxColumn>
                                     <TogglerButton onClick={() => this.handleAdmission()}>By Admission No</TogglerButton>
-                                </FlexBoxColumn> */}
+                                </FlexBoxColumn>
                                 <FlexBoxColumn>
-                                    <TogglerButton onClick={() => this.handleName()}>Division</TogglerButton>
+                                    <TogglerButton onClick={() => this.handleName()}>By Name</TogglerButton>
                                 </FlexBoxColumn>
                             </FlexBoxRow>
-
-
+                            <br />
                             <FlexBoxRow style={{ justifyContent: "space-between" }}>
                                 {this.state.DivisionStatus ? <FlexBoxColumn>
                                     <Selection options={grades} placeholder="Grades"></Selection>
@@ -108,6 +107,7 @@ export default class ManageAdmission extends Component {
                                 {this.state.NameStatus ? <FlexBoxColumn style={{ justifyContent: "center" }}>
                                     <LargeIconOnlyButton primary><SearchIconPrimary /></LargeIconOnlyButton>
                                 </FlexBoxColumn>
+
                                     : ""}
 
                             </FlexBoxRow>

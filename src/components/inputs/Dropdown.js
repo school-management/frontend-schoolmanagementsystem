@@ -6,7 +6,7 @@ import theme from '../../theme/theme';
 export const Option = styled.option`
 
     font-family: ${theme.font.fontFamily};
-    font-size: 15.5px;
+    font-size: 14.5px;
     font-weight: 540;
     line-height: 10px;
     height: 50em;
@@ -14,17 +14,33 @@ export const Option = styled.option`
     outline: none;
     border: ${theme.size.selectBorder};
     border-radius: 1em;
+    padding: 10px;
+    overflow: hidden;
+    -webkit-appearance: button;
 `
 
 export const Dropdown = styled.select`
     padding: 0.7em;
     outline: none;
     color: ${theme.colors.gray};
-    width: 15em;
+    width: 13em;
     font-family: ${ theme.font.fontFamily};
     border: ${ theme.size.selectBorder};
     box-shadow: ${ theme.size.btnBoxShadow1};
     border-radius: 0.4em;
     line-height: 10px;
+    overflow: hidden;
+    
+    &:focus {
+        ${Option} {
+            height: 2em;
+            border-radius: 0.4em;
+            border: none;
+            stroke-opacity: 0.3;
+            overflow: hidden;
+            background: red;
+            padding: 0px 2px 1px;
+        }
+    }
 
 `
