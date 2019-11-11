@@ -12,48 +12,40 @@ export const IconLink = styled(Link)`
 `
 
 export const FlexBasedDiv = styled.div`
-    width: 70em;
-    
-    /* for smaller laptop screens */
+   
+
+
+
+    @media only screen and (max-width: 1440px) {
+        width: 75em;
+    }
+
     @media only screen and (max-width: 1024px) {
-        width: 48.2em;
+        width: 49em;
     }
 
-     /* for tablet screens */
-     @media only screen and (max-width: 768px) {
-        width: 30.8em;
+    @media only screen and (max-width: 768px) {
+        width: 31em;
+    }
+    
+    
+    @media only screen and (max-width: 425px) {
+        width: 5em;
     }
 
     
-     /* for bigger mobile screens */
-     @media only screen and (max-width: 425px) {
-        width: 5.2em;
-        
+    @media only screen and (max-width: 320px) {
+        width: 3em;
     }
-     /* for mediums mobile screens */
-     @media only screen and (max-width: 375px) {
-        width: 4.4em;
-        
-    }
-
-     /* for mediums mobile screens */
-     @media only screen and (max-width: 320px) {
-        width: 2.85em;
-        
-    }
-
-    /* for ultra large laptop screens */
-    @media only screen and (max-width: 1920px) {
-        width: 1100px;
-        
-    }
+    
+   
 `
 
 export const TopbarFlex = styled.div`
     background: ${theme.colors.white};
-    width: 98%;
+    width: 99%;
     height: 22%;
-    margin-left: 0.8em;
+    margin-left: 0.6em;
     margin-bottom: 0em;
     text-align: left;
     align-content: center;    

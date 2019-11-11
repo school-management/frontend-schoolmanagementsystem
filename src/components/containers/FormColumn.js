@@ -5,15 +5,14 @@ export const FormRow = styled.div`
     display: flex;
     flex-direction:row;
     justify-content: stretch;
-    /* padding-bottom:2em; */
-    padding-top:0;
+    padding-bottom: 2em;
     justify-content:space-between;
 `
 
 export const FormColumn = styled.div`
     flex-direction: column;
     flex-basis: ${props => props.fieldWidth ? "50em" : props.formGap ? "14em" : props.viewprofile ? "70em" : props.admissionForm ? "50em" : ""};
-    justify-content: space - between;
+    justify-content: space-between;
 
 `
 

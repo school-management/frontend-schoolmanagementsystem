@@ -23,7 +23,7 @@ export default class TopnavFlex extends Component {
                 <div style={{ flexBasis: "0.3em" }}></div>
                 <TinyDivider style={{ flexDirection: "column", marginBottom: "1em" }} />
                 <Heading4 style={{ marginLeft: "0.5em" }} >St Johns College, Jaffna</Heading4>
-                <FlexBasedDiv></FlexBasedDiv>
+                <FlexBasedDiv layout></FlexBasedDiv>
                 <TinyDivider style={{ flexDirection: "column", marginBottom: "0.8em" }} />
                 <div style={{ flexBasis: "1em" }}></div>
                 <BellIcon src={Bell} style={{ flexBasis: "2em", flexDirection: "column", marginBottom: "0.8em" }}></BellIcon>

@@ -23,6 +23,7 @@ import Card from '../../../../components/cards/Card';
 import CardHeader from './cardHeader';
 import { Dropdown, Option } from '../../../../components/inputs/Dropdown';
 import { CheckBoxWrapper, CheckBox, CheckBoxLabel } from '../../../../components/inputs/Toggler';
+import theme from '../../../../theme/theme';
 
 //options for the selections
 const Religion = [
@@ -389,10 +390,18 @@ class StudentForm extends Component {
                                         </CardHeader>
                                     </FormRow>
                                     <FormRow>
-
+                                        <FormColumn></FormColumn>
+                                        <FormColumn>
+                                            <img src="https://img.icons8.com/bubbles/48/000000/user-male-circle.png" />
+                                        </FormColumn>
+                                        <FormColumn></FormColumn>
                                     </FormRow>
                                     <FormRow>
-                                        <FlatInput style={{ width: "15em" }} type="file" />
+                                        <FormColumn></FormColumn>
+                                        <FormColumn>
+                                            <FlatInput style={{ width: "15em" }} type="file" />
+                                        </FormColumn>
+                                        <FormColumn></FormColumn>
                                     </FormRow>
                                 </Card>
                             </FormRow>

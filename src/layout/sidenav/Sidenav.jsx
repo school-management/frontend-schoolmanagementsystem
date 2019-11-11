@@ -153,9 +153,9 @@ export default class Sidenav extends Component {
     render() {
         return (
             <Sidebar>
-                <SidenavCard>
+                {/* <SidenavCard>
                     <img style={{ height: "44px", padding: "1.5em" }} src={Img}></img>
-                </SidenavCard>
+                </SidenavCard> */}
 
 
                 <Navigator>
