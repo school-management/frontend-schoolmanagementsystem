@@ -19,8 +19,10 @@ const colors = {
     aside: "#5d4f8d",
     //toggler button
     togglerBackground: "rgb(240,250,228)",
-    togglerColor: "#5c5757"
-
+    togglerColor: "#5c5757",
+    viewText: "#918190",
+    viewhed1: "#400f3c",
+    viewhed: "#703f6d"
 
 }
 
@@ -50,10 +52,10 @@ const size = {
     btnRadiusLarge: "0.40em",
     //toggler button
     togglerBackgroundWhenHover: colors.main,
-    togglerShadow: "0.5px 0.5px 0.2px 0.4px rgba(0,0,0,0.05)", 
+    togglerShadow: "0.5px 0.5px 0.2px 0.4px rgba(0,0,0,0.05)",
     togglerShadowWhenHover: "1.1px 1.2px 1.1px 1.8px rgba(0,0,0,0.18)",
     togglerBorder: "0.5px solid rgba(0,0,0,0.12)",
-   
+
 
 
     //input field styling

@@ -41,6 +41,12 @@ export const FlexBasedDiv = styled.div`
         width: 2.85em;
         
     }
+
+    /* for ultra large laptop screens */
+    @media only screen and (max-width: 1920px) {
+        width: 1100px;
+        
+    }
 `
 
 export const TopbarFlex = styled.div`

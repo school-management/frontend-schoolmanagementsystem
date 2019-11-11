@@ -6,4 +6,4 @@ const Heading6 = styled.h6`
     
 `
 
-export default Heading6;
+export default Heading6; 
