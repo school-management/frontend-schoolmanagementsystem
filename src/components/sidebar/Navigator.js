@@ -3,11 +3,11 @@ import theme from '../../theme/theme';
 
 
 const Navigator = styled.nav`
-    background: #5d4f8d;
+    background: ${theme.colors.sidebar};
     text-align: justify;
     color: ${theme.colors.white};
     font-family: ${theme.font.fontFamily};
-    padding: 1em;
+    padding: 0.4em;
     /* margin-top: 2em; */
     border-top-right-radius: 1.5em;
 

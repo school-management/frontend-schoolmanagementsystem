@@ -3,17 +3,19 @@ import Heading3 from '../../../components/typography/Heading3'
 import Paragraph from '../../../components/typography/Paragraph'
 import TableCom from '../../Table'
 import Table1Show from '../../Table1'
+import { FlexBoxContainer, FlexBoxRow, FlexBoxColumn } from '../admission/admissionFlexBox'
 
 
 export default class EditProfile extends Component {
     render() {
         return (
-            <div>
-                <Heading3>Edit Profile</Heading3>
-                <Paragraph>Sample Content</Paragraph>
-                <TableCom />
-                {/* <Table1Show /> */}
-            </div>
+            <FlexBoxContainer>
+                <FlexBoxRow>
+                    <FlexBoxColumn>
+                        <TableCom />
+                    </FlexBoxColumn>
+                </FlexBoxRow>
+            </FlexBoxContainer>
         )
     }
 }

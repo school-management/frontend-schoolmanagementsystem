@@ -12,7 +12,8 @@ export const CheckBoxLabel = styled.label`
   width: 42px;
   height: 26px;
   border-radius: 15px;
-  background: #bebebe;
+  background: ${theme.colors.sidebarHover};
+  opacity: 0.89;
   cursor: pointer;
   &::after {
     content: "";

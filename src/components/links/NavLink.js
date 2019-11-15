@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 
 const NavLink = styled(Link)`
 
-        background: #5d4f8d;
+        background: ${theme.colors.sidebar};
         padding: 0.8em;
         cursor: pointer;
         border-radius: 1.6em;

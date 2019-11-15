@@ -30,6 +30,7 @@ export const Dropdown = styled.select`
     border-radius: 0.4em;
     line-height: 10px;
     overflow: hidden;
+    border-color: ${theme.colors.sidebar};
     
     &:focus {
         ${Option} {
@@ -38,8 +39,9 @@ export const Dropdown = styled.select`
             border: none;
             stroke-opacity: 0.3;
             overflow: hidden;
-            background: red;
+            background: ${theme.colors.base};
             padding: 0px 2px 1px;
+            font-size: 16px;
         }
     }
 

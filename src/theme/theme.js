@@ -7,9 +7,11 @@ const colors = {
     white: "white",
     black: "black",
     gray: "#5f6769",
+    sidebar: "#2b2b2b",
+    sidebarHover: "#bc231d",
     //button colors
-    btnPurple: '#6200ed',
-    btnPurpleWhenHover: "#5600d1",
+    btnPurple: '#2b2b2b',
+    btnPurpleWhenHover: "#2b2b2b",
     //input color
     inputPurple: '#6200ed',
     inputPurpleWhenFocus: "#564985",
@@ -20,6 +22,7 @@ const colors = {
     //toggler button
     togglerBackground: "rgb(240,250,228)",
     togglerColor: "#5c5757",
+    //view profile
     viewText: "#918190",
     viewhed1: "#400f3c",
     viewhed: "#703f6d"

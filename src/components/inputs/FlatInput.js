@@ -8,7 +8,7 @@ const FlatInput = styled.input`
     padding: ${theme.size.inputPadding};
     border: ${theme.size.inputBorder}; 
     box-shadow: ${theme.size.inputBoxShadow};
-    border-color: ${theme.colors.main};
+    border-color: ${theme.colors.sidebar};
     width: ${theme.size.inputWidth};
     height: ${theme.size.inputHeight};
     font-size: ${theme.size.fontDefault};

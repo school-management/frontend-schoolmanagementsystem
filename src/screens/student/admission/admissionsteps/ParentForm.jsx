@@ -58,15 +58,20 @@ class ParentForm extends Component {
         sibilingAdmissionNo: "",
         sibilingFullName: "",
         sibilingGrade: "",
+        //card togglers
+        fatherCard: true,
+        motherCard: true,
+        guardianCard: false,
+        siblingCard: false,
 
     }
+
 
     doChange = e => {
         this.setState({
             [e.target.id]: e.target.value
         })
         console.log(this.state.fatherName)
-
     }
 
     handleSelectChange = event => {
@@ -164,6 +169,16 @@ class ParentForm extends Component {
         console.log("submitted")
     }
 
+    //card togglers
+    // toggleCardSibling() {
+    //     if (this.state.siblingCard == false) {
+    //         this.setState({
+    //             siblingCard: true
+    //         })
+    //     }
+
+    // }
+
 
     render() {
         return (
@@ -173,7 +188,7 @@ class ParentForm extends Component {
                 <form>
                     <FormRow>
                         <FormColumn>
-                            <Card admission>
+                            <Card>
                                 <FormRow>
                                     <CardHeader>
                                         Father's Details
@@ -469,7 +484,7 @@ class ParentForm extends Component {
                         </FormColumn>
 
                         <FormColumn>
-                            <Card admission>
+                            <Card>
                                 <FormRow>
                                     <CardHeader>
                                         Siblings' Details
@@ -549,6 +564,7 @@ class ParentForm extends Component {
                                         </FormRow>
                                     </div>
                                     : ""}
+
                             </Card>
                         </FormColumn>
                     </FormRow>

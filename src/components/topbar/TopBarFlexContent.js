@@ -4,14 +4,14 @@ import Heading4 from '../typography/Heading4';
 import BellIcon from '../icon/topbar/BellIcon';
 import { Link } from 'react-router-dom';
 
-export const IconLink = styled(Link)`
+export const IconLinkContent = styled(Link)`
 
     margin-left: -1.5em;
     width: 85px;
  
 `
 
-export const FlexBasedDiv = styled.div`
+export const FlexBasedDivContent = styled.div`
    
 
 
@@ -41,11 +41,14 @@ export const FlexBasedDiv = styled.div`
    
 `
 
-export const TopbarFlex = styled.div`
-    background: ${theme.colors.white};
-    width: 99%;
+export const TopbarFlexContent = styled.div`
+    display: flex;
+    flex-direction: row;
+
+    background: ${theme.colors.black};
+    width: 100%;
     height: 22%;
-    margin-left: 0.6em;
+  
     margin-bottom: 0em;
     text-align: left;
     align-content: center;    
@@ -54,12 +57,11 @@ export const TopbarFlex = styled.div`
     font-weight: 400;
     font-family: ${theme.font.fontFamily};
     /* box-shadow: ${theme.size.btnBoxShadow1}; */
-    border-bottom-right-radius: 0.8em;
-    border-bottom-left-radius: 0.8em;
+    /* border-bottom-right-radius: 0.8em;
+    border-bottom-left-radius: 0.8em; */
     border-bottom: 4px;
     /* box-shadow: ${theme.size.topBarBoxShadow}; */
-    display: flex;
-    flex-direction: row;
+  
    
    ${props => props.home && css} {
        box-shadow: "1px 2px 3px 5px rgba(0,0,0,0.20)";

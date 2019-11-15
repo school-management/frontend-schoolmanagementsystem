@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import theme from '../../../theme/theme';
 
 const BellIcon = styled.img`
@@ -12,6 +12,11 @@ const BellIcon = styled.img`
     background: ${theme.colors.base};
     border-radius: 0.4em;
     border: 1px thin ${theme.colors.gray};
+
+    ${props => props.content && css`
+    background: ${theme.colors.sidebar};
+    fill: ${theme.colors.sidebar};
+    `}
 `
 
 export default BellIcon;

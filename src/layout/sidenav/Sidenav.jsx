@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Sidebar from '../../components/sidebar/Sidebar';
 import Heading2 from '../../components/typography/Heading2';
-import Img from '../../assets/icons/fontawesome/book-read.svg';
+import Img from '../../assets/img/stjohns.png';
 import Navigator from '../../components/sidebar/Navigator';
 import NavLink from '../../components/links/NavLink';
 import NavBox from '../../components/sidebar/NavBox';
@@ -153,9 +153,9 @@ export default class Sidenav extends Component {
     render() {
         return (
             <Sidebar>
-                {/* <SidenavCard>
-                    <img style={{ height: "44px", padding: "1.5em" }} src={Img}></img>
-                </SidenavCard> */}
+                <SidenavCard>
+                    <img style={{ height: "99px", padding: "0.8em" }} src={Img}></img>
+                </SidenavCard>
 
 
                 <Navigator>
@@ -228,13 +228,19 @@ export default class Sidenav extends Component {
                             </div>}
                     </NavBox>
                     <NavBox isChecked={false}>
-                        <NavLink to="/student/classconfig">Class Configuration</NavLink>
+                        <Nav to="/student/classconfig"  >
+                            <NavLink to="/student/classconfig">Class Configuration</NavLink>
+                        </Nav>
                     </NavBox>
                     <NavBox isChecked={false}>
-                        <NavLink to="/student/classallocation">Classroom Allocation</NavLink>
+                        <Nav to="/student/classallocation">
+                            <NavLink to="/student/classallocation">Classroom Allocation</NavLink>
+                        </Nav>
                     </NavBox>
                     <NavBox isChecked={false}>
-                        <NavLink to="/student/promotion">Promotion</NavLink>
+                        <Nav to="/student/promotion">
+                            <NavLink to="/student/promotion">Promotion</NavLink>
+                        </Nav>
                     </NavBox>
 
 

@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 
 const NavLinkSub = styled(Link)`
-        background: ${theme.colors.main};
+        background: ${theme.colors.sidebar};
         padding: 0.5em;
         cursor: pointer;
         border-radius: 1.6em;

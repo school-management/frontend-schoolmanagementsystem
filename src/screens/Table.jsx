@@ -13,7 +13,7 @@ class TableCom extends Component {
                         <TableHeading>Admission No</TableHeading>
                         <TableHeading>First Name</TableHeading>
                         <TableHeading>Last Name</TableHeading>
-                        <TableHeading colSpan={2}>Actions</TableHeading>
+                        <TableHeading colSpan={2} style={{ textAlign: "center" }}>Actions</TableHeading>
                     </TableRow>
                 </THead>
                 <TableRow body>

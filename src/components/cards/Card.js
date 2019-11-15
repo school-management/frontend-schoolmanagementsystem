@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import theme from "../../theme/theme"
 
 const Card = styled.div`
@@ -22,6 +22,11 @@ const Card = styled.div`
     outline: ${theme.size.btnOutline};
     transition: 0.2s ease-in;
     z-index: 1200;
-}
+};
+
+${props => props.admission && css`
+    background: ${theme.colors.base};
+`}
+
 `
 export default Card;

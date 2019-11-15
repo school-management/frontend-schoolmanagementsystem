@@ -6,13 +6,13 @@ import NavBoxSub from './NavBoxSub';
 
 
 const NavBox = styled.div`
-    background: ${theme.colors.main};
+    background: ${theme.colors.sidebar};
     text-align: justify;
     width: 90.8%;
     color: ${theme.colors.white};
     padding: 1em;
     border: none;
-    margin-top: 0.7em;
+    margin-top: 0.2em;
     cursor: pointer;
 
   
@@ -21,7 +21,7 @@ const NavBox = styled.div`
     ${props => props.isCheck && css`
     ${NavLink} {
             background: ${theme.colors.base};
-            color: ${theme.colors.main};
+            color: ${theme.colors.sidebarHover};
             font-weight: 700;
             
         }
@@ -46,7 +46,7 @@ const NavBox = styled.div`
     ${props => props.tree && css`    
     &:hover{
         ${NavLink} {
-            background: ${theme.colors.main};
+            background: ${theme.colors.sidebarHover};
             color: ${theme.colors.white};
             font-weight: 700;
             
@@ -57,7 +57,7 @@ const NavBox = styled.div`
         };
         ${NavBoxSub}{
            
-        background: ${theme.colors.main};
+        background: ${theme.colors.sidebar};
         border-top-left-radius: 1.5em;
         border-bottom-left-radius: 1.5em;
         z-index: 1000;
@@ -76,13 +76,13 @@ const NavBox = styled.div`
     &:hover{
         ${NavLink} {
             background: ${theme.colors.base};
-            color: ${theme.colors.main};
+            color: ${theme.colors.sidebar};
             font-weight: 700;
             
         }
         ${SidenavCard} {
             border-bottom-right-radius: 0.5em;
-            background: white;
+            background: ${theme.colors.white};
         }
         background: ${theme.colors.base};
         border-top-left-radius: 1.5em;
@@ -97,7 +97,7 @@ const NavBox = styled.div`
     ${props => props.default && css`
     ${NavLink} {
             background: ${theme.colors.base};
-            color: ${theme.colors.main};
+            color: ${theme.colors.sidebar};
             font-weight: 700;
             
         }

@@ -24,6 +24,8 @@ import CardHeader from './cardHeader';
 import { Dropdown, Option } from '../../../../components/inputs/Dropdown';
 import { CheckBoxWrapper, CheckBox, CheckBoxLabel } from '../../../../components/inputs/Toggler';
 import theme from '../../../../theme/theme';
+//profile avatar icon
+import ProfileIMG from '../../../../assets/icons/icons8/profileIcon.png';
 
 //options for the selections
 const Religion = [
@@ -215,7 +217,7 @@ class StudentForm extends Component {
                                             onChange={e => this.doChange(e)}></FlatInput>
                                     </FormColumn>
                                     <FormColumn formGap></FormColumn>
-                                    <FormColumn formGap>
+                                    <FormColumn formGap style={{ marginRight: "0.5em" }}>
                                         <Label>Religion :</Label>
                                         <Dropdown options={Religion} type="text"
                                             name="religion"
@@ -263,7 +265,7 @@ class StudentForm extends Component {
                                             onChange={e => this.doChange(e)} ></FlatInput>
                                     </FormColumn>
                                     <FormColumn formGap></FormColumn>
-                                    <FormColumn formGap>
+                                    <FormColumn formGap style={{ marginRight: "0.5em" }}>
                                         <Label>Gender :</Label>
                                         <Dropdown
                                             type="text"
@@ -346,10 +348,10 @@ class StudentForm extends Component {
                             <FormRow style={{ marginTop: "-2em" }}>
                                 <Card>
                                     <FormRow>
-                                        <CardHeader>
+                                        <CardHeader style={{ height: "1.8em" }}>
                                             <FormRow>
-                                                <FormColumn style={{ flexBasis: "30em" }}>Hostel Needs</FormColumn>
-                                                <FormColumn>
+                                                <FormColumn style={{ flexBasis: "30em", marginTop: "0.1em" }}>Hostel Needs</FormColumn>
+                                                <FormColumn style={{ marginTop: "0.1em" }}>
                                                     {/* toggler btn */}
                                                     <div>
                                                         <CheckBoxWrapper>
@@ -392,7 +394,7 @@ class StudentForm extends Component {
                                     <FormRow>
                                         <FormColumn></FormColumn>
                                         <FormColumn>
-                                            <img src="https://img.icons8.com/bubbles/48/000000/user-male-circle.png" />
+                                            <img src="https://img.icons8.com/color/48/000000/person-male.png"></img>
                                         </FormColumn>
                                         <FormColumn></FormColumn>
                                     </FormRow>

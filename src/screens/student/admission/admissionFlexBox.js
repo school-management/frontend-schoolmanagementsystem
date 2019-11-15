@@ -2,16 +2,17 @@ import styled from 'styled-components';
 import theme from '../../../theme/theme';
 
 export const FlexBoxContainer = styled.div`
-        display:flex;
         flex-wrap:wrap;
         justify-content:center;
-        height:200px;
+        height:30em;
+        width: 72.2em;
+
         align-items:center;
 
 `
 export const FlexBoxRow = styled.div`
-          flex-direction:row;
           display: flex;
+          flex-direction:row;
           align-items:center;
           
 

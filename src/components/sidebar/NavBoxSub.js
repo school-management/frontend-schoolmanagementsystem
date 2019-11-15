@@ -7,8 +7,8 @@ import NavLinkSub from '../links/NavLinkSub';
 
 
 const NavBoxSub = styled.div`
-   background: ${theme.colors.main};
-   width: 89%;   
+   background: ${theme.colors.sidebar};
+   width: 83%;   
    padding: 1em;
    border: none;
    margin-top: 0.7em;
@@ -21,23 +21,22 @@ const NavBoxSub = styled.div`
    
 
    &:hover {
+    position: static;
     transform: translateZ(150px);
     z-index: 800px;
    /* transition: 0.3s linear; */
    background: ${theme.colors.white};
     ${NavLinkSub} {
+        transform: translateZ(2px);
         transform-style: preserve-3d;
-        background: ${theme.colors.white};
-        color: ${theme.colors.main};
-        font-weight: 600;
-        text-transform:capitalize;
+        background: ${theme.colors.sidebar};
+        color: ${theme.colors.white};
         border-radius: 3px;
-        background-size: 10px;
-        /* transition: 0.2s step-end; */
+        transition: 0.2s step-end;
       
     }
     ${NavBox} {
-        background: ${theme.colors.main};
+        background: ${theme.colors.sidebar};
       
     }
    }

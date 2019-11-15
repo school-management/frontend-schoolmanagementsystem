@@ -67,9 +67,11 @@ export default class ManageAdmission extends Component {
                     <FlexBoxColumn>
                         <Card style={cardStyle}>
                             <FlexBoxRow>
+
                                 <FlexBoxColumn>
-                                    <Heading3> Search A Student</Heading3>
+                                    <Heading3 style={{ marginLeft: "7.7em" }}>Search A Student</Heading3>
                                 </FlexBoxColumn>
+
                             </FlexBoxRow>
                             <FlexBoxRow style={{ justifyContent: "space-between" }}>
                                 <FlexBoxColumn>
@@ -115,7 +117,6 @@ export default class ManageAdmission extends Component {
                             <br />
 
                             <br />
-
 
                         </Card>
                     </FlexBoxColumn>

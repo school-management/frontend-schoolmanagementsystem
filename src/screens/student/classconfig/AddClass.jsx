@@ -54,7 +54,7 @@ export default class AddClass extends Component {
             <FlexBoxContainer>
                 <FlexBoxRow>
                     <FlexBoxColumn>
-                        <Card style={cardStyle}>
+                        <Card>
                             <FlexBoxRow style={{ justifyContent: "center" }}>
                                 <FlexBoxColumn>
                                     <Heading6>Select Grade</Heading6>
@@ -73,9 +73,6 @@ export default class AddClass extends Component {
                             <FlexBoxRow style={{ justifyContent: "space-between" }}>
                                 <FlexBoxColumn>
                                     <FlexBoxRow style={{ justifyContent: "center" }}>
-                                        <FlexBoxColumn>
-                                            <Heading6>Table</Heading6>
-                                        </FlexBoxColumn>
                                     </FlexBoxRow>
                                     <FlexBoxRow>
                                         {this.state.TableStatus ? <FlexBoxColumn>
